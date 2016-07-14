@@ -3,9 +3,9 @@ SProvisioner is the easiest to use and most complete SharePoint provisioning lib
 
 This repository includes the .NET class libraries we use at InstantQuick and a companion PowerShell module.
 
-This codebase predates Office PnPCore by a couple of years and differs in that it is designed to be turnkey and easy to use with minimal setup. It also offers more features out of the box including the ability to read and provion Web Part Pages, Wiki Pages,  Publishing Pages, and 2010 style workflows against versions of SharePoint that do not support the latest SharePoint Client Object Model API's by falling back to older API's as needed.
+This codebase predates Office PnPCore by a couple of years and differs in that it is designed to be turnkey and easy to use with minimal setup. It also offers more features out of the box including the ability to read and provision Web Part Pages, Wiki Pages,  Publishing Pages, and 2010 style workflows against versions of SharePoint that do not support the latest SharePoint Client Object Model API's by falling back to older API's as needed.
 
-As with the Microsoft Patterns and Practices library, SProvisioner can generate templates by comparing a customized site to a base site. Unlike the PnP engine you can easily include any file in the site (including publishing pages and page layouts) without writing code or being forced to extend the library. It also has the capabilty to provision site heirarchies and to both install and/or remove multiple template manifests as a single operation. 
+As with the Microsoft Patterns and Practices library, SProvisioner can generate templates by comparing a customized site to a base site. Unlike the PnP engine you can easily include any file in the site (including publishing pages and page layouts) without writing code or being forced to extend the library. It also has the capabilty to provision site hierarchies and to both install and/or remove multiple template manifests as a single operation. 
  
 ##Features
 SProvisioner can read and recreate the following out of the box
