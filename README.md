@@ -33,8 +33,7 @@ InstantQuick SharePoint Provisioning can read and recreate the following out of 
 + Top and left navigation
 + Document templates
 + 2010 Workflows
-+ 2013 Workflows
-+ Managed metadata
++ Managed metadata fields and list item values
 + Site, Web, and List custom actions
 + AppWeb navigation surfaces
 + Remote Event Receivers
