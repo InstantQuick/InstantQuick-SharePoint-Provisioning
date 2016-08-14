@@ -39,5 +39,5 @@ InstantQuick SharePoint Provisioning can read and recreate the following out of 
 + Remote Event Receivers
 + ...and more
  
-This page is a preview and the repository is currently empty, but not for long!
+Currently working on an installer and getting started guide... Stay tuned!
 
