@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebPart xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WebPart/v2">
+  <Title>Practice Calendar</Title>
+  <FrameType>Default</FrameType>
+  <Description />
+  <IsIncluded>true</IsIncluded>
+  <ZoneID>Body</ZoneID>
+  <PartOrder>1</PartOrder>
+  <FrameState>Normal</FrameState>
+  <Height />
+  <Width />
+  <AllowRemove>true</AllowRemove>
+  <AllowZoneChange>true</AllowZoneChange>
+  <AllowMinimize>true</AllowMinimize>
+  <AllowConnect>true</AllowConnect>
+  <AllowEdit>true</AllowEdit>
+  <AllowHide>true</AllowHide>
+  <IsVisible>true</IsVisible>
+  <DetailLink>{ListUrl}</DetailLink>
+  <HelpLink />
+  <HelpMode>Modeless</HelpMode>
+  <Dir>Default</Dir>
+  <PartImageSmall />
+  <MissingAssembly>Cannot import this Web Part.</MissingAssembly>
+  <PartImageLarge>/_layouts/15/images/itevent.png</PartImageLarge>
+  <IsIncludedFilter />
+  <Assembly>Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c</Assembly>
+  <TypeName>Microsoft.SharePoint.WebPartPages.ListViewWebPart</TypeName>
+  <WebId xmlns="http://schemas.microsoft.com/WebPart/v2/ListView">00000000-0000-0000-0000-000000000000</WebId>
+  <ListViewXml xmlns="http://schemas.microsoft.com/WebPart/v2/ListView">&lt;View Name="{B230413A-EB85-4008-A43B-8736DA14DA39}" MobileView="TRUE" Type="CALENDAR" Hidden="TRUE" TabularView="FALSE" RecurrenceRowset="TRUE" DisplayName="" Url="/sites/dev/PMPages/Agenda.aspx" Level="1" BaseViewID="2" ContentTypeID="0x" MobileUrl="_layouts/15/mobile/viewdaily.aspx" ImageUrl="/_layouts/15/images/events.png"&gt;&lt;Toolbar Type="Standard" /&gt;&lt;ViewHeader /&gt;&lt;ViewBody /&gt;&lt;ViewFooter /&gt;&lt;ViewEmpty /&gt;&lt;ParameterBindings&gt;&lt;ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" /&gt;&lt;ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" /&gt;&lt;/ParameterBindings&gt;&lt;ViewFields&gt;&lt;FieldRef Name="EventDate" /&gt;&lt;FieldRef Name="EndDate" /&gt;&lt;FieldRef Name="fRecurrence" /&gt;&lt;FieldRef Name="EventType" /&gt;&lt;FieldRef Name="WorkspaceLink" /&gt;&lt;FieldRef Name="Title" /&gt;&lt;FieldRef Name="Location" /&gt;&lt;FieldRef Name="Description" /&gt;&lt;FieldRef Name="Workspace" /&gt;&lt;FieldRef Name="MasterSeriesItemID" /&gt;&lt;FieldRef Name="fAllDayEvent" /&gt;&lt;/ViewFields&gt;&lt;ViewData&gt;&lt;FieldRef Name="Title" Type="CalendarMonthTitle" /&gt;&lt;FieldRef Name="Title" Type="CalendarWeekTitle" /&gt;&lt;FieldRef Name="Location" Type="CalendarWeekLocation" /&gt;&lt;FieldRef Name="Title" Type="CalendarDayTitle" /&gt;&lt;FieldRef Name="Location" Type="CalendarDayLocation" /&gt;&lt;/ViewData&gt;&lt;Query&gt;&lt;Where&gt;&lt;DateRangesOverlap&gt;&lt;FieldRef Name="EventDate" /&gt;&lt;FieldRef Name="EndDate" /&gt;&lt;FieldRef Name="RecurrenceID" /&gt;&lt;Value Type="DateTime"&gt;&lt;Month /&gt;&lt;/Value&gt;&lt;/DateRangesOverlap&gt;&lt;/Where&gt;&lt;/Query&gt;&lt;/View&gt;</ListViewXml>
+  <ListName xmlns="http://schemas.microsoft.com/WebPart/v2/ListView">{{ListName}}</ListName>
+  <ListId xmlns="http://schemas.microsoft.com/WebPart/v2/ListView">{ListId}</ListId>
+  <ViewFlag xmlns="http://schemas.microsoft.com/WebPart/v2/ListView">8921097</ViewFlag>
+  <ViewFlags xmlns="http://schemas.microsoft.com/WebPart/v2/ListView">Html Hidden RecurrenceRowset Calendar Mobile</ViewFlags>
+  <ViewContentTypeId xmlns="http://schemas.microsoft.com/WebPart/v2/ListView">0x</ViewContentTypeId>
+</WebPart>
