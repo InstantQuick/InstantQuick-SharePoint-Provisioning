@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQAppProvisioningPowerShell", "IQAppProvisioningPowerShell\IQAppProvisioningPowerShell.csproj", "{D17E5E3E-EEFC-4D36-B070-74F02A8F13C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQAppManifestProvisioner", "IQAppManifestProvisioner\IQAppManifestProvisioner.csproj", "{09106344-728A-467A-97AE-5DB91D0958B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQAppStorageMigrator", "IQAppStorageMigrator\IQAppStorageMigrator.csproj", "{BE8F1C03-9D2F-4E59-A11C-9421EFE43CDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQAppManifestBuilders", "IQAppManifestBuilders\IQAppManifestBuilders.csproj", "{5462EE12-1E3B-48C2-A254-3043AC31FC58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQAppProvisioningBaseClasses", "IQAppProvisioningBaseClasses\IQAppProvisioningBaseClasses.csproj", "{E9667BA1-F246-423D-B3E1-661F60BC6BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQAppSiteProvisioner", "IQAppSiteProvisioner\IQAppSiteProvisioner.csproj", "{28DC1CF6-1033-468E-95D6-90590EA6BD7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CloudKhanPublish|Any CPU = CloudKhanPublish|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D17E5E3E-EEFC-4D36-B070-74F02A8F13C6}.CloudKhanPublish|Any CPU.ActiveCfg = Release|Any CPU
+		{D17E5E3E-EEFC-4D36-B070-74F02A8F13C6}.CloudKhanPublish|Any CPU.Build.0 = Release|Any CPU
+		{D17E5E3E-EEFC-4D36-B070-74F02A8F13C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17E5E3E-EEFC-4D36-B070-74F02A8F13C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17E5E3E-EEFC-4D36-B070-74F02A8F13C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17E5E3E-EEFC-4D36-B070-74F02A8F13C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09106344-728A-467A-97AE-5DB91D0958B7}.CloudKhanPublish|Any CPU.ActiveCfg = Release|Any CPU
+		{09106344-728A-467A-97AE-5DB91D0958B7}.CloudKhanPublish|Any CPU.Build.0 = Release|Any CPU
+		{09106344-728A-467A-97AE-5DB91D0958B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09106344-728A-467A-97AE-5DB91D0958B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09106344-728A-467A-97AE-5DB91D0958B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09106344-728A-467A-97AE-5DB91D0958B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8F1C03-9D2F-4E59-A11C-9421EFE43CDF}.CloudKhanPublish|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8F1C03-9D2F-4E59-A11C-9421EFE43CDF}.CloudKhanPublish|Any CPU.Build.0 = Release|Any CPU
+		{BE8F1C03-9D2F-4E59-A11C-9421EFE43CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8F1C03-9D2F-4E59-A11C-9421EFE43CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8F1C03-9D2F-4E59-A11C-9421EFE43CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8F1C03-9D2F-4E59-A11C-9421EFE43CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5462EE12-1E3B-48C2-A254-3043AC31FC58}.CloudKhanPublish|Any CPU.ActiveCfg = CloudKhanPublish|Any CPU
+		{5462EE12-1E3B-48C2-A254-3043AC31FC58}.CloudKhanPublish|Any CPU.Build.0 = CloudKhanPublish|Any CPU
+		{5462EE12-1E3B-48C2-A254-3043AC31FC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5462EE12-1E3B-48C2-A254-3043AC31FC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5462EE12-1E3B-48C2-A254-3043AC31FC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5462EE12-1E3B-48C2-A254-3043AC31FC58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9667BA1-F246-423D-B3E1-661F60BC6BB9}.CloudKhanPublish|Any CPU.ActiveCfg = CloudKhanPublish|Any CPU
+		{E9667BA1-F246-423D-B3E1-661F60BC6BB9}.CloudKhanPublish|Any CPU.Build.0 = CloudKhanPublish|Any CPU
+		{E9667BA1-F246-423D-B3E1-661F60BC6BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9667BA1-F246-423D-B3E1-661F60BC6BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9667BA1-F246-423D-B3E1-661F60BC6BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9667BA1-F246-423D-B3E1-661F60BC6BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28DC1CF6-1033-468E-95D6-90590EA6BD7B}.CloudKhanPublish|Any CPU.ActiveCfg = Release|Any CPU
+		{28DC1CF6-1033-468E-95D6-90590EA6BD7B}.CloudKhanPublish|Any CPU.Build.0 = Release|Any CPU
+		{28DC1CF6-1033-468E-95D6-90590EA6BD7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28DC1CF6-1033-468E-95D6-90590EA6BD7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28DC1CF6-1033-468E-95D6-90590EA6BD7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28DC1CF6-1033-468E-95D6-90590EA6BD7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
