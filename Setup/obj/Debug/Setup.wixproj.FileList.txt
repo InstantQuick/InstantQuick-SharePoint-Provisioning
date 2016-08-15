@@ -1,6 +1,0 @@
-obj\Debug\Product.wixobj
-C:\Users\testuser\Source\Repos\InstantQuick-SharePoint-Provisioning\Setup\bin\Debug\Setup.msi
-C:\Users\testuser\Source\Repos\InstantQuick-SharePoint-Provisioning\Setup\bin\Debug\Setup.wixpdb
-obj\Debug\Setup.wixproj.BindContentsFileListnull.txt
-obj\Debug\Setup.wixproj.BindOutputsFileListnull.txt
-obj\Debug\Setup.wixproj.BindBuiltOutputsFileListnull.txt
