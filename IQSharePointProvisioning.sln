@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQAppProvisioningBaseClasse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQAppSiteProvisioner", "IQAppSiteProvisioner\IQAppSiteProvisioner.csproj", "{28DC1CF6-1033-468E-95D6-90590EA6BD7B}"
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "PowerShellModuleSetup", "Setup\PowerShellModuleSetup.wixproj", "{6ACE6AEA-ACB2-4E85-BC7E-26C6AF13600C}"
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "PowerShellModuleSetup", "PowerShellModuleSetup\PowerShellModuleSetup.wixproj", "{6ACE6AEA-ACB2-4E85-BC7E-26C6AF13600C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
