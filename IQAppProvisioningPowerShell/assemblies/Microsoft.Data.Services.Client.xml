@@ -5930,9 +5930,6 @@
             <returns>The resolved EDM type.</returns>
         </member>
         <member name="P:System.Data.Services.Client.Materialization.ODataMaterializerContext.IgnoreMissingProperties">
-            <remarks>
-            Undeclared properties will be silently ignored if they are allowed from pervious stage, otherwise exception will be thrown.
-            </remarks>
             <summary>
             Gets a value indicating whether to ignore missing properties when materializing values
             </summary>
@@ -9496,9 +9493,6 @@
         </member>
         <member name="P:System.Data.Services.Client.ResponseInfo.IgnoreMissingProperties">
             <summary>Whether to ignore extra properties in the response payload.</summary>
-        </member>
-        <member name="P:System.Data.Services.Client.ResponseInfo.UndeclaredPropertyBehaviorKinds">
-            <summary>Gets the value of UndeclaredPropertyBehaviorKinds.</summary>
         </member>
         <member name="P:System.Data.Services.Client.ResponseInfo.EntityTracker">
             <summary>Returns the instance of entity tracker class which tracks all the entities and links for the context.</summary>
@@ -18659,28 +18653,6 @@
             <remarks>This has been suggested as a workaround in msdn forums by the VS team. Note that even though this is production code
             the attribute has no effect on anything else.</remarks>
         </member>
-        <member name="T:System.Data.Services.Client.UndeclaredPropertyBehavior">
-            <summary>
-            Indicates DataServiceContext's behavior on undeclared property in entity/complex value.
-            </summary>
-        </member>
-        <member name="F:System.Data.Services.Client.UndeclaredPropertyBehavior.None">
-            <summary>
-            The default value, implies respecting DataServiceContext.IgnoreMissingProperties boolean.
-            Note: IgnoreMissingProperties==false is to throw exception on undeclared property in entity.
-            IgnoreMissingProperties==true is to read undeclared property in entity.
-            </summary>
-        </member>
-        <member name="F:System.Data.Services.Client.UndeclaredPropertyBehavior.Ignore">
-            <summary>
-            Sliently ignores undeclared property.
-            </summary>
-        </member>
-        <member name="F:System.Data.Services.Client.UndeclaredPropertyBehavior.Support">
-            <summary>
-            Supports undeclared property.
-            </summary>
-        </member>
         <member name="T:System.Data.Services.Client.DataServiceContext">
             <summary>
             The <see cref="T:System.Data.Services.Client.DataServiceContext" /> represents the runtime context of the data service.
@@ -18736,9 +18708,6 @@
         </member>
         <member name="F:System.Data.Services.Client.DataServiceContext.ignoreMissingProperties">
             <summary>Options when deserializing properties to the target type.</summary>
-        </member>
-        <member name="F:System.Data.Services.Client.DataServiceContext.undeclaredPropertyBehavior">
-            <summary>Options on top of ignoreMissingProperties.</summary>
         </member>
         <member name="F:System.Data.Services.Client.DataServiceContext.mergeOption">
             <summary>Used to specify a value synchronization strategy.</summary>
@@ -19858,12 +19827,6 @@
         <member name="P:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties">
             <summary>Gets or sets whether the properties read from the type must be mapped to properties on the client-side type.</summary>
             <returns>A Boolean value that indicates whether the properties read from the type must be mapped to properties on the client-side type.</returns>
-            <remarks>
-            This also affects responses during SaveChanges.
-            </remarks>
-        </member>
-        <member name="P:System.Data.Services.Client.DataServiceContext.UndeclaredPropertyBehavior">
-            <summary>Gets or sets whether to respect IgnoreMissingProperties boolean, or directly ignore/support undeclared properties.</summary>
             <remarks>
             This also affects responses during SaveChanges.
             </remarks>

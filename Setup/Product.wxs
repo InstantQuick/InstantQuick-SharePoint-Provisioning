@@ -41,7 +41,7 @@
 
 	<Fragment>
 		<Directory Id="TARGETDIR" Name="SourceDir">
-      <Directory Id="APPLICATIONFOLDER" >
+      <Directory Id="ProgramFilesFolder" Name="ProgramFilesFolder">
         <Directory Id="ModuleFolder" Name="SharePointProvisioning">
           <Directory Id="MODULEFOLDER" Name="IQAppProvisioningModule">
             <Directory Id="ASSEMBLIESFOLDER" Name="Assemblies"></Directory>
@@ -61,11 +61,7 @@
     <ComponentGroup Id="ENVIRONMENTVARS" Directory="TARGETDIR">
       <Component Id="EnvironmentVarPerMachine" Guid="{367A62DF-45EC-4928-849D-467D776A9564}">
         <Condition>ALLUSERS=1  OR (ALLUSERS=2 AND Privileged)</Condition>
-        <Environment Id="PSMODULEPATHPERMACHINE" Name="PSMODULEPATH" Value="C:\SharePointProvisioning\IQAppProvisioningModule" Permanent="no" Part="last" Action="set" System="yes" />
-      </Component>
-      <Component Id="EnvironmentVarPerUser" Guid="{1951BFFB-7643-44CF-BAA1-C30406651D85}">
-        <Condition>ALLUSERS="" OR (ALLUSERS=2 AND (NOT Privileged))</Condition>
-        <Environment Id="PSMODULEPATHPERUSER" Name="PSMODULEPATH" Value="[LocalAppDataFolder]Apps\[ApplicationFolderName]\IQAppProvisioningModule.psm1" Permanent="no" Part="last" Action="set" System="no" />
+        <Environment Id="PSMODULEPATHPERMACHINE" Name="PSMODULEPATH" Value="[ProgramFilesFolder]\SharePointProvisioning\IQAppProvisioningModule" Permanent="no" Part="last" Action="set" System="yes" />
       </Component>
     </ComponentGroup>
 	</Fragment>
