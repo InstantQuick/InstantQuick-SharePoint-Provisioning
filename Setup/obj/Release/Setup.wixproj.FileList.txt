@@ -1,0 +1,6 @@
+obj\Release\Product.wixobj
+C:\Users\testuser\Source\Repos\InstantQuick-SharePoint-Provisioning\Setup\bin\Release\Setup.msi
+C:\Users\testuser\Source\Repos\InstantQuick-SharePoint-Provisioning\Setup\bin\Release\Setup.wixpdb
+obj\Release\Setup.wixproj.BindContentsFileListnull.txt
+obj\Release\Setup.wixproj.BindOutputsFileListnull.txt
+obj\Release\Setup.wixproj.BindBuiltOutputsFileListnull.txt
