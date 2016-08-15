@@ -61,7 +61,7 @@
     <ComponentGroup Id="ENVIRONMENTVARS" Directory="TARGETDIR">
       <Component Id="EnvironmentVarPerMachine" Guid="{367A62DF-45EC-4928-849D-467D776A9564}">
         <Condition>ALLUSERS=1  OR (ALLUSERS=2 AND Privileged)</Condition>
-        <Environment Id="PSMODULEPATHPERMACHINE" Name="PSMODULEPATH" Value="[ProgramFilesFolder]\SharePointProvisioning\IQAppProvisioningModule" Permanent="no" Part="last" Action="set" System="yes" />
+        <Environment Id="PSMODULEPATHPERMACHINE" Name="PSMODULEPATH" Value="[ProgramFilesFolder]SharePointProvisioning\IQAppProvisioningModule" Permanent="no" Part="last" Action="set" System="yes" />
       </Component>
     </ComponentGroup>
 	</Fragment>
