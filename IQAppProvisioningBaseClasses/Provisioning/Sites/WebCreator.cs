@@ -47,11 +47,6 @@ namespace IQAppProvisioningBaseClasses.Provisioning
         public virtual string WebTemplate { get; set; }
 
         /// <summary>
-        ///     Composed look for the web
-        /// </summary>
-        public virtual ComposedLook ComposedLook { get; set; }
-
-        /// <summary>
         ///     Property bag entries for the web
         /// </summary>
         public virtual Dictionary<string, string> PropertyBagItems { get; set; } = new Dictionary<string, string>();

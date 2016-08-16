@@ -1,0 +1,41 @@
+<div id="iqp">
+    <div style="width:95%" ng-controller="IQAppPartConfig">
+        <div class="row" style="padding:30px 30px 15px 30px;">
+            <div class="col-md-6 left-column">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>Starter Configuration Template</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- Add form fields to the iqPart below using the 'config model' -->
+                        <!-- In the sample below this creates a config value for the selected demo: ng-model="config.SelectedDemo" -->
+                        <ng-form class="form-horizontal" name="iqPart">
+                            <div class="form-group" ng-class="{ 'has-error' : iqPart.demo.$invalid && !iqPart.demo.$pristine }">
+                                <label for="demo">Demo Mode</label>
+                                <select name="demo" class="form-control" required ng-model="config.SelectedDemo">
+                                    <option value="" selected disabled>Select an demo...</option>
+                                    <option ng-repeat="demo in Demos">{{demo}}</option>
+                                </select>
+                            </div>
+                        </ng-form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 right-column">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4>This file is located <a target="_blank" href="{{ConfigTemplateUrl}}"><span ng-bind="ConfigTemplateUrl"></span></a></h4>
+                        <p>Modify the AngularJS form to add configuration properties. See <a href="https://docs.angularjs.org/guide/forms" target="_blank">AngularJS Forms</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom:15px;margin-right:15px;">
+            <div class="col-md-12">
+                <div class="pull-right text-right"><a class=" btn btn-primary" role="button" name="save" ng-click="save()" ng-disabled="iqPart.$invalid">Save</a></div>&nbsp;
+            </div>
+        </div>
+    </div>
+</div>

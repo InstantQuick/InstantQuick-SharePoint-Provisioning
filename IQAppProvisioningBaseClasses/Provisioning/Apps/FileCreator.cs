@@ -251,7 +251,10 @@ namespace IQAppProvisioningBaseClasses.Provisioning
             var specialNames = new List<string>()
             {
                 "ContentTypeId",
-                "ContentType"
+                "ContentType",
+                WikiPageContentFieldName,      //Should ignore, set elsewhere
+                PublishingPageContentFieldName //Should ignore, set elsewhere
+
             };
 
             var item = File.ListItemAllFields;
@@ -632,6 +635,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                     newIdMappings)
                     .Replace("{@WebServerRelativeUrl}", web.ServerRelativeUrl != "/" ? web.ServerRelativeUrl : "");
             File.ListItemAllFields.Update();
+            File.Context.ExecuteQuery();
         }
 
         private void AddWikiOrPublishingContentPageWebParts(ClientContext ctx, Web web, Dictionary<string, string> newIdMappings,

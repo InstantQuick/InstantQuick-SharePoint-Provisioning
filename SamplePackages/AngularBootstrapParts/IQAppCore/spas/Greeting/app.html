@@ -1,0 +1,13 @@
+<!-- This page is the root of your AngularJS app's functionality-->
+<div ng-controller="IQAppPart">
+
+    <!-- Customize from here-->
+    <div ng-if="Demo==='hello' && !!UserName">
+        <h1>Hello <span ng-bind="UserName"></span></h1>
+    </div>
+    <div ng-if="Demo!=='hello'">
+        <h1><span ng-bind="Time | date:'mediumTime'"></span></h1>
+    </div>
+    <!-- To here -->
+
+</div>

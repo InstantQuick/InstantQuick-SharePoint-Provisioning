@@ -117,7 +117,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                     {
                         if (!FileExists(fileCreator, ctx, web, fileCreator.ForceOverwrite))
                         {
-                            if (fileCreator.ContentType == "Wiki Page" || fileCreator.ContentTypeId.StartsWith(WikiPageContentTypeId))
+                            if ((fileCreator.ContentType != null && fileCreator.ContentType == "Wiki Page") || (fileCreator.ContentTypeId != null && fileCreator.ContentTypeId.StartsWith(WikiPageContentTypeId)))
                             {
                                 OnNotify(ProvisioningNotificationLevels.Verbose, "Creating wiki page " + fileCreator.Url);
                                 if (wikiPagesLibrary == null)
@@ -136,7 +136,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                                 fileCreator.AddWikiOrPublishingPageWebParts(ctx, web, WikiPageContentFieldName);
                                 fileCreator.Created = true;
                             }
-                            else if (fileCreator.ContentTypeId.StartsWith(PublishingPageContentTypeId))
+                            else if (fileCreator.ContentTypeId != null && fileCreator.ContentTypeId.StartsWith(PublishingPageContentTypeId))
                             {
                                 OnNotify(ProvisioningNotificationLevels.Verbose, "Creating publishing page " + fileCreator.Url);
                                 if (publishingPagesLibrary == null)
@@ -185,7 +185,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                                     }
                                 }
                             }
-                            else if (fileCreator.ContentType == "Web Part Page" || fileCreator.ContentTypeId.StartsWith(BasicPageContentTypeId))
+                            else if ((fileCreator.ContentType != null && fileCreator.ContentType == "Web Part Page") || (fileCreator.ContentTypeId != null && fileCreator.ContentTypeId.StartsWith(BasicPageContentTypeId)))
                             {
                                 OnNotify(ProvisioningNotificationLevels.Verbose,
                                     "Creating web part page " + fileCreator.Url);
@@ -203,7 +203,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                                 OnNotify(ProvisioningNotificationLevels.Verbose, "Creating file " + fileCreator.Url);
                                 var file = GetFileFromStorage(manifest, fileCreator);
                                 if (!fileCreator.IsBinary)
-                                    file = fileCreator.PrepareFile(file, ctx, web, fileCreator.ContentType == "Workflow");
+                                    file = fileCreator.PrepareFile(file, ctx, web, fileCreator.ContentType != null && fileCreator.ContentType == "Workflow");
                                 fileCreator.File = UploadFile(ctx, web, fileCreator.List, file, fileCreator.Url);
                                 ctx.Load(fileCreator.File, f => f.ServerRelativeUrl);
                                 fileCreator.Created = true;

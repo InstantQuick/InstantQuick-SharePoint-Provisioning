@@ -1,0 +1,136 @@
+<style>
+    #dlg .form-horizontal .form-group {
+        margin: auto;
+    }
+
+    #dlg [name=iqPart] input {
+        margin-bottom: 12px;
+    }
+
+    #dlg [name=iqPart] select {
+        margin-bottom: 12px;
+    }
+
+    #dlg [name=iqPart] .checkbox-inline {
+        margin-bottom: 0;
+    }
+
+    #dlg .btn {
+        margin-left: 6px;
+    }
+
+    .left-column {
+        padding-right: 24px;
+    }
+
+    .right-column {
+        min-height: 350px;
+        padding: 26px 12px 6px 24px;
+    }
+</style>
+<div id="dlg">
+    <div style="width:95%" ng-controller="Default">
+        <div ng-if="InEditMode">
+            <div ng-if="State==='view'">
+                <div class="row" style="padding:0 30px 15px 30px;">
+                    <div class="col-md-6 left-column">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h2>Select AngularJS App</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ng-form class="form-horizontal" name="iqPart">
+                                    <div class="form-group" ng-class="{ 'has-error' : iqPart.app.$invalid && !iqPart.app.$pristine }">
+                                        <label for="app">AngularJS App</label>
+                                        <select name="app" class="form-control" required placeholder="Select an app" ng-model="model.SelectedApp" ng-change="appChanged()">
+                                            <option value="" selected disabled>Select an app...</option>
+                                            <option ng-repeat="app in Apps">{{app}}</option>
+                                        </select>
+                                    </div>
+                                </ng-form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 right-column" style="padding-top:30px">
+                        <div class="row" ng-if="!SelectedConfig">
+                            <div class="col-xs-12">
+                                <h4>How to Configure the IQPart for AngularJS 1.4 and Bootstrap 3.3</h4>
+                                <p>Select an existing app or create a new app by choosing a value from the <strong>AngularJS App</strong> dropdown.</p>
+                            </div>
+                        </div>
+                        <div class="row" ng-if="!!SelectedConfig">
+                            <div class="col-xs-12">
+                                <h4><span ng-bind="SelectedConfig.Name"></span></h4>
+                                <p><span ng-bind="SelectedConfig.Description"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-if="!!SelectedConfig">
+                    <div class="col-xs-12">
+                        <span class="pull-right">
+                            <button class="btn btn-primary" ng-click="setPart()">Select App</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="State==='new'">
+                <div class="row" style="padding:0 30px 15px 30px;">
+                    <div class="col-md-6 left-column">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h2>New AngularJS App</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <ng-form class="form-horizontal" name="iqPart">
+                                            <div class="form-group" ng-class="{ 'has-error' : iqPart.Name.$invalid && !iqPart.Name.$pristine }">
+                                                <label for="Name">AngularJS App Name</label>
+                                                <input name="Name" class="form-control" type="text" required placeholder="New app name - no special characters please!" ng-pattern="/^[a-zA-Z\s]*$/" ng-model="newApp.Name" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Description">Description</label>
+                                                <textarea name="Description" type="text" class="form-control" ng-model="newApp.Description" rows="8" placeholder="Longer description of the app..." />
+                                            </div>
+                                        </ng-form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 right-column">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4>How to Create a New IQPart for AngularJS 1.4 and Bootstrap 3.3</h4>
+                                <ol class="list">
+                                    <li>Name your app and optionally enter a description</li>
+                                    <li>Click save</li>
+                                    <li>Modify the generated files to complete your app</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom:15px;margin-right:15px;">
+                    <div class="col-md-12">
+                        <div class="pull-right text-right"><a class=" btn btn-primary" role="button" name="createApp" ng-click="createApp()" ng-disabled="iqPart.$invalid">Create New App</a></div>&nbsp;
+                        <div class="pull-right text-right"><a class=" btn btn-primary" role="button" name="back" ng-click="cancelAdd()">Back</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!InEditMode">
+            <div class="row" style="padding:30px 30px 15px 30px;">
+                <div class="col-md-12" class="text-primary">
+                    <h4>This is an IQPart for AngularJS 1.4 and Bootstrap 3.3</h4>
+                    <p>To edit this IQPart, or create a new part, select <strong>Page | Edit Page</strong> from the ribbon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

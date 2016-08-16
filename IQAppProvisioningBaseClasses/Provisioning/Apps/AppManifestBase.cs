@@ -171,7 +171,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
             var js = new JavaScriptSerializer();
 
             var json = js.Serialize(appManifest);
-            File.WriteAllText(appManifest.BaseFilePath + "manifest.json", json);
+            File.WriteAllText(appManifest.BaseFilePath + "manifest.json", json, new System.Text.UTF8Encoding());
         }
     }
 }

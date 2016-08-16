@@ -165,7 +165,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
 
             var js = new JavaScriptSerializer();
             var json = js.Serialize(siteCreator);
-            File.WriteAllText(siteCreator.BaseFilePath + "sitedefinition.json", json);
+            File.WriteAllText(siteCreator.BaseFilePath + "sitedefinition.json", json, new System.Text.UTF8Encoding());
         }
     }
 }

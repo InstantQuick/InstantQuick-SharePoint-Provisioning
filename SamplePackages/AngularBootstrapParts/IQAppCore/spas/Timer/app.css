@@ -1,0 +1,19 @@
+#iqp .form-horizontal .form-group {
+    margin: auto;
+}
+
+#iqp input, #iqp select {
+    margin-bottom: 12px;
+}
+
+#iqp .checkbox-inline {
+    margin-bottom: 0;
+}
+
+#iqp .btn {
+    margin-left: 6px;
+}
+
+.left-column {
+    padding-right: 24px;
+}

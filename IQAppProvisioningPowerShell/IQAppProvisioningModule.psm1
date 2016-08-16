@@ -56,7 +56,7 @@ function New-IQAppManifest
 	elseif ($JSONFilePath -ne "")
 	{	
 		Write-Host $JSONFilePath
-		$j = Get-Content -Path "$JSONFilePath"
+		$j = Get-Content -Path "$JSONFilePath" -Encoding UTF8
 		return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::GetManifestFromJSON($j)
 	}
 	elseif (($StorageAccount -ne "") -and ($AccountKey -ne "") -and ($Container -eq ""))
@@ -907,7 +907,7 @@ function New-IQSiteDefinition
 	elseif ($JSONFilePath -ne "")
 	{	
 		Write-Host $JSONFilePath
-		$j = Get-Content -Path "$JSONFilePath"
+		$j = Get-Content -Path "$JSONFilePath" -Encoding UTF8
 		return [IQAppProvisioningBaseClasses.Provisioning.SiteDefinition]::GetSiteDefinitionFromJSON($j)
 	}
 	elseif (($StorageAccount -ne "") -and ($AccountKey -ne "") -and ($Container -eq ""))

@@ -172,31 +172,35 @@ namespace IQAppManifestBuilders
 
                     newFileCreator.ListItemFieldValues = listItemCreatorBuilder.GetListItemCreator(file.ListItemAllFields).FieldValues;
 
-                    newFileCreator.ContentType = file.ListItemAllFields.ContentType.Name;
-                    newFileCreator.ContentTypeId = file.ListItemAllFields.ContentType.StringId;
-
-                    if (newFileCreator.ContentTypeId.StartsWith(WikiPageContentTypeId) || newFileCreator.ContentTypeId.StartsWith(PublishingPageContentTypeId))
+                    //Some item types have a list value, but a server null content type, such as dwp files
+                    if (file.ListItemAllFields.ContentType.ServerObjectIsNull != true)
                     {
-                        var contentFieldName = newFileCreator.ContentTypeId.StartsWith(WikiPageContentTypeId) ? WikiPageContentFieldName : PublishingPageContentFieldName;
-                        ProcessWikiOrPublishingPage(ctx, web, fileUrl, file, contentFieldName, newFileCreator);
+                        newFileCreator.ContentType = file.ListItemAllFields.ContentType.Name;
+                        newFileCreator.ContentTypeId = file.ListItemAllFields.ContentType.StringId;
 
-                        if (getRelatedFileCreators)
+                        if (newFileCreator.ContentTypeId.StartsWith(WikiPageContentTypeId) || newFileCreator.ContentTypeId.StartsWith(PublishingPageContentTypeId))
                         {
-                            var contentField = file.ListItemAllFields[contentFieldName]?.ToString() ?? string.Empty;
-                            GetRelatedFileCreators(ctx, web, appManifest, downloadFolderPath, contentField);
+                            var contentFieldName = newFileCreator.ContentTypeId.StartsWith(WikiPageContentTypeId) ? WikiPageContentFieldName : PublishingPageContentFieldName;
+                            ProcessWikiOrPublishingPage(ctx, web, fileUrl, file, contentFieldName, newFileCreator);
+
+                            if (getRelatedFileCreators)
+                            {
+                                var contentField = file.ListItemAllFields[contentFieldName]?.ToString() ?? string.Empty;
+                                GetRelatedFileCreators(ctx, web, appManifest, downloadFolderPath, contentField);
+                            }
+
+                            newFileCreator.IsHomePage = IsHomePage(ctx, fileUrl);
+
+                            //Wiki pages don't get downloaded, they are created from a template
+                            return retVal;
                         }
-
-                        newFileCreator.IsHomePage = IsHomePage(ctx, fileUrl);
-
-                        //Wiki pages don't get downloaded, they are created from a template
-                        return retVal;
-                    }
-                    //0x010107 is declarative workflow document
-                    if (file.ListItemAllFields.ContentType.Id.StringValue.StartsWith(DeclarativeWorkflowDocumentContentTypeId))
-                    {
-                        DownloadWorkflowFile(ctx, web, downloadFolderPath, fileUrl, newFileCreator, appManifest);
-                        newFileCreator.ContentType = "Workflow";
-                        return retVal;
+                        //0x010107 is declarative workflow document
+                        if (file.ListItemAllFields.ContentType.Id.StringValue.StartsWith(DeclarativeWorkflowDocumentContentTypeId))
+                        {
+                            DownloadWorkflowFile(ctx, web, downloadFolderPath, fileUrl, newFileCreator, appManifest);
+                            newFileCreator.ContentType = "Workflow";
+                            return retVal;
+                        }
                     }
                 }
                 if (fileName.ToLowerInvariant().EndsWith(".aspx"))

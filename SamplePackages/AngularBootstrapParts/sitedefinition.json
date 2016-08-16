@@ -1,0 +1,3300 @@
+{
+  "BaseFilePath": "C:\\Users\\testuser\\Source\\Repos\\InstantQuick-SharePoint-Provisioning\\SamplePackages\\AngularBootstrapParts\\",
+  "Description": "Provisioning sample packages for configurable Web Parts based on AngularJS and Bootstrap",
+  "WebDefinition": {
+    "AppManifest": {
+      "DefaultResourceAssembly": null,
+      "AdditionalResourceAssemblies": null,
+      "ProvisioningAssemblyName": null,
+      "ProvisioningClass": null,
+      "Settings": null,
+      "ManifestId": "2bf53598-ddf6-4571-82ee-8593bec6ec9d",
+      "ManifestName": null,
+      "Version": "0.0.0.0",
+      "RemoteHost": null,
+      "StorageType": 1,
+      "BaseFilePath": "C:\\Users\\testuser\\Source\\Repos\\InstantQuick-SharePoint-Provisioning\\SamplePackages\\AngularBootstrapParts\\",
+      "GroupCreators": null,
+      "RoleDefinitions": null,
+      "Fields": { },
+      "ContentTypeCreators": { },
+      "ListCreators": {
+        "AngularJS and Bootstrap Web Parts Documentation": {
+          "ListViewSchemas": {
+            "Created By Me": "\u003cQuery\u003e\u003cWhere\u003e\u003cEq\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cValue Type=\"Integer\"\u003e\u003cUserID /\u003e\u003c/Value\u003e\u003c/Eq\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"FileLeafRef\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"DocIcon\" /\u003e\u003cFieldRef Name=\"LinkFilename\" /\u003e\u003cFieldRef Name=\"Editor\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"Created\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+            "By Author": "\u003cQuery\u003e\u003cGroupBy Collapse=\"FALSE\"\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003c/GroupBy\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"DocIcon\" /\u003e\u003cFieldRef Name=\"LinkFilename\" /\u003e\u003cFieldRef Name=\"Editor\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003cFieldRef Name=\"Created\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+            "By Editor": "\u003cQuery\u003e\u003cGroupBy Collapse=\"FALSE\"\u003e\u003cFieldRef Name=\"Editor\" /\u003e\u003c/GroupBy\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"FileLeafRef\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"DocIcon\" /\u003e\u003cFieldRef Name=\"LinkFilename\" /\u003e\u003cFieldRef Name=\"Editor\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"Created\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e"
+          },
+          "SecurityConfiguration": null,
+          "DocumentTemplateUrl": null,
+          "DefaultViewTitle": "All Pages",
+          "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Modified\" Ascending=\"FALSE\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"DocIcon\" /\u003e\u003cFieldRef Name=\"LinkFilename\" /\u003e\u003cFieldRef Name=\"Editor\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"Created\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+          "Title": "AngularJS and Bootstrap Web Parts Documentation",
+          "Id": "c0222523-e660-4b49-9382-adf44f1648f3",
+          "TitleFieldDisplayName": null,
+          "RequiredFields": [ "FileLeafRef" ],
+          "IndexFields": [ "Modified" ],
+          "HiddenFormFields": [ ],
+          "DisplayFormOnlyFields": [ ],
+          "EnforceUniqueFields": [ ],
+          "RemoveViewFields": null,
+          "AddToAllViewsFields": [ ],
+          "FieldDisplayNameOverrides": { },
+          "AdditionalContentTypes": [ ],
+          "AdditionalFields": { },
+          "NoCrawl": false,
+          "Hidden": false,
+          "QuickLaunchOption": 0,
+          "TemplateFeatureId": "00bfea71-c796-4402-9f2f-0eb9a6e71b18",
+          "TemplateType": 119,
+          "Url": "/AngularJS and Bootstrap Web Parts Documentation",
+          "Description": "",
+          "ReplaceDefaultType": false,
+          "ContentType": "Wiki Page",
+          "ListItems": null,
+          "DeleteExistingListItems": false,
+          "ProvisionListItems": false,
+          "WorkflowAssociations": null,
+          "List": null,
+          "ListInfo": null,
+          "CorrespondingLookupFieldName": null,
+          "CorrespondingLookupFieldNames": null,
+          "CorrespondingLookupField": null,
+          "CustomActionCreators": { },
+          "PropertyBagItems": { },
+          "RemoteEventRegistrationCreators": [ ]
+        },
+        "IQAppCore": {
+          "ListViewSchemas": { },
+          "SecurityConfiguration": null,
+          "DocumentTemplateUrl": null,
+          "DefaultViewTitle": "All Documents",
+          "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"FileLeafRef\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"DocIcon\" /\u003e\u003cFieldRef Name=\"LinkFilename\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003cFieldRef Name=\"Editor\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+          "Title": "IQAppCore",
+          "Id": "fd2fb7f0-188c-4a47-a4f5-c2af8b121e40",
+          "TitleFieldDisplayName": null,
+          "RequiredFields": [ "FileLeafRef" ],
+          "IndexFields": [ ],
+          "HiddenFormFields": [ ],
+          "DisplayFormOnlyFields": [ ],
+          "EnforceUniqueFields": [ ],
+          "RemoveViewFields": null,
+          "AddToAllViewsFields": [ ],
+          "FieldDisplayNameOverrides": { },
+          "AdditionalContentTypes": [ ],
+          "AdditionalFields": {
+            "Shared_x0020_With": "\u003cField ID=\"{ef991a83-108d-4407-8ee5-ccc0c3d836b9}\" Type=\"UserMulti\" DisplayName=\"Shared With\" Mult=\"TRUE\" Name=\"Shared_x0020_With\" StaticName=\"SharedWithUsers\" Group=\"_Hidden\" Sealed=\"TRUE\" AllowDeletion=\"FALSE\" ReadOnly=\"TRUE\" ShowInDisplayForm=\"FALSE\" ShowInEditForm=\"FALSE\" ShowInListSettings=\"FALSE\" Viewable=\"FALSE\" SourceID=\"{846d70ee-c680-4b04-a29a-ddbf9e4fc646}\" Version=\"1\" ColName=\"int1\" RowOrdinal=\"0\" Description=\"\" /\u003e",
+            "Shared_x0020_With_x0020_Details": "\u003cField ID=\"{d3c9caf7-044c-4c71-ae64-092981e54b33}\" Type=\"Note\" DisplayName=\"Shared With Details\" Name=\"Shared_x0020_With_x0020_Details\" StaticName=\"SharedWithDetails\" Group=\"_Hidden\" Sealed=\"TRUE\" AllowDeletion=\"FALSE\" ReadOnly=\"TRUE\" ShowInDisplayForm=\"FALSE\" ShowInEditForm=\"FALSE\" ShowInListSettings=\"FALSE\" Viewable=\"FALSE\" SourceID=\"{93ff4d98-224f-497e-b511-2740e4f88c7f}\" ColName=\"ntext2\" RowOrdinal=\"0\" Description=\"\" /\u003e"
+          },
+          "NoCrawl": false,
+          "Hidden": false,
+          "QuickLaunchOption": 0,
+          "TemplateFeatureId": "00bfea71-e717-4e80-aa17-d0c71b360101",
+          "TemplateType": 101,
+          "Url": "/IQAppCore",
+          "Description": "",
+          "ReplaceDefaultType": false,
+          "ContentType": "Document",
+          "ListItems": null,
+          "DeleteExistingListItems": false,
+          "ProvisionListItems": false,
+          "WorkflowAssociations": null,
+          "List": null,
+          "ListInfo": null,
+          "CorrespondingLookupFieldName": null,
+          "CorrespondingLookupFieldNames": null,
+          "CorrespondingLookupField": null,
+          "CustomActionCreators": { },
+          "PropertyBagItems": { },
+          "RemoteEventRegistrationCreators": [ ]
+        }
+       },
+      "Folders": [ "/_catalogs", "/_catalogs/wp", "/AngularJS and Bootstrap Web Parts Documentation", "/IQAppCore", "/IQAppCore/bootstrap", "/IQAppCore/bootstrap/css", "/IQAppCore/bootstrap/fonts", "/IQAppCore/bootstrap/js", "/IQAppCore/scripts", "/IQAppCore/scripts/AngularJS 1.4 and Bootstrap 3.3 Web Parts", "/IQAppCore/scripts/angular-ui", "/IQAppCore/spacontainer", "/IQAppCore/spacontainer/template", "/IQAppCore/spas", "/IQAppCore/spas/Add Some Control", "/IQAppCore/spas/Bootstrap Reference", "/IQAppCore/spas/Create Components", "/IQAppCore/spas/Greeting", "/IQAppCore/spas/The Basics", "/IQAppCore/spas/Timer", "/SiteAssets", "/SiteAssets/AngularJS and Bootstrap Web Parts Documentation", "/SiteAssets/AngularJS and Bootstrap Web Parts Documentation/Home" ],
+      "FileCreators": {
+        "/AngularJS and Bootstrap Web Parts Documentation/Home.aspx": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "Home.aspx",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "Home.aspx",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "WikiField",
+              "Value": "\u003cdiv class=\"ExternalClass8B7935283549410BAEECA24B6E1A7936\"\u003e\u003ctable id=\"layoutsTable\" style=\"width\u0026#58;100%;\"\u003e\u003ctbody\u003e\u003ctr style=\"vertical-align\u0026#58;top;\"\u003e\u003ctd style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\" role=\"textbox\" aria-autocomplete=\"both\" aria-haspopup=\"true\" aria-multiline=\"true\"\u003e\u003ch1\u003e​​​​​​​​​​Getting Started with IQ Parts using\u0026#160;AngularJS and Bootstrap\u003cbr\u003e\u003c/h1\u003e\u003cp\u003eThis is a sample from \r\n   \u003ca href=\"http\u0026#58;//www.instantquick.com/\"\u003eInstantQuick\u003c/a\u003e that was created using \r\n   \u003ca href=\"https\u0026#58;//apps.instantquick.com/appcentral\"\u003eIQApp Central​\u003c/a\u003e. It is a framework that allows\u0026#160;for user\u0026#160;configurable\u0026#160;Web Parts built using SharePopint,\u0026#160;\u003ca href=\"https\u0026#58;//angularjs.org/\"\u003eAngularJS 1.4\u003c/a\u003e and \r\n   \u003ca href=\"http\u0026#58;//getbootstrap.com/\"\u003eBootstrap 3​\u003c/a\u003e.\u0026#160;​\u003cspan style=\"line-height\u0026#58;1.6;\"\u003eThis sample contains two Web Parts, six sample apps, an extensible configuration system,\u0026#160;a template to help you get started with your own apps,\u0026#160;and\u0026#160;\u003c/span\u003e\u003cspan style=\"line-height\u0026#58;20.7999992370605px;\"\u003esome handy functions to make integrating with SharePoint pages and services eas\u003c/span\u003e\u003cspan style=\"line-height\u0026#58;20.7999992370605px;\"\u003ey\u003c/span\u003e\u003cspan style=\"line-height\u0026#58;1.6;\"\u003e​.\u003c/span\u003e\u003c/p\u003e\u003ch2\u003e​​​Two W​eb Parts\u003cbr\u003e\u003c/h2\u003e\u003cp\u003eThere are two Web Parts. One is based on the standard Content Editor Web Part, and the other is based on the Page Viewer Web Part. They are functionally equivalent but the one based on the\u0026#160;\u003cspan style=\"line-height\u0026#58;20.7999992370605px;\"\u003ePage Viewer Web Part\u003c/span\u003e​ is slightly easier to use. We built both for comparison purposes, but in the end couldn\u0027t really tell a difference. We included both for the sake of completeness. There are two pages that show these Web Parts in action, [[Angular Content Editor IQPart Example]] and \r\n   \u003ca href=\"{@WebServerRelativeUrl}/AngularJS%20and%20Bootstrap%20Web%20Parts%20Documentation/Angular%20PageViewer%20IQParts%20Sample.aspx\"\u003eAngular PageViewer IQParts Example​​\u003c/a\u003e. Each contains three instances of the corresponding Web Part with a nice layout and three of the sample apps.\u003cbr\u003e\u003c/p\u003e\u003cp\u003e\r\n   \u003cimg src=\"{@WebServerRelativeUrl}/SiteAssets/AngularJS%20and%20Bootstrap%20Web%20Parts%20Documentation/Home/AddIQParts.png\" alt=\"AddIQParts.png\" class=\"ms-rteImage-2\" style=\"margin\u0026#58;5px;\" /\u003e\r\n   \u003cbr\u003e\r\n   \u003cbr\u003e\r\n\u003c/p\u003e\u003ch2\u003e​​​Six Sample Apps​​​​​\u003cbr\u003e\u003c/h2\u003e\u003cp\u003e\u003c/p\u003e\u003cp\u003eTo add\u0026#160;​a sample app to a page, add one of the\u0026#160;Web Parts to a page and select an app.\u003cbr\u003e\u003c/p\u003e\u003cp\u003e\r\n   \u003cimg src=\"{@WebServerRelativeUrl}/SiteAssets/AngularJS%20and%20Bootstrap%20Web%20Parts%20Documentation/Home/SixApps.png\" alt=\"SixApps.png\" class=\"ms-rteImage-2\" style=\"margin\u0026#58;5px;\" /\u003e\r\n   \u003cbr\u003e\r\n\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\u003ch3\u003e​​​​​Timer and Greeting\u003c/h3\u003e\u003cp\u003e\r\n   \u003cspan style=\"line-height\u0026#58;1.6;\"\u003eThese samples are the same app with different configurations. The app itself is the template used if you select\u0026#160;\u003cstrong\u003eCreate a new AngularJS app\u003c/strong\u003e​. These samples demonstrate\u0026#58;\u003c/span\u003e\u003c/p\u003e\u003cul\u003e\u003cli\u003e\r\n      \u003cspan style=\"line-height\u0026#58;1.6;\"\u003e​​Resizing\u003c/span\u003e\u003cbr\u003e\u003c/li\u003e\u003cli\u003e\r\n      \u003cspan style=\"line-height\u0026#58;1.6;\"\u003eWeb Part Configuration forms\u003c/span\u003e\u003c/li\u003e\u003cli\u003e\r\n      \u003cspan style=\"line-height\u0026#58;1.6;\"\u003eUsing the SharePoint Client Object Model with an AngularJS factory\u003c/span\u003e\u003c/li\u003e\u003c/ul\u003e\u003ch3\u003e​Bootstrap Reference\u003cbr\u003e\u003c/h3\u003e\u003cp\u003e​This simple sample demonstrates the use of a number of Bootstrap styles and components.\u003cbr\u003e\u003c/p\u003e\u003ch2\u003e​​\u003ca href=\"{@WebServerRelativeUrl}/AngularJS%20and%20Bootstrap%20Web%20Parts%20Documentation/AngularJS%20Demos.aspx\"\u003eAngularJS Samples\u003c/a\u003e\u003cbr\u003e\u003c/h2\u003e\u003cp\u003e​These samples are from the AngularJS home page.\u003cbr\u003e\u003c/p\u003e\u003ch3\u003e​The Basics​\u003c/h3\u003e\u003cp\u003e​This is the \u0027The Basics\u0027 sample from\u0026#160;\u003ca href=\"https\u0026#58;//angularjs.org/\"\u003ehttps\u0026#58;//angularjs.org/​\u003c/a\u003e. It demonstrates basic model binding.​\u003c/p\u003e\u003ch3\u003e​​​Ad​d Some Control\u003cbr\u003e\u003c/h3\u003e\u003cp\u003e​This is the \u0027Add Some Control​\u003cspan style=\"line-height\u0026#58;1.6;\"\u003e\u0027 sample from\u0026#160;\u003ca href=\"https\u0026#58;//angularjs.org/\"\u003ehttps\u0026#58;//angularjs.org/\u003c/a\u003e​. It demonstrates the use of controllers and basic forms.\u003c/span\u003e\u003c/p\u003e\u003ch3\u003eCreate Components\u003c/h3\u003e\u003cp\u003e​This is the \u0027Create Components​\u003cspan style=\"line-height\u0026#58;1.6;\"\u003e\u0027 sample from\u0026#160;\u003ca href=\"https\u0026#58;//angularjs.org/\"\u003ehttps\u0026#58;//angularjs.org/​\u003c/a\u003e​. It demonstrates the use of directives.\u003c/span\u003e\u003c/p\u003e\u003ch2\u003e​​​​Create a New AngularJS App\u003cbr\u003e\u003c/h2\u003e\u003cp\u003e​\u003cimg src=\"{@WebServerRelativeUrl}/SiteAssets/AngularJS%20and%20Bootstrap%20Web%20Parts%20Documentation/Home/NewApp.png\" alt=\"NewApp.png\" class=\"ms-rteImage-2\" style=\"margin\u0026#58;5px;\" /\u003e\u003cbr\u003eTo create a new app, add one of the Web Parts to a page and select\u0026#160;\u003cstrong\u003eCreate new AngularJS app...\u003c/strong\u003e​, then give your app a name and description. This will create a new folder in IQAppCore/SPAs with the name you provide and copy the\u0026#160;template files for your new app. Edit the files as desired to build your own amazing creation!\u003cbr\u003e\u003c/p\u003e\u003cp\u003e\u003c/p\u003e\r\n\u003cbr\u003e\r\n\u003cbr\u003e\r\n\u003cbr\u003e\r\n\u003cbr\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cspan id=\"layoutsData\" style=\"display\u0026#58;none;\"\u003efalse,false,1\u003c/span\u003e\u003c/div\u003e",
+              "FieldType": "Note"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Wiki Page",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": true,
+          "Url": "/AngularJS and Bootstrap Web Parts Documentation/Home.aspx",
+          "HostWebResourceKey": null,
+          "List": "AngularJS and Bootstrap Web Parts Documentation",
+          "ContentType": "Wiki Page",
+          "ContentTypeId": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\AngularJS and Bootstrap Web Parts Documentation\\Home.aspx",
+          "WebParts": { },
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": { },
+          "WikiPageWebPartListViews": { }
+        },
+        "/AngularJS and Bootstrap Web Parts Documentation/Angular Content Editor IQPart Example.aspx": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "Angular Content Editor IQPart Example.aspx",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "Angular Content Editor IQPart Example.aspx",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "WikiField",
+              "Value": "\u003cdiv class=\"ExternalClass546DAF3EF5144787B1B3B115EA79FB62\"\u003e\u003ctable id=\"layoutsTable\" style=\"width\u0026#58;100%;\"\u003e\u003ctbody\u003e\u003ctr style=\"vertical-align\u0026#58;top;\"\u003e\u003ctd style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\" role=\"textbox\" aria-autocomplete=\"both\" aria-haspopup=\"true\" aria-multiline=\"true\"\u003e​\u003ctable cellspacing=\"0\" width=\"100%\" class=\"ms-rteTable-0\"\u003e\u003ctbody\u003e\u003ctr class=\"ms-rteTableEvenRow-0\"\u003e\u003ctd class=\"ms-rteTableEvenCol-0\" style=\"width\u0026#58;50%;\"\u003e​​\r\n            \u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 67a27da3-7fcc-4499-9a5c-1419cd744dd9\" id=\"div_67a27da3-7fcc-4499-9a5c-1419cd744dd9\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_67a27da3-7fcc-4499-9a5c-1419cd744dd9\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e​​\u003c/td\u003e\u003ctd class=\"ms-rteTableOddCol-0\" style=\"width\u0026#58;50%;\"\u003e​\r\n            \u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 40e730b1-fb9c-4ef2-a217-d13f20ec1738\" id=\"div_40e730b1-fb9c-4ef2-a217-d13f20ec1738\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_40e730b1-fb9c-4ef2-a217-d13f20ec1738\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read e57786e2-66e6-4ea9-90b7-72f463e327f2\" id=\"div_e57786e2-66e6-4ea9-90b7-72f463e327f2\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_e57786e2-66e6-4ea9-90b7-72f463e327f2\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cp\u003e​​\u003cbr\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cspan id=\"layoutsData\" style=\"display\u0026#58;none;\"\u003efalse,false,1\u003c/span\u003e\u003c/div\u003e",
+              "FieldType": "Note"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Wiki Page",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/AngularJS and Bootstrap Web Parts Documentation/Angular Content Editor IQPart Example.aspx",
+          "HostWebResourceKey": null,
+          "List": "AngularJS and Bootstrap Web Parts Documentation",
+          "ContentType": "Wiki Page",
+          "ContentTypeId": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\AngularJS and Bootstrap Web Parts Documentation\\Angular Content Editor IQPart Example.aspx",
+          "WebParts": {
+            "e57786e2-66e6-4ea9-90b7-72f463e327f2": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eBootstrap Reference\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eAllows authors to enter rich text content.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e3300px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscontl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.ContentEditorWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\"\u003e../IQAppCore/SPAContainer/bodyframeBootstrapReference.html\u003c/ContentLink\u003e \u003cContent xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\" /\u003e \u003cPartStorage xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\" /\u003e\u003c/WebPart\u003e",
+            "67a27da3-7fcc-4499-9a5c-1419cd744dd9": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eGreeting\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eAllows authors to enter rich text content.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e80px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscontl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.ContentEditorWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\"\u003e../IQAppCore/SPAContainer/bodyframeGreeting.html\u003c/ContentLink\u003e \u003cContent xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\" /\u003e \u003cPartStorage xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\" /\u003e\u003c/WebPart\u003e",
+            "40e730b1-fb9c-4ef2-a217-d13f20ec1738": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eTimer\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eAllows authors to enter rich text content.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e80px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscontl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.ContentEditorWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\"\u003e../IQAppCore/SPAContainer/bodyframeTimer.html\u003c/ContentLink\u003e \u003cContent xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\" /\u003e \u003cPartStorage xmlns=\"http://schemas.microsoft.com/WebPart/v2/ContentEditor\" /\u003e\u003c/WebPart\u003e"
+          },
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": {
+            "67a27da3-7fcc-4499-9a5c-1419cd744dd9": "67a27da3-7fcc-4499-9a5c-1419cd744dd9",
+            "40e730b1-fb9c-4ef2-a217-d13f20ec1738": "40e730b1-fb9c-4ef2-a217-d13f20ec1738",
+            "e57786e2-66e6-4ea9-90b7-72f463e327f2": "e57786e2-66e6-4ea9-90b7-72f463e327f2"
+          },
+          "WikiPageWebPartListViews": { }
+        },
+        "/AngularJS and Bootstrap Web Parts Documentation/Angular PageViewer IQParts Sample.aspx": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "Angular PageViewer IQParts Sample.aspx",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "Angular PageViewer IQParts Sample.aspx",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "WikiField",
+              "Value": "\u003cdiv class=\"ExternalClass0D36F8BB69E14FCE8B7B0CAEA28AD0B9\"\u003e\u003ctable id=\"layoutsTable\" style=\"width\u0026#58;100%;\"\u003e\u003ctbody\u003e\u003ctr style=\"vertical-align\u0026#58;top;\"\u003e\u003ctd style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\"\u003e\u003ctable width=\"100%\" class=\"ms-rteTable-0\" cellspacing=\"0\"\u003e\u003ctbody\u003e\u003ctr class=\"ms-rteTableEvenRow-0\"\u003e\u003ctd class=\"ms-rteTableEvenCol-0\" style=\"width\u0026#58;50%;\"\u003e​ \r\n            \u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read c353d5f1-e4e5-4de4-a2f1-ba87aa1323a1\" id=\"div_c353d5f1-e4e5-4de4-a2f1-ba87aa1323a1\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_c353d5f1-e4e5-4de4-a2f1-ba87aa1323a1\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\r\n         ​\u003cbr\u003e\u003c/td\u003e\u003ctd class=\"ms-rteTableOddCol-0\" style=\"width\u0026#58;50%;\"\u003e​\r\n            \u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 3430808f-d522-4d27-bc2e-d7d4c3326c9a\" id=\"div_3430808f-d522-4d27-bc2e-d7d4c3326c9a\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_3430808f-d522-4d27-bc2e-d7d4c3326c9a\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 9889b390-2662-480c-9fb5-fd61582a8d0b\" id=\"div_9889b390-2662-480c-9fb5-fd61582a8d0b\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_9889b390-2662-480c-9fb5-fd61582a8d0b\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cp\u003e​​\u003cbr\u003e​\u003cbr\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cspan id=\"layoutsData\" style=\"display\u0026#58;none;\"\u003efalse,false,1\u003c/span\u003e\u003c/div\u003e",
+              "FieldType": "Note"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Wiki Page",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/AngularJS and Bootstrap Web Parts Documentation/Angular PageViewer IQParts Sample.aspx",
+          "HostWebResourceKey": null,
+          "List": "AngularJS and Bootstrap Web Parts Documentation",
+          "ContentType": "Wiki Page",
+          "ContentTypeId": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\AngularJS and Bootstrap Web Parts Documentation\\Angular PageViewer IQParts Sample.aspx",
+          "WebParts": {
+            "c353d5f1-e4e5-4de4-a2f1-ba87aa1323a1": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eGreeting\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eDisplays another Web page on this Web page. The other Web page is presented in an IFrame.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e80px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e../IQAppCore/SPAContainer/spabody.aspx?app=Greeting\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e",
+            "3430808f-d522-4d27-bc2e-d7d4c3326c9a": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eTimer\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eDisplays another Web page on this Web page. The other Web page is presented in an IFrame.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e80px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e../IQAppCore/SPAContainer/spabody.aspx?app=Timer\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e",
+            "9889b390-2662-480c-9fb5-fd61582a8d0b": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eBootstrap Reference\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eDisplays another Web page on this Web page. The other Web page is presented in an IFrame.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e3400px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e../IQAppCore/SPAContainer/spabody.aspx?app=Bootstrap Reference\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e"
+          },
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": {
+            "c353d5f1-e4e5-4de4-a2f1-ba87aa1323a1": "c353d5f1-e4e5-4de4-a2f1-ba87aa1323a1",
+            "3430808f-d522-4d27-bc2e-d7d4c3326c9a": "3430808f-d522-4d27-bc2e-d7d4c3326c9a",
+            "9889b390-2662-480c-9fb5-fd61582a8d0b": "9889b390-2662-480c-9fb5-fd61582a8d0b"
+          },
+          "WikiPageWebPartListViews": { }
+        },
+        "/AngularJS and Bootstrap Web Parts Documentation/AngularJS Demos.aspx": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "AngularJS Demos.aspx",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "AngularJS Demos.aspx",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "WikiField",
+              "Value": "\u003cdiv class=\"ExternalClass60B51B2BF3E94278BA5DD4B0FEC5B485\"\u003e\u003ctable id=\"layoutsTable\" style=\"width\u0026#58;100%;\"\u003e\u003ctbody\u003e\u003ctr style=\"vertical-align\u0026#58;top;\"\u003e\u003ctd style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\" role=\"textbox\" aria-autocomplete=\"both\" aria-haspopup=\"true\" aria-multiline=\"true\"\u003e\u003ch1\u003e​​​​​​​​​​​​​The Basics\u003cbr\u003e\u003c/h1\u003e\u003cp\u003e\u003c/p\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read b25172a1-b4e0-4732-b5b4-1240ddc10d8c\" id=\"div_b25172a1-b4e0-4732-b5b4-1240ddc10d8c\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_b25172a1-b4e0-4732-b5b4-1240ddc10d8c\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cp\u003e​​\u003cbr\u003e\u003c/p\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read e000c37e-a1a3-40ca-896b-f87aeb1c8964\" id=\"div_e000c37e-a1a3-40ca-896b-f87aeb1c8964\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_e000c37e-a1a3-40ca-896b-f87aeb1c8964\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\r\n\r\n\u003ch1\u003eAdd Some Control​​\u003c/h1\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 267e2851-3f80-4332-9131-eee78f899310\" id=\"div_267e2851-3f80-4332-9131-eee78f899310\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_267e2851-3f80-4332-9131-eee78f899310\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\r\n\u003ch1\u003eCreate Components\u003c/h1\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read a82e47fc-da0c-40e1-bca6-8fb38e9c201e\" id=\"div_a82e47fc-da0c-40e1-bca6-8fb38e9c201e\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_a82e47fc-da0c-40e1-bca6-8fb38e9c201e\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e​\u003cbr\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cspan id=\"layoutsData\" style=\"display\u0026#58;none;\"\u003efalse,false,1\u003c/span\u003e\u003c/div\u003e",
+              "FieldType": "Note"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Wiki Page",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/AngularJS and Bootstrap Web Parts Documentation/AngularJS Demos.aspx",
+          "HostWebResourceKey": null,
+          "List": "AngularJS and Bootstrap Web Parts Documentation",
+          "ContentType": "Wiki Page",
+          "ContentTypeId": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\AngularJS and Bootstrap Web Parts Documentation\\AngularJS Demos.aspx",
+          "WebParts": {
+            "e000c37e-a1a3-40ca-896b-f87aeb1c8964": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eThe Basics\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eA container for an AngularJS/Bootstrap add-in based on the Page Viewer Web Part.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e80px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e../IQAppCore/SPAContainer/spabody.aspx?app=The Basics\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e",
+            "267e2851-3f80-4332-9131-eee78f899310": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eAdd Some Control\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eA container for an AngularJS/Bootstrap add-in based on the Page Viewer Web Part.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e250px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e../IQAppCore/SPAContainer/spabody.aspx?app=Add Some Control\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e",
+            "a82e47fc-da0c-40e1-bca6-8fb38e9c201e": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eCreate Components\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eA container for an AngularJS/Bootstrap add-in based on the Page Viewer Web Part.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e250px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e{@ListUrl:IQAppCore}/SPAContainer/SPABody.aspx?app=Create Components\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e"
+          },
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": {
+            "e000c37e-a1a3-40ca-896b-f87aeb1c8964": "e000c37e-a1a3-40ca-896b-f87aeb1c8964",
+            "267e2851-3f80-4332-9131-eee78f899310": "267e2851-3f80-4332-9131-eee78f899310",
+            "a82e47fc-da0c-40e1-bca6-8fb38e9c201e": "a82e47fc-da0c-40e1-bca6-8fb38e9c201e"
+          },
+          "WikiPageWebPartListViews": { }
+        },
+        "/AngularJS and Bootstrap Web Parts Documentation/Sample.aspx": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "Sample.aspx",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "Sample.aspx",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "WikiField",
+              "Value": "\u003cdiv class=\"ExternalClass8718AF0F0AB94ECA93CCB825C7E76E16\"\u003e\u003ctable id=\"layoutsTable\" style=\"width\u0026#58;100%;\"\u003e\u003ctbody\u003e\u003ctr style=\"vertical-align\u0026#58;top;\"\u003e\u003ctd style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\"\u003e\u003cp\u003e​\u003cbr\u003e\u003c/p\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 5d51d768-a391-485f-8cd6-91248a0e8781\" id=\"div_5d51d768-a391-485f-8cd6-91248a0e8781\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_5d51d768-a391-485f-8cd6-91248a0e8781\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cp\u003e​\u003cbr\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cspan id=\"layoutsData\" style=\"display\u0026#58;none;\"\u003efalse,false,1\u003c/span\u003e\u003c/div\u003e",
+              "FieldType": "Note"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Wiki Page",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/AngularJS and Bootstrap Web Parts Documentation/Sample.aspx",
+          "HostWebResourceKey": null,
+          "List": "AngularJS and Bootstrap Web Parts Documentation",
+          "ContentType": "Wiki Page",
+          "ContentTypeId": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\AngularJS and Bootstrap Web Parts Documentation\\Sample.aspx",
+          "WebParts": { "509814bf-b130-4b07-b581-e77f600e807b": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eAngularJS IQApp Container (Page Viewer)\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eA container for an AngularJS/Bootstrap add-in based on the Page Viewer Web Part.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e400px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e{@ListUrl:IQAppCore}/SPAContainer/SPABody.aspx\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e" },
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": { "509814bf-b130-4b07-b581-e77f600e807b": "5d51d768-a391-485f-8cd6-91248a0e8781" },
+          "WikiPageWebPartListViews": { }
+        },
+        "/AngularJS and Bootstrap Web Parts Documentation/Foo.aspx": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "Foo.aspx",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "Foo.aspx",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "WikiField",
+              "Value": "\u003cdiv class=\"ExternalClassA87E78793D4343DF9F3B5BB094FFF688\"\u003e\u003ctable id=\"layoutsTable\" style=\"width\u0026#58;100%;\"\u003e\u003ctbody\u003e\u003ctr style=\"vertical-align\u0026#58;top;\"\u003e\u003ctd style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\"\u003e\u003cp\u003e​​\u003cbr\u003e\u003c/p\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read e5f85c32-ca71-4fdf-bd70-d41a6adff3e5\" id=\"div_e5f85c32-ca71-4fdf-bd70-d41a6adff3e5\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_e5f85c32-ca71-4fdf-bd70-d41a6adff3e5\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cp\u003e​\u003cbr\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cspan id=\"layoutsData\" style=\"display\u0026#58;none;\"\u003efalse,false,1\u003c/span\u003e\u003c/div\u003e",
+              "FieldType": "Note"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Wiki Page",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/AngularJS and Bootstrap Web Parts Documentation/Foo.aspx",
+          "HostWebResourceKey": null,
+          "List": "AngularJS and Bootstrap Web Parts Documentation",
+          "ContentType": "Wiki Page",
+          "ContentTypeId": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\AngularJS and Bootstrap Web Parts Documentation\\Foo.aspx",
+          "WebParts": { "2da24c9e-ef9d-45b4-8936-ff6216dc0c31": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eAngularJS IQApp Container (Page Viewer)\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eA container for an AngularJS/Bootstrap add-in based on the Page Viewer Web Part.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e400px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e{@ListUrl:IQAppCore}/SPAContainer/SPABody.aspx\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e" },
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": { "2da24c9e-ef9d-45b4-8936-ff6216dc0c31": "e5f85c32-ca71-4fdf-bd70-d41a6adff3e5" },
+          "WikiPageWebPartListViews": { }
+        },
+        "/IQAppCore/bootstrap/css/bootstrap.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/css/bootstrap.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\css\\bootstrap.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/css/bootstrap.min.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap.min.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap.min.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/css/bootstrap.min.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\css\\bootstrap.min.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/css/bootstrap.css.map": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap.css.map",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap.css.map",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/css/bootstrap.css.map",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\css\\bootstrap.css.map",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/css/bootstrap-theme.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap-theme.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap-theme.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/css/bootstrap-theme.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\css\\bootstrap-theme.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/css/bootstrap-theme.css.map": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap-theme.css.map",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap-theme.css.map",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/css/bootstrap-theme.css.map",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\css\\bootstrap-theme.css.map",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/css/bootstrap-theme.min.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap-theme.min.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap-theme.min.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/css/bootstrap-theme.min.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\css\\bootstrap-theme.min.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.eot": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "glyphicons-halflings-regular.eot",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "glyphicons-halflings-regular.eot",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.eot",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": true,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\fonts\\glyphicons-halflings-regular.eot",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.svg": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "glyphicons-halflings-regular.svg",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "glyphicons-halflings-regular.svg",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.svg",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\fonts\\glyphicons-halflings-regular.svg",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.ttf": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "glyphicons-halflings-regular.ttf",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "glyphicons-halflings-regular.ttf",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.ttf",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": true,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\fonts\\glyphicons-halflings-regular.ttf",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.woff": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "glyphicons-halflings-regular.woff",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "glyphicons-halflings-regular.woff",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.woff",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": true,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\fonts\\glyphicons-halflings-regular.woff",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.woff2": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "glyphicons-halflings-regular.woff2",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "glyphicons-halflings-regular.woff2",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/fonts/glyphicons-halflings-regular.woff2",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": true,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\fonts\\glyphicons-halflings-regular.woff2",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/js/bootstrap.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/js/bootstrap.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\js\\bootstrap.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/bootstrap/js/bootstrap.min.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap.min.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap.min.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/bootstrap/js/bootstrap.min.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\bootstrap\\js\\bootstrap.min.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/angular-ui/ui-bootstrap.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "ui-bootstrap.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "ui-bootstrap.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/angular-ui/ui-bootstrap.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\angular-ui\\ui-bootstrap.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/angular-ui/ui-bootstrap.min.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "ui-bootstrap.min.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "ui-bootstrap.min.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/angular-ui/ui-bootstrap.min.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\angular-ui\\ui-bootstrap.min.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/angular-ui/ui-bootstrap-tpls.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "ui-bootstrap-tpls.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "ui-bootstrap-tpls.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/angular-ui/ui-bootstrap-tpls.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\angular-ui\\ui-bootstrap-tpls.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/angular-ui/ui-bootstrap-tpls.min.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "ui-bootstrap-tpls.min.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "ui-bootstrap-tpls.min.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/angular-ui/ui-bootstrap-tpls.min.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\angular-ui\\ui-bootstrap-tpls.min.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/angular.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "angular.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "angular.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/angular.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\angular.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/bootstrap.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bootstrap.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bootstrap.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/bootstrap.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\bootstrap.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/spabody.aspx": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "spabody.aspx",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "spabody.aspx",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "Title",
+              "Value": "SPA Scaffolding",
+              "FieldType": "Text"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/spabody.aspx",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\spabody.aspx",
+          "WebParts": { },
+          "WebPartPageZoneMappings": [ ],
+          "WebPartPageWebPartListViews": { },
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/jquery-2.1.1.min.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "jquery-2.1.1.min.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "jquery-2.1.1.min.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/jquery-2.1.1.min.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\jquery-2.1.1.min.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/iqpart.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "iqpart.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "iqpart.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/iqpart.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\iqpart.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/default.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "default.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "default.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/default.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\default.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/template/app.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/template/app.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\template\\app.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/template/app.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/template/app.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\template\\app.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/template/app.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/template/app.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\template\\app.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/template/config.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "config.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "config.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/template/config.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\template\\config.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Bootstrap Reference/app.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Bootstrap Reference/app.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Bootstrap Reference\\app.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Bootstrap Reference/app.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Bootstrap Reference/app.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Bootstrap Reference\\app.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Bootstrap Reference/app.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Bootstrap Reference/app.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Bootstrap Reference\\app.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Bootstrap Reference/config.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "config.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "config.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Bootstrap Reference/config.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Bootstrap Reference\\config.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Bootstrap Reference/defaultconfig.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "defaultconfig.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "defaultconfig.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Bootstrap Reference/defaultconfig.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Bootstrap Reference\\defaultconfig.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/configurations.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "configurations.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "configurations.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/configurations.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\configurations.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Timer/app.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Timer/app.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Timer\\app.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Timer/app.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Timer/app.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Timer\\app.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Timer/app.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Timer/app.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Timer\\app.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Timer/config.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "config.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "config.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Timer/config.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Timer\\config.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Timer/defaultconfig.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "defaultconfig.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "defaultconfig.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Timer/defaultconfig.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Timer\\defaultconfig.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Greeting/app.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Greeting/app.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Greeting\\app.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Greeting/app.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Greeting/app.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Greeting\\app.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Greeting/app.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Greeting/app.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Greeting\\app.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Greeting/config.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "config.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "config.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Greeting/config.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Greeting\\config.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Greeting/defaultconfig.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "defaultconfig.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "defaultconfig.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Greeting/defaultconfig.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Greeting\\defaultconfig.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/lab.min.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "lab.min.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "lab.min.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/lab.min.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\lab.min.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/bodyframe.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bodyframe.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bodyframe.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/bodyframe.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\bodyframe.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/bodyframeBootstrapReference.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bodyframeBootstrapReference.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bodyframeBootstrapReference.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/bodyframeBootstrapReference.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\bodyframeBootstrapReference.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/bodyframeGreeting.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bodyframeGreeting.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bodyframeGreeting.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/bodyframeGreeting.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\bodyframeGreeting.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spacontainer/bodyframeTimer.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "bodyframeTimer.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "bodyframeTimer.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spacontainer/bodyframeTimer.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spacontainer\\bodyframeTimer.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/The Basics/app.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/The Basics/app.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\The Basics\\app.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/The Basics/app.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/The Basics/app.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\The Basics\\app.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/The Basics/app.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/The Basics/app.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\The Basics\\app.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/The Basics/config.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "config.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "config.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/The Basics/config.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\The Basics\\config.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/The Basics/defaultconfig.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "defaultconfig.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "defaultconfig.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/The Basics/defaultconfig.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\The Basics\\defaultconfig.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Add Some Control/app.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Add Some Control/app.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Add Some Control\\app.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Add Some Control/app.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Add Some Control/app.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Add Some Control\\app.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Add Some Control/app.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Add Some Control/app.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Add Some Control\\app.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Add Some Control/config.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "config.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "config.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Add Some Control/config.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Add Some Control\\config.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Add Some Control/defaultconfig.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "defaultconfig.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "defaultconfig.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Add Some Control/defaultconfig.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Add Some Control\\defaultconfig.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Create Components/app.css": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.css",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.css",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Create Components/app.css",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Create Components\\app.css",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Create Components/app.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Create Components/app.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Create Components\\app.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Create Components/app.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "app.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "app.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Create Components/app.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Create Components\\app.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Create Components/config.html": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "config.html",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "config.html",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Create Components/config.html",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Create Components\\config.html",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/spas/Create Components/defaultconfig.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "defaultconfig.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "defaultconfig.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/spas/Create Components/defaultconfig.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\spas\\Create Components\\defaultconfig.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/IQAppCore/scripts/AngularJS 1.4 and Bootstrap 3.3 Web Parts/settings.js": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "settings.js",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "settings.js",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/IQAppCore/scripts/AngularJS 1.4 and Bootstrap 3.3 Web Parts/settings.js",
+          "HostWebResourceKey": null,
+          "List": "IQAppCore",
+          "ContentType": "Document",
+          "ContentTypeId": "0x01010030FE742E4D8B4C4FB371CC701244D877",
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\IQAppCore\\scripts\\AngularJS 1.4 and Bootstrap 3.3 Web Parts\\settings.js",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/SiteAssets/AngularJS and Bootstrap Web Parts Documentation/Home/AddIQParts.png": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "AddIQParts.png",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x010100EC3C673DE29AFA4C8AD987DE67435C06",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "AddIQParts.png",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/SiteAssets/AngularJS and Bootstrap Web Parts Documentation/Home/AddIQParts.png",
+          "HostWebResourceKey": null,
+          "List": "Site Assets",
+          "ContentType": "Document",
+          "ContentTypeId": "0x010100EC3C673DE29AFA4C8AD987DE67435C06",
+          "IsBinary": true,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\SiteAssets\\AngularJS and Bootstrap Web Parts Documentation\\Home\\AddIQParts.png",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/SiteAssets/AngularJS and Bootstrap Web Parts Documentation/Home/NewApp.png": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "NewApp.png",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x010100EC3C673DE29AFA4C8AD987DE67435C06",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "NewApp.png",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/SiteAssets/AngularJS and Bootstrap Web Parts Documentation/Home/NewApp.png",
+          "HostWebResourceKey": null,
+          "List": "Site Assets",
+          "ContentType": "Document",
+          "ContentTypeId": "0x010100EC3C673DE29AFA4C8AD987DE67435C06",
+          "IsBinary": true,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\SiteAssets\\AngularJS and Bootstrap Web Parts Documentation\\Home\\NewApp.png",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/SiteAssets/AngularJS and Bootstrap Web Parts Documentation/Home/SixApps.png": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "SixApps.png",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x010100EC3C673DE29AFA4C8AD987DE67435C06",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "SixApps.png",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "Document",
+              "FieldType": "ContentType"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/SiteAssets/AngularJS and Bootstrap Web Parts Documentation/Home/SixApps.png",
+          "HostWebResourceKey": null,
+          "List": "Site Assets",
+          "ContentType": "Document",
+          "ContentTypeId": "0x010100EC3C673DE29AFA4C8AD987DE67435C06",
+          "IsBinary": true,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\SiteAssets\\AngularJS and Bootstrap Web Parts Documentation\\Home\\SixApps.png",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/_catalogs/wp/AngularJS IQApp Container Content Editor.dwp": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "AngularJS IQApp Container Content Editor.dwp",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x00E18EDA8679F5134D87D3F5D4306E55B5",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "AngularJS IQApp Container Content Editor.dwp",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "Title",
+              "Value": "AngularJS IQApp Container (Content Editor)",
+              "FieldType": "Text"
+            },
+            {
+              "FieldName": "WebPartDescription",
+              "Value": "A container for an AngularJS/Bootstrap add-in based on the Content Editor Web Part.",
+              "FieldType": "Note"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/_catalogs/wp/AngularJS IQApp Container Content Editor.dwp",
+          "HostWebResourceKey": null,
+          "List": "Web Part Gallery",
+          "ContentType": null,
+          "ContentTypeId": null,
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\_catalogs\\wp\\AngularJS IQApp Container Content Editor.dwp",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        },
+        "/_catalogs/wp/AngularJS IQApp Container Page Viewer.dwp": {
+          "SecurityConfiguration": null,
+          "AppPageIdentifier": null,
+          "Name": "AngularJS IQApp Container Page Viewer.dwp",
+          "ViewSchemas": null,
+          "ListViewWebParts": null,
+          "ListItemFieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x00E18EDA8679F5134D87D3F5D4306E55B5",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "FileLeafRef",
+              "Value": "AngularJS IQApp Container Page Viewer.dwp",
+              "FieldType": "File"
+            },
+            {
+              "FieldName": "Title",
+              "Value": "AngularJS IQApp Container (Page Viewer)",
+              "FieldType": "Text"
+            },
+            {
+              "FieldName": "WebPartDescription",
+              "Value": "A container for an AngularJS/Bootstrap add-in based on the Page Viewer Web Part.",
+              "FieldType": "Note"
+            }
+          ],
+          "IsHomePage": false,
+          "Url": "/_catalogs/wp/AngularJS IQApp Container Page Viewer.dwp",
+          "HostWebResourceKey": null,
+          "List": "Web Part Gallery",
+          "ContentType": null,
+          "ContentTypeId": null,
+          "IsBinary": false,
+          "DeleteOnCleanup": false,
+          "ForceOverwrite": true,
+          "Created": false,
+          "File": null,
+          "RelativeFilePath": "\\_catalogs\\wp\\AngularJS IQApp Container Page Viewer.dwp",
+          "WebParts": null,
+          "WebPartPageZoneMappings": null,
+          "WebPartPageWebPartListViews": null,
+          "WikiPageWebPartStorageKeyMappings": null,
+          "WikiPageWebPartListViews": null
+        }
+      },
+      "ClassicWorkflowCreators": null,
+      "CustomActionCreators": null,
+      "AddFeatures": {
+        "MaintenanceLogs": {
+          "FeatureId": "8c6f9096-388d-4eed-96ff-698b3ec46fc4",
+          "DisplayName": "MaintenanceLogs",
+          "Force": true,
+          "FeatureDefinitionScope": 3
+        }
+      },
+      "RemoveFeatures": {
+        "MDSFeature": {
+          "FeatureId": "87294c72-f260-42f3-a41b-981a2ffce37a",
+          "DisplayName": "MDSFeature",
+          "FeatureDefinitionScope": 3,
+          "Force": true
+        }
+      },
+      "Navigation": null,
+      "LookAndFeel": null,
+      "RemoteEventRegistrationCreators": null,
+      "Description": null,
+      "RuntimeResources": null,
+      "ClientPageRuntimeResources": null,
+      "ClientGlobalRuntimeResources": null
+    },
+    "Description": "",
+    "Language": 1033,
+    "Title": "AngularJS",
+    "SiteAuditSettings": null,
+    "Url": "/",
+    "SecurityConfiguration": null,
+    "Webs": { },
+    "WebTemplate": "STS#0",
+    "PropertyBagItems": { }
+  },
+  "RootWebOnly": false,
+  "SiteDefinitionId": "67a2816f-a0b2-4106-b5fd-3d6fc0328159",
+  "StorageType": 1,
+  "Title": "AngularJS and Bootstrap Web Parts",
+  "Version": "0.0.0.0"
+}
