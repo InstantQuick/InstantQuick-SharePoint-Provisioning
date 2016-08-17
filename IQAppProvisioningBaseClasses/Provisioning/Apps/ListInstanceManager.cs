@@ -163,7 +163,8 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                         "DateTime",
                         "User",
                         "TaxonomyFieldType",
-                        "TaxonomyFieldTypeMulti"
+                        "TaxonomyFieldTypeMulti",
+                        "Boolean"
                     };
 
                     var specialNames = new List<string>()
@@ -186,6 +187,10 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                             else if (fieldInfo.FieldType == "DateTime")
                             {
                                 item[fieldInfo.FieldName] = DateTime.ParseExact(fieldInfo.Value, "yyyy-MM-ddTHH:mm:ss.fffZ", CultureInfo.InvariantCulture);
+                            }
+                            else if (fieldInfo.FieldType == "Boolean")
+                            {
+                                item[fieldInfo.FieldName] = (fieldInfo.Value == "Yes");
                             }
                             else if (fieldInfo.FieldType == "User")
                             {

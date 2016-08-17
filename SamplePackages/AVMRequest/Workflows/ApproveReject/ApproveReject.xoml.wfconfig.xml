@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorkflowConfig>
+    <Template
+        BaseID="{D6292D7C-2B89-41DA-9169-02E606872E88}"
+        DocLibID="{{@ListId:Workflows}}"
+        XomlHref="Workflows/ApproveReject/ApproveReject.xoml"
+        XomlVersion="V1.0"
+    >
+    </Template>
+    <Association
+        ListID="{{@ListId:Absences}}"
+        TaskListID="{{@ListId:Tasks}}"
+        StartManually="true"
+    >
+    </Association>
+    <ContentTypes>
+    </ContentTypes>
+    <Initiation URL="Workflows/ApproveReject/ApproveReject.aspx">
+        <Fields><Field Name="ApproveReject" Format="Dropdown" BaseType="Text" DisplayName="Approve/Reject" Description="" Direction="None" Type="Choice"><CHOICES><CHOICE>Approved</CHOICE><CHOICE>Rejected</CHOICE></CHOICES></Field><Field Name="Comments" NumLines="5" Sortable="FALSE" RichText="TRUE" RichTextMode="Compatible" DisplayName="Comments" Description="" Direction="None" Type="Note"/></Fields>
+        <Parameters><Parameter Name="ApproveReject" Type="System.String" /><Parameter Name="Comments" Type="System.String" /></Parameters>
+    </Initiation>
+</WorkflowConfig>

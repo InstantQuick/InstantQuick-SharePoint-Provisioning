@@ -79,7 +79,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
             //This is a crude way to go about cooercing the version numbers
             //for files created on SPO/SP2016 for SP2013 on prem
             //probably valid 99.999% of the time, but if it isn't for you, sorry!
-            if(ctx.ServerLibraryVersion.Major == 15)
+            if (ctx.ServerLibraryVersion.Major == 15)
             {
                 fileText = fileText.Replace("16.0.0.0", "15.0.0.0");
             }
@@ -253,7 +253,8 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                 "DateTime",
                 "User",
                 "TaxonomyFieldType",
-                "TaxonomyFieldTypeMulti"
+                "TaxonomyFieldTypeMulti",
+                "Boolean"
             };
 
             var specialNames = new List<string>()
@@ -318,6 +319,10 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                 {
                     item[fieldInfo.FieldName] = DateTime.ParseExact(fieldInfo.Value, "yyyy-MM-ddTHH:mm:ss.fffZ",
                         CultureInfo.InvariantCulture);
+                }
+                else if (fieldInfo.FieldType == "Boolean")
+                {
+                    item[fieldInfo.FieldName] = (fieldInfo.Value == "Yes");
                 }
                 else if (fieldInfo.FieldType == "User")
                 {

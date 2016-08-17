@@ -1,0 +1,1097 @@
+{
+  "DefaultResourceAssembly": null,
+  "AdditionalResourceAssemblies": null,
+  "ProvisioningAssemblyName": null,
+  "ProvisioningClass": null,
+  "Settings": null,
+  "ManifestId": "a664772c-23e4-4782-bc00-6627247263db",
+  "ManifestName": "Absence Request and Vacation Schedule Management",
+  "Version": "0.0.0.0",
+  "RemoteHost": null,
+  "StorageType": 1,
+  "BaseFilePath": "C:\\Users\\testuser\\Source\\Repos\\InstantQuick-SharePoint-Provisioning\\SamplePackages\\AVMRequest\\",
+  "GroupCreators": null,
+  "RoleDefinitions": null,
+  "Fields": {
+    "LinkAVMResponsibilityAdoptionNoMenu": "\u003cField ID=\"{3b867619-2431-4d78-abcf-88410d62fe0d}\" Name=\"LinkAVMResponsibilityAdoptionNoMenu\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" Group=\"Absence and Vacation Schedule Fields\" ReadOnly=\"TRUE\" Type=\"Computed\" DisplayName=\"Responsibility Adoption\" Dir=\"\" DisplayNameSrcField=\"AVMResponsibilityAdoption\" AuthoringInfo=\"(linked to item)\" StaticName=\"LinkAVMResponsibilityAdoptionNoMenu\" Version=\"1\"\u003e\u003cFieldRefs\u003e\u003cFieldRef ID=\"{b87da3f7-c816-4a1c-8ed5-b9440d1d4800}\" Name=\"AVMResponsibilityAdoption\" /\u003e\u003c/FieldRefs\u003e\u003cDisplayPattern\u003e\u003cHTML\u003e\u003c![CDATA[\u003cspan dir=\"]]\u003e\u003c/HTML\u003e\u003cProperty Select=\"Direction\" HTMLEncode=\"TRUE\" /\u003e\u003cHTML\u003e\u003c![CDATA[\"\u003e\u003ca onfocus=\"OnLink(this)\" href=\"]]\u003e\u003c/HTML\u003e\u003cURL /\u003e\u003cHTML\u003e\u003c![CDATA[\" ONCLICK=\"GoToLink(this);return false;\" target=\"_self\"\u003e]]\u003e\u003c/HTML\u003e\u003cColumn HTMLEncode=\"TRUE\" Name=\"AVMResponsibilityAdoption\" /\u003e\u003cHTML\u003e\u003c![CDATA[\u003c/a\u003e]]\u003e\u003c/HTML\u003e\u003cIfNew\u003e\u003cHTML\u003e\u003c![CDATA[\u003cIMG SRC=\"/_layouts/1033/images/new.gif\" alt=\"]]\u003e\u003c/HTML\u003e\u003cHTML\u003eNew\u003c/HTML\u003e\u003cHTML\u003e\u003c![CDATA[\"\u003e]]\u003e\u003c/HTML\u003e\u003c/IfNew\u003e\u003cHTML\u003e\u003c![CDATA[\u003c/span\u003e]]\u003e\u003c/HTML\u003e\u003c/DisplayPattern\u003e\u003c/Field\u003e",
+    "AVMDateSubmitted": "\u003cField ID=\"{9f54d81e-9648-430b-a6b1-14493db841cf}\" Name=\"AVMDateSubmitted\" Group=\"Absence and Vacation Schedule Fields\" Type=\"DateTime\" DisplayName=\"Date Submitted\" Required=\"TRUE\" SourceID=\"{404bd7bf-b93e-4e33-b344-fa40a5f20aad}\" StaticName=\"AVMDateSubmitted\" Version=\"1\" /\u003e",
+    "AVMStatus": "\u003cField ID=\"{bf730e40-58ab-4b50-aeab-8513aedad344}\" Name=\"AVMStatus\" Group=\"Absence and Vacation Schedule Fields\" Type=\"Choice\" DisplayName=\"Status\" ShowInNewForm=\"FALSE\" Required=\"TRUE\" SourceID=\"{404bd7bf-b93e-4e33-b344-fa40a5f20aad}\" StaticName=\"AVMStatus\" Version=\"1\"\u003e\u003cCHOICES\u003e\u003cCHOICE\u003ePending Approval\u003c/CHOICE\u003e\u003cCHOICE\u003eApproved\u003c/CHOICE\u003e\u003cCHOICE\u003eRejected\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003cDefault\u003ePending Approval\u003c/Default\u003e\u003c/Field\u003e",
+    "AVMAbsenceType": "\u003cField ID=\"{f1882f63-d4b3-4121-a3be-fe0765bd66e0}\" Name=\"AVMAbsenceType\" Group=\"Absence and Vacation Schedule Fields\" Type=\"Lookup\" DisplayName=\"Absence Type\" List=\"{@ListId:Absence Type}\" ShowField=\"Title\" Sealed=\"FALSE\" Required=\"TRUE\" SourceID=\"{404bd7bf-b93e-4e33-b344-fa40a5f20aad}\" StaticName=\"AVMAbsenceType\" Version=\"3\" WebId=\"404bd7bf-b93e-4e33-b344-fa40a5f20aad\" /\u003e",
+    "AVMRequiresApproval": "\u003cField ID=\"{4960dd7c-1574-4c0d-9380-ba59b49fdbf6}\" Name=\"AVMRequiresApproval\" Group=\"Absence and Vacation Schedule Fields\" Type=\"Boolean\" DisplayName=\"Requires Approval\" Required=\"FALSE\" SourceID=\"{404bd7bf-b93e-4e33-b344-fa40a5f20aad}\" StaticName=\"AVMRequiresApproval\" Version=\"1\" /\u003e",
+    "AVMEmailto": "\u003cField ID=\"{f18301a0-ca97-4a74-a178-79dcb6e5835b}\" Name=\"AVMEmailto\" Group=\"Absence and Vacation Schedule Fields\" Type=\"User\" List=\"UserInfo\" DisplayName=\"Email To\" Required=\"FALSE\" SourceID=\"{404bd7bf-b93e-4e33-b344-fa40a5f20aad}\" StaticName=\"AVMEmailto\" Version=\"1\" /\u003e",
+    "AVMResponsibilityAdoption": "\u003cField ID=\"{b87da3f7-c816-4a1c-8ed5-b9440d1d4800}\" Name=\"AVMResponsibilityAdoption\" Group=\"Absence and Vacation Schedule Fields\" Type=\"Note\" DisplayName=\"Responsibility Adoption\" Required=\"TRUE\" SourceID=\"{404bd7bf-b93e-4e33-b344-fa40a5f20aad}\" StaticName=\"AVMResponsibilityAdoption\" Version=\"1\" /\u003e",
+    "AVMComments": "\u003cField ID=\"{2899d7fd-4045-4e08-8deb-728c48a05153}\" Name=\"AVMComments\" Group=\"Absence and Vacation Schedule Fields\" Type=\"Note\" DisplayName=\"Comments\" ShowInNewForm=\"FALSE\" Required=\"FALSE\" SourceID=\"{404bd7bf-b93e-4e33-b344-fa40a5f20aad}\" StaticName=\"AVMComments\" Version=\"1\" /\u003e"
+  },
+  "ContentTypeCreators": {
+    "AbsenceType": {
+      "Fields": [ "AVMRequiresApproval" ],
+      "OrderedFields": [ "ContentType", "Title", "AVMRequiresApproval" ],
+      "RemoveFields": [ ],
+      "Id": "0x01004E564BBC304846AD9B3AD74607BB06F9",
+      "ParentContentTypeName": "Item",
+      "Description": "Create a new list item.",
+      "Group": "IQApp",
+      "BaseViewUrl": null,
+      "NewFormUrl": null,
+      "NewFormIsDialog": false,
+      "NewFormDialogTitle": null,
+      "NewFormDialogHeight": null,
+      "NewFormDialogWidth": null,
+      "EditFormUrl": null,
+      "EditFormIsDialog": false,
+      "EditFormDialogTitle": null,
+      "EditFormDialogHeight": null,
+      "EditFormDialogWidth": null,
+      "DisplayFormUrl": null,
+      "DisplayFormIsDialog": false,
+      "DisplayFormDialogTitle": null,
+      "DisplayFormDialogHeight": null,
+      "DisplayFormDialogWidth": null,
+      "ContentType": null
+    },
+    "ResponsibilityAdoption": {
+      "Fields": [ "AVMDateSubmitted", "LinkAVMResponsibilityAdoptionNoMenu", "AVMResponsibilityAdoption", "AVMEmailto" ],
+      "OrderedFields": [ "ContentType", "AVMDateSubmitted", "LinkAVMResponsibilityAdoptionNoMenu", "AVMResponsibilityAdoption", "AVMEmailto" ],
+      "RemoveFields": [ "Title" ],
+      "Id": "0x0100784AEE5297504E008EB5D2BB45CF3E5A",
+      "ParentContentTypeName": "Item",
+      "Description": "Create a new list item.",
+      "Group": "IQApp",
+      "BaseViewUrl": null,
+      "NewFormUrl": null,
+      "NewFormIsDialog": false,
+      "NewFormDialogTitle": null,
+      "NewFormDialogHeight": null,
+      "NewFormDialogWidth": null,
+      "EditFormUrl": null,
+      "EditFormIsDialog": false,
+      "EditFormDialogTitle": null,
+      "EditFormDialogHeight": null,
+      "EditFormDialogWidth": null,
+      "DisplayFormUrl": null,
+      "DisplayFormIsDialog": false,
+      "DisplayFormDialogTitle": null,
+      "DisplayFormDialogHeight": null,
+      "DisplayFormDialogWidth": null,
+      "ContentType": null
+    },
+    "Absences": {
+      "Fields": [ "AVMAbsenceType", "AVMStatus", "AVMComments" ],
+      "OrderedFields": [ "ContentType", "Title", "StartDate", "EndDate", "AVMAbsenceType", "fAllDayEvent", "EventType", "UID", "EventCanceled", "Duration", "TimeZone", "XMLTZone", "AVMStatus", "AVMComments" ],
+      "RemoveFields": [ "Location", "Category", "fRecurrence", "WorkspaceLink", "RecurrenceID", "RecurrenceData", "MasterSeriesItemID", "Workspace" ],
+      "Id": "0x010200BD456170FAE140EE81A1244B37E196E0",
+      "ParentContentTypeName": "Event",
+      "Description": "Create a new meeting, deadline or other event.",
+      "Group": "IQApp",
+      "BaseViewUrl": null,
+      "NewFormUrl": null,
+      "NewFormIsDialog": false,
+      "NewFormDialogTitle": null,
+      "NewFormDialogHeight": null,
+      "NewFormDialogWidth": null,
+      "EditFormUrl": null,
+      "EditFormIsDialog": false,
+      "EditFormDialogTitle": null,
+      "EditFormDialogHeight": null,
+      "EditFormDialogWidth": null,
+      "DisplayFormUrl": null,
+      "DisplayFormIsDialog": false,
+      "DisplayFormDialogTitle": null,
+      "DisplayFormDialogHeight": null,
+      "DisplayFormDialogWidth": null,
+      "ContentType": null
+    }
+  },
+  "ListCreators": {
+    "Absence Type": {
+      "ListViewSchemas": { },
+      "SecurityConfiguration": null,
+      "DocumentTemplateUrl": "",
+      "DefaultViewTitle": "All Absence Types",
+      "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Created\" Ascending=\"FALSE\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"AVMRequiresApproval\" /\u003e\u003cFieldRef Name=\"Created\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e100\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+      "Title": "Absence Type",
+      "Id": "59bd60c0-72d8-4194-a951-47145df477af",
+      "TitleFieldDisplayName": "Absence Type",
+      "RequiredFields": [ "Title" ],
+      "IndexFields": [ ],
+      "HiddenFormFields": [ ],
+      "DisplayFormOnlyFields": [ ],
+      "EnforceUniqueFields": [ ],
+      "RemoveViewFields": null,
+      "AddToAllViewsFields": [ ],
+      "FieldDisplayNameOverrides": { "fa564e0f-0c70-4ab9-b863-0177e6ddd247": "Absence Type" },
+      "AdditionalContentTypes": [ ],
+      "AdditionalFields": { },
+      "NoCrawl": false,
+      "Hidden": false,
+      "QuickLaunchOption": 1,
+      "TemplateFeatureId": "00bfea71-de22-43b2-a848-c05709900100",
+      "TemplateType": 100,
+      "Url": "/Lists/AbsenceType",
+      "Description": "Use the Absence Type list to specify the types of absences recognized by the team.",
+      "ReplaceDefaultType": true,
+      "ContentType": "AbsenceType",
+      "ListItems": [
+        {
+          "FieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01004E564BBC304846AD9B3AD74607BB06F90083D1F5DCFF330543A1F2839E83994EC4",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "Title",
+              "Value": "Illness",
+              "FieldType": "Text"
+            },
+            {
+              "FieldName": "AVMRequiresApproval",
+              "Value": "No",
+              "FieldType": "Boolean"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "AbsenceType",
+              "FieldType": "ContentType"
+            }
+          ]
+        },
+        {
+          "FieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01004E564BBC304846AD9B3AD74607BB06F90083D1F5DCFF330543A1F2839E83994EC4",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "Title",
+              "Value": "Personal Vacation",
+              "FieldType": "Text"
+            },
+            {
+              "FieldName": "AVMRequiresApproval",
+              "Value": "Yes",
+              "FieldType": "Boolean"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "AbsenceType",
+              "FieldType": "ContentType"
+            }
+          ]
+        },
+        {
+          "FieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01004E564BBC304846AD9B3AD74607BB06F90083D1F5DCFF330543A1F2839E83994EC4",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "Title",
+              "Value": "Business Outing",
+              "FieldType": "Text"
+            },
+            {
+              "FieldName": "AVMRequiresApproval",
+              "Value": "No",
+              "FieldType": "Boolean"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "AbsenceType",
+              "FieldType": "ContentType"
+            }
+          ]
+        },
+        {
+          "FieldValues": [
+            {
+              "FieldName": "ContentTypeId",
+              "Value": "0x01004E564BBC304846AD9B3AD74607BB06F90083D1F5DCFF330543A1F2839E83994EC4",
+              "FieldType": "ContentTypeId"
+            },
+            {
+              "FieldName": "Title",
+              "Value": "Other",
+              "FieldType": "Text"
+            },
+            {
+              "FieldName": "AVMRequiresApproval",
+              "Value": "Yes",
+              "FieldType": "Boolean"
+            },
+            {
+              "FieldName": "ContentType",
+              "Value": "AbsenceType",
+              "FieldType": "ContentType"
+            }
+          ]
+        }
+      ],
+      "DeleteExistingListItems": false,
+      "ProvisionListItems": true,
+      "WorkflowAssociations": null,
+      "List": null,
+      "ListInfo": null,
+      "CorrespondingLookupFieldName": null,
+      "CorrespondingLookupFieldNames": [ "AVMAbsenceType" ],
+      "CorrespondingLookupField": null,
+      "CustomActionCreators": { },
+      "PropertyBagItems": { },
+      "RemoteEventRegistrationCreators": [ ]
+    },
+    "Absences": {
+      "ListViewSchemas": {
+        "Calendar": "\u003cQuery\u003e\u003cWhere\u003e\u003cAnd\u003e\u003cEq\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003cValue Type=\"Text\"\u003eApproved\u003c/Value\u003e\u003c/Eq\u003e\u003cDateRangesOverlap\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"RecurrenceID\" /\u003e\u003cValue Type=\"DateTime\"\u003e\u003cMonth /\u003e\u003c/Value\u003e\u003c/DateRangesOverlap\u003e\u003c/And\u003e\u003c/Where\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"fRecurrence\" /\u003e\u003cFieldRef Name=\"EventType\" /\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"Title\" /\u003e\u003cFieldRef Name=\"Description\" /\u003e\u003cFieldRef Name=\"MasterSeriesItemID\" /\u003e\u003cFieldRef Name=\"Title\" /\u003e\u003cFieldRef Name=\"MasterSeriesItemID\" /\u003e\u003cFieldRef Name=\"fAllDayEvent\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "Current Events": "\u003cQuery\u003e\u003cWhere\u003e\u003cAnd\u003e\u003cDateRangesOverlap\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"RecurrenceID\" /\u003e\u003cValue Type=\"DateTime\"\u003e\u003cNow /\u003e\u003c/Value\u003e\u003c/DateRangesOverlap\u003e\u003cEq\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003cValue Type=\"Text\"\u003eApproved\u003c/Value\u003e\u003c/Eq\u003e\u003c/And\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"fRecurrence\" /\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"fAllDayEvent\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e100\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "Approved": "\u003cQuery\u003e\u003cWhere\u003e\u003cEq\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003cValue Type=\"Text\"\u003eApproved\u003c/Value\u003e\u003c/Eq\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"AVMAbsenceType\" /\u003e\u003cFieldRef Name=\"LinkEventDateNoMenu\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e100\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "Pending Approval": "\u003cQuery\u003e\u003cWhere\u003e\u003cEq\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003cValue Type=\"Text\"\u003ePending Approval\u003c/Value\u003e\u003c/Eq\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"AVMAbsenceType\" /\u003e\u003cFieldRef Name=\"LinkEventDateNoMenu\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e100\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "Rejected": "\u003cQuery\u003e\u003cWhere\u003e\u003cEq\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003cValue Type=\"Text\"\u003eRejected\u003c/Value\u003e\u003c/Eq\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"AVMAbsenceType\" /\u003e\u003cFieldRef Name=\"LinkEventDateNoMenu\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e100\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e"
+      },
+      "SecurityConfiguration": null,
+      "DocumentTemplateUrl": "",
+      "DefaultViewTitle": "Calendar",
+      "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cWhere\u003e\u003cDateRangesOverlap\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"RecurrenceID\" /\u003e\u003cValue Type=\"DateTime\"\u003e\u003cMonth /\u003e\u003c/Value\u003e\u003c/DateRangesOverlap\u003e\u003c/Where\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"fRecurrence\" /\u003e\u003cFieldRef Name=\"EventType\" /\u003e\u003cFieldRef Name=\"WorkspaceLink\" /\u003e\u003cFieldRef Name=\"Title\" /\u003e\u003cFieldRef Name=\"Location\" /\u003e\u003cFieldRef Name=\"Description\" /\u003e\u003cFieldRef Name=\"Workspace\" /\u003e\u003cFieldRef Name=\"MasterSeriesItemID\" /\u003e\u003cFieldRef Name=\"fAllDayEvent\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit\u003e2147483647\u003c/RowLimit\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+      "Title": "Absences",
+      "Id": "58544cf1-483d-40fb-b3f2-958a7846482b",
+      "TitleFieldDisplayName": null,
+      "RequiredFields": [ "Title", "EventDate", "EndDate", "AVMAbsenceType", "AVMStatus" ],
+      "IndexFields": [ "EndDate" ],
+      "HiddenFormFields": [ ],
+      "DisplayFormOnlyFields": [ ],
+      "EnforceUniqueFields": [ ],
+      "RemoveViewFields": null,
+      "AddToAllViewsFields": [ ],
+      "FieldDisplayNameOverrides": { },
+      "AdditionalContentTypes": null,
+      "AdditionalFields": { },
+      "NoCrawl": false,
+      "Hidden": false,
+      "QuickLaunchOption": 1,
+      "TemplateFeatureId": "00bfea71-ec85-4903-972d-ebe475780106",
+      "TemplateType": 106,
+      "Url": "/Lists/Absences",
+      "Description": "Use the Absences list to enter dates that you will be out of office.",
+      "ReplaceDefaultType": true,
+      "ContentType": "Absences",
+      "ListItems": null,
+      "DeleteExistingListItems": false,
+      "ProvisionListItems": false,
+      "WorkflowAssociations": null,
+      "List": null,
+      "ListInfo": null,
+      "CorrespondingLookupFieldName": null,
+      "CorrespondingLookupFieldNames": null,
+      "CorrespondingLookupField": null,
+      "CustomActionCreators": { },
+      "PropertyBagItems": { },
+      "RemoteEventRegistrationCreators": [ ]
+    },
+    "Announcements": {
+      "ListViewSchemas": { },
+      "SecurityConfiguration": null,
+      "DocumentTemplateUrl": "",
+      "DefaultViewTitle": "All items",
+      "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Modified\" Ascending=\"FALSE\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+      "Title": "Announcements",
+      "Id": "97724178-3603-460a-887e-96b61c08e4eb",
+      "TitleFieldDisplayName": null,
+      "RequiredFields": [ "Title" ],
+      "IndexFields": [ ],
+      "HiddenFormFields": [ ],
+      "DisplayFormOnlyFields": [ ],
+      "EnforceUniqueFields": [ ],
+      "RemoveViewFields": null,
+      "AddToAllViewsFields": [ ],
+      "FieldDisplayNameOverrides": { },
+      "AdditionalContentTypes": [ ],
+      "AdditionalFields": { },
+      "NoCrawl": false,
+      "Hidden": false,
+      "QuickLaunchOption": 0,
+      "TemplateFeatureId": "00bfea71-d1ce-42de-9c63-a44004ce0104",
+      "TemplateType": 104,
+      "Url": "/Lists/Announcements",
+      "Description": "Use the Announcements list to post messages on the home page of your site.",
+      "ReplaceDefaultType": false,
+      "ContentType": "Announcement",
+      "ListItems": null,
+      "DeleteExistingListItems": false,
+      "ProvisionListItems": false,
+      "WorkflowAssociations": null,
+      "List": null,
+      "ListInfo": null,
+      "CorrespondingLookupFieldName": null,
+      "CorrespondingLookupFieldNames": null,
+      "CorrespondingLookupField": null,
+      "CustomActionCreators": { },
+      "PropertyBagItems": { },
+      "RemoteEventRegistrationCreators": [ ]
+    },
+    "Responsibility Adoption": {
+      "ListViewSchemas": {
+        "Responsibility Adoption": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003c/OrderBy\u003e\u003cWhere\u003e\u003cEq\u003e\u003cFieldRef Name=\"AVMEmailto\" /\u003e\u003cValue Type=\"Integer\"\u003e\u003cUserID Type=\"Integer\" /\u003e\u003c/Value\u003e\u003c/Eq\u003e\u003c/Where\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"AVMEmailto\" /\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"AVMResponsibilityAdoption\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cAggregations Value=\"Off\" /\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "My Items": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003c/OrderBy\u003e\u003cWhere\u003e\u003cEq\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cValue Type=\"Integer\"\u003e\u003cUserID Type=\"Integer\" /\u003e\u003c/Value\u003e\u003c/Eq\u003e\u003c/Where\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"AVMEmailto\" /\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"AVMResponsibilityAdoption\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cAggregations Value=\"Off\" /\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e"
+      },
+      "SecurityConfiguration": null,
+      "DocumentTemplateUrl": "",
+      "DefaultViewTitle": "All Items",
+      "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"ID\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"Author\" /\u003e\u003cFieldRef Name=\"AVMResponsibilityAdoption\" /\u003e\u003cFieldRef Name=\"AVMEmailto\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cAggregations Value=\"Off\" /\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+      "Title": "Responsibility Adoption",
+      "Id": "4dfd1278-e27a-48ca-afc5-d9c5d6e9de57",
+      "TitleFieldDisplayName": null,
+      "RequiredFields": [ "AVMDateSubmitted", "AVMResponsibilityAdoption" ],
+      "IndexFields": [ ],
+      "HiddenFormFields": [ ],
+      "DisplayFormOnlyFields": [ ],
+      "EnforceUniqueFields": [ ],
+      "RemoveViewFields": null,
+      "AddToAllViewsFields": [ ],
+      "FieldDisplayNameOverrides": {
+        "3b867619-2431-4d78-abcf-88410d62fe0d": "Responsibilities",
+        "b87da3f7-c816-4a1c-8ed5-b9440d1d4800": "Responsibilities",
+        "f18301a0-ca97-4a74-a178-79dcb6e5835b": "Contact"
+      },
+      "AdditionalContentTypes": [ ],
+      "AdditionalFields": { },
+      "NoCrawl": false,
+      "Hidden": false,
+      "QuickLaunchOption": 1,
+      "TemplateFeatureId": "00bfea71-de22-43b2-a848-c05709900100",
+      "TemplateType": 100,
+      "Url": "/Lists/ResponsibilityAdoption",
+      "Description": "Use the Responsibility Adoption list to track responsibility coverage for people who are out of office.",
+      "ReplaceDefaultType": true,
+      "ContentType": "ResponsibilityAdoption",
+      "ListItems": null,
+      "DeleteExistingListItems": false,
+      "ProvisionListItems": false,
+      "WorkflowAssociations": null,
+      "List": null,
+      "ListInfo": null,
+      "CorrespondingLookupFieldName": null,
+      "CorrespondingLookupFieldNames": null,
+      "CorrespondingLookupField": null,
+      "CustomActionCreators": { },
+      "PropertyBagItems": { },
+      "RemoteEventRegistrationCreators": [ ]
+    },
+    "Tasks": {
+      "ListViewSchemas": {
+        "My Tasks": "\u003cQuery\u003e\u003cWhere\u003e\u003cEq\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003cValue Type=\"Integer\"\u003e\u003cUserID /\u003e\u003c/Value\u003e\u003c/Eq\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cFieldRef Name=\"Priority\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cFieldRef Name=\"Priority\" /\u003e\u003cFieldRef Name=\"DueDate\" /\u003e\u003cFieldRef Name=\"PercentComplete\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "Due Today": "\u003cQuery\u003e\u003cWhere\u003e\u003cEq\u003e\u003cFieldRef Name=\"DueDate\" /\u003e\u003cValue Type=\"DateTime\"\u003e\u003cToday /\u003e\u003c/Value\u003e\u003c/Eq\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"ID\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cFieldRef Name=\"Priority\" /\u003e\u003cFieldRef Name=\"PercentComplete\" /\u003e\u003cFieldRef Name=\"Predecessors\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "Active Tasks": "\u003cQuery\u003e\u003cWhere\u003e\u003cNeq\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cValue Type=\"Text\"\u003eCompleted\u003c/Value\u003e\u003c/Neq\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"ID\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cFieldRef Name=\"Priority\" /\u003e\u003cFieldRef Name=\"DueDate\" /\u003e\u003cFieldRef Name=\"PercentComplete\" /\u003e\u003cFieldRef Name=\"Predecessors\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "By Assigned To": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cFieldRef Name=\"Priority\" /\u003e\u003cFieldRef Name=\"DueDate\" /\u003e\u003cFieldRef Name=\"PercentComplete\" /\u003e\u003cFieldRef Name=\"Predecessors\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "By My Groups": "\u003cQuery\u003e\u003cWhere\u003e\u003cMembership Type=\"CurrentUserGroups\"\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003c/Membership\u003e\u003c/Where\u003e\u003cGroupBy Collapse=\"FALSE\"\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003c/GroupBy\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cFieldRef Name=\"Priority\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cFieldRef Name=\"Priority\" /\u003e\u003cFieldRef Name=\"DueDate\" /\u003e\u003cFieldRef Name=\"PercentComplete\" /\u003e\u003cFieldRef Name=\"Predecessors\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e"
+      },
+      "SecurityConfiguration": null,
+      "DocumentTemplateUrl": "",
+      "DefaultViewTitle": "All Tasks",
+      "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"ID\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"DocIcon\" /\u003e\u003cFieldRef Name=\"LinkTitle\" /\u003e\u003cFieldRef Name=\"AssignedTo\" /\u003e\u003cFieldRef Name=\"Status\" /\u003e\u003cFieldRef Name=\"Priority\" /\u003e\u003cFieldRef Name=\"DueDate\" /\u003e\u003cFieldRef Name=\"PercentComplete\" /\u003e\u003cFieldRef Name=\"Predecessors\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+      "Title": "Tasks",
+      "Id": "4863f644-a2c6-4e88-8522-5b359ba7928d",
+      "TitleFieldDisplayName": null,
+      "RequiredFields": [ "Title" ],
+      "IndexFields": [ ],
+      "HiddenFormFields": [ ],
+      "DisplayFormOnlyFields": [ "RelatedItems" ],
+      "EnforceUniqueFields": [ ],
+      "RemoveViewFields": null,
+      "AddToAllViewsFields": [ ],
+      "FieldDisplayNameOverrides": {
+        "7662cd2c-f069-4dba-9e35-082cf976e170": "Description",
+        "c15b34c3-ce7d-490a-b133-3f4de8801b76": "Status"
+      },
+      "AdditionalContentTypes": [ ],
+      "AdditionalFields": { },
+      "NoCrawl": false,
+      "Hidden": false,
+      "QuickLaunchOption": 0,
+      "TemplateFeatureId": "00bfea71-a83e-497e-9ba0-7a5c597d0107",
+      "TemplateType": 107,
+      "Url": "/Lists/Tasks",
+      "Description": "Use the Tasks list to keep track of work that you or your team needs to complete.",
+      "ReplaceDefaultType": false,
+      "ContentType": "Task",
+      "ListItems": null,
+      "DeleteExistingListItems": false,
+      "ProvisionListItems": false,
+      "WorkflowAssociations": null,
+      "List": null,
+      "ListInfo": null,
+      "CorrespondingLookupFieldName": null,
+      "CorrespondingLookupFieldNames": null,
+      "CorrespondingLookupField": null,
+      "CustomActionCreators": { },
+      "PropertyBagItems": { },
+      "RemoteEventRegistrationCreators": [ ]
+    },
+    "Vacation Policies": {
+      "ListViewSchemas": { "Explorer View": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"FileLeafRef\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields /\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e" },
+      "SecurityConfiguration": null,
+      "DocumentTemplateUrl": null,
+      "DefaultViewTitle": "All Documents",
+      "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"FileLeafRef\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"DocIcon\" /\u003e\u003cFieldRef Name=\"LinkFilename\" /\u003e\u003cFieldRef Name=\"Modified\" /\u003e\u003cFieldRef Name=\"Editor\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+      "Title": "Vacation Policies",
+      "Id": "745c2740-b220-45db-b013-7929de64c468",
+      "TitleFieldDisplayName": null,
+      "RequiredFields": [ "FileLeafRef" ],
+      "IndexFields": [ ],
+      "HiddenFormFields": [ ],
+      "DisplayFormOnlyFields": [ ],
+      "EnforceUniqueFields": [ ],
+      "RemoveViewFields": null,
+      "AddToAllViewsFields": [ ],
+      "FieldDisplayNameOverrides": { },
+      "AdditionalContentTypes": [ ],
+      "AdditionalFields": { },
+      "NoCrawl": false,
+      "Hidden": false,
+      "QuickLaunchOption": 1,
+      "TemplateFeatureId": "00bfea71-e717-4e80-aa17-d0c71b360101",
+      "TemplateType": 101,
+      "Url": "/policies",
+      "Description": "Share a document with the team by adding it to this document library.",
+      "ReplaceDefaultType": false,
+      "ContentType": "Document",
+      "ListItems": null,
+      "DeleteExistingListItems": false,
+      "ProvisionListItems": false,
+      "WorkflowAssociations": null,
+      "List": null,
+      "ListInfo": null,
+      "CorrespondingLookupFieldName": null,
+      "CorrespondingLookupFieldNames": null,
+      "CorrespondingLookupField": null,
+      "CustomActionCreators": { },
+      "PropertyBagItems": { },
+      "RemoteEventRegistrationCreators": [ ]
+    },
+    "Workflow History": {
+      "ListViewSchemas": { },
+      "SecurityConfiguration": null,
+      "DocumentTemplateUrl": "",
+      "DefaultViewTitle": "All History",
+      "DefaultViewSchemaXml": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Occurred\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"WorkflowInstance\" /\u003e\u003cFieldRef Name=\"WorkflowAssociation\" /\u003e\u003cFieldRef Name=\"WorkflowTemplate\" /\u003e\u003cFieldRef Name=\"List\" /\u003e\u003cFieldRef Name=\"Item\" /\u003e\u003cFieldRef Name=\"User\" /\u003e\u003cFieldRef Name=\"Occurred\" /\u003e\u003cFieldRef Name=\"Event\" /\u003e\u003cFieldRef Name=\"Group\" /\u003e\u003cFieldRef Name=\"Outcome\" /\u003e\u003cFieldRef Name=\"Duration\" /\u003e\u003cFieldRef Name=\"Description\" /\u003e\u003cFieldRef Name=\"Data\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+      "Title": "Workflow History",
+      "Id": "f4eba2d7-8570-4ce5-9df5-2a81dd152891",
+      "TitleFieldDisplayName": null,
+      "RequiredFields": [ "Title", "Event", "WorkflowInstance", "WorkflowAssociation", "WorkflowTemplate", "List", "User", "Occurred" ],
+      "IndexFields": [ "WorkflowInstance" ],
+      "HiddenFormFields": [ ],
+      "DisplayFormOnlyFields": [ ],
+      "EnforceUniqueFields": [ ],
+      "RemoveViewFields": null,
+      "AddToAllViewsFields": [ ],
+      "FieldDisplayNameOverrides": { },
+      "AdditionalContentTypes": null,
+      "AdditionalFields": { },
+      "NoCrawl": false,
+      "Hidden": true,
+      "QuickLaunchOption": 0,
+      "TemplateFeatureId": "00bfea71-4ea5-48d4-a4ad-305cf7030140",
+      "TemplateType": 140,
+      "Url": "/Lists/Workflow History",
+      "Description": "History list for workflow.",
+      "ReplaceDefaultType": false,
+      "ContentType": "Workflow History",
+      "ListItems": null,
+      "DeleteExistingListItems": false,
+      "ProvisionListItems": false,
+      "WorkflowAssociations": null,
+      "List": null,
+      "ListInfo": null,
+      "CorrespondingLookupFieldName": null,
+      "CorrespondingLookupFieldNames": null,
+      "CorrespondingLookupField": null,
+      "CustomActionCreators": { },
+      "PropertyBagItems": { },
+      "RemoteEventRegistrationCreators": [ ]
+    },
+    "Workflows": {
+      "ListViewSchemas": { },
+      "SecurityConfiguration": null,
+      "DocumentTemplateUrl": "",
+      "DefaultViewTitle": null,
+      "DefaultViewSchemaXml": null,
+      "Title": "Workflows",
+      "Id": "a651b251-93b4-4f4b-b05a-2ef88e2cf50d",
+      "TitleFieldDisplayName": null,
+      "RequiredFields": [ "FileLeafRef" ],
+      "IndexFields": [ ],
+      "HiddenFormFields": [ ],
+      "DisplayFormOnlyFields": [ ],
+      "EnforceUniqueFields": [ ],
+      "RemoveViewFields": null,
+      "AddToAllViewsFields": [ ],
+      "FieldDisplayNameOverrides": {
+        "e9359d15-261b-48f6-a302-01419a68d4de": "BaseAssociationGuid",
+        "566da236-762b-4a76-ad1f-b08b3c703fce": "XomlUrl",
+        "ad97fbac-70af-4860-a078-5ee704946f93": "RulesUrl",
+        "b75067a2-e23b-499f-aa07-4ceb6c79e0b3": "AssociatedListId"
+      },
+      "AdditionalContentTypes": [ ],
+      "AdditionalFields": { },
+      "NoCrawl": false,
+      "Hidden": true,
+      "QuickLaunchOption": 0,
+      "TemplateFeatureId": "00bfea71-f600-43f6-a895-40c0de7b0117",
+      "TemplateType": 117,
+      "Url": "/Workflows",
+      "Description": "",
+      "ReplaceDefaultType": false,
+      "ContentType": "User Workflow Document",
+      "ListItems": null,
+      "DeleteExistingListItems": false,
+      "ProvisionListItems": false,
+      "WorkflowAssociations": null,
+      "List": null,
+      "ListInfo": null,
+      "CorrespondingLookupFieldName": null,
+      "CorrespondingLookupFieldNames": null,
+      "CorrespondingLookupField": null,
+      "CustomActionCreators": { },
+      "PropertyBagItems": { },
+      "RemoteEventRegistrationCreators": [ ]
+    }
+  },
+  "Folders": [ "/images", "/Lists", "/Lists/Absences", "/SiteAssets", "/SitePages", "/Workflows", "/Workflows/ApproveReject", "/Workflows/Setup" ],
+  "FileCreators": {
+    "/Lists/Absences/DispForm.aspx": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "DispForm.aspx",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": null,
+      "IsHomePage": false,
+      "Url": "/Lists/Absences/DispForm.aspx",
+      "HostWebResourceKey": null,
+      "List": null,
+      "ContentType": "Web Part Page",
+      "ContentTypeId": null,
+      "IsBinary": false,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\Lists\\Absences\\DispForm.aspx",
+      "WebParts": {
+        "e69d1d0f-9309-430f-8651-df51d9bb14fa": "\u003cwebParts\u003e \u003cwebPart xmlns=\"http://schemas.microsoft.com/WebPart/v3\"\u003e \u003cmetaData\u003e  \u003ctype name=\"Microsoft.SharePoint.WebPartPages.DataFormWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" /\u003e  \u003cimportErrorMessage\u003eCannot import this Web Part.\u003c/importErrorMessage\u003e \u003c/metaData\u003e \u003cdata\u003e  \u003cproperties\u003e  \u003cproperty name=\"InitialAsyncDataFetch\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ChromeType\" type=\"chrometype\"\u003eTitleAndBorder\u003c/property\u003e  \u003cproperty name=\"UseSQLDataSourcePaging\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"Height\" type=\"string\" /\u003e  \u003cproperty name=\"CacheXslStorage\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"XslLink\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ParameterBindings\" type=\"string\"\u003e\t\u0026lt;ParameterBinding Name=\"dvt_apos\" Location=\"Postback;Connection\"/\u0026gt;\t\u0026lt;ParameterBinding Name=\"UserID\" Location=\"CAMLVariable\" DefaultValue=\"CurrentUserName\"/\u0026gt;\t\u0026lt;ParameterBinding Name=\"Today\" Location=\"CAMLVariable\" DefaultValue=\"CurrentDate\"/\u0026gt;\t\u0026lt;ParameterBinding Name=\"Param1\" Location=\"QueryString(ID)\" DefaultValue=\"1\"/\u0026gt;\u003c/property\u003e  \u003cproperty name=\"AllowZoneChange\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"AutoRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"XmlDefinitionLink\" type=\"string\" /\u003e  \u003cproperty name=\"DataFields\" type=\"string\"\u003e@Title,Title;@AVMAbsenceType,Absence Type;@EventDate,Start Time;@EndDate,End Time;@Description,Description;@fAllDayEvent,All Day Event;@fRecurrence,Recurrence;@AVMStatus,Status;@AVMComments,Comments;@ID,ID;@ContentType,Content Type;@Modified,Modified;@Created,Created;@Author,Created By;@Editor,Modified By;@_UIVersionString,Version;@Attachments,Attachments;@File_x0020_Type,File Type;@FileLeafRef,Name (for use in forms);@FileDirRef,Path;@FSObjType,Item Type;@_HasCopyDestinations,Has Copy Destinations;@_CopySource,Copy Source;@ContentTypeId,Content Type ID;@_ModerationStatus,Approval Status;@_UIVersion,UI Version;@Created_x0020_Date,Created;@FileRef,URL Path;@AVMResponsibilityAdoption,Responsibilities;@AVMEmailto,Contact;\u003c/property\u003e  \u003cproperty name=\"NoDefaultStyle\" type=\"string\"\u003eTRUE\u003c/property\u003e  \u003cproperty name=\"ViewFlag\" type=\"string\"\u003e0\u003c/property\u003e  \u003cproperty name=\"CatalogIconImageUrl\" type=\"string\" /\u003e  \u003cproperty name=\"ListUrl\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"AutoRefreshInterval\" type=\"int\"\u003e60\u003c/property\u003e  \u003cproperty name=\"AllowConnect\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"AllowClose\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"HelpMode\" type=\"helpmode\"\u003eModeless\u003c/property\u003e  \u003cproperty name=\"Xsl\" type=\"string\"\u003e\u0026lt;xsl:stylesheet xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:x=\"http://www.w3.org/2001/XMLSchema\" xmlns:d=\"http://schemas.microsoft.com/sharepoint/dsp\" version=\"1.0\" exclude-result-prefixes=\"xsl msxsl ddwrt\" xmlns:ddwrt=\"http://schemas.microsoft.com/WebParts/v2/DataView/runtime\" xmlns:asp=\"http://schemas.microsoft.com/ASPNET/20\" xmlns:__designer=\"http://schemas.microsoft.com/WebParts/v2/DataView/designer\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:msxsl=\"urn:schemas-microsoft-com:xslt\" xmlns:SharePoint=\"Microsoft.SharePoint.WebControls\" xmlns:ddwrt2=\"urn:frontpage:internal\"\u0026gt;\t\u0026lt;xsl:output method=\"html\" indent=\"no\"/\u0026gt;\t\u0026lt;xsl:decimal-format NaN=\"\"/\u0026gt;\t\u0026lt;xsl:param name=\"dvt_apos\"\u0026gt;\u0027\u0026lt;/xsl:param\u0026gt;\t\u0026lt;xsl:param name=\"Param1\"\u0026gt;1\u0026lt;/xsl:param\u0026gt;\t\u0026lt;xsl:variable name=\"dvt_1_automode\"\u0026gt;0\u0026lt;/xsl:variable\u0026gt;\t\u0026lt;xsl:template match=\"/\"\u0026gt;\t\t\u0026lt;xsl:call-template name=\"dvt_1\"/\u0026gt;\t\u0026lt;/xsl:template\u0026gt;\t\u0026lt;xsl:template name=\"dvt_1\"\u0026gt;\t\t\u0026lt;xsl:variable name=\"dvt_StyleName\"\u0026gt;Table\u0026lt;/xsl:variable\u0026gt;\t\t\u0026lt;xsl:variable name=\"Rows\" select=\"/dsQueryResponse/Responsibility_Adoption/Rows/Row[substring-before(@Author,\u0027\u0026amp;lt;/A\u0026amp;gt;\u0027) = substring-before(/dsQueryResponse/Absences_Trimmed/Rows/Row/@Author,\u0027\u0026amp;lt;/A\u0026amp;gt;\u0027)]\"/\u0026gt; \u0026lt;SCRIPT type=\"text/javascript\"\u0026gt; function GetSource(defaultSource) { return escapeProperly(STSPageUrlValidation(window.location.href)); } \u0026lt;/SCRIPT\u0026gt;\t\t\u0026lt;table border=\"0\" width=\"100%\" cellpadding=\"2\" cellspacing=\"0\"\u0026gt;\t\t\t\u0026lt;tr valign=\"top\"\u0026gt;\t\t\t\t\u0026lt;xsl:if test=\"$dvt_1_automode = \u00271\u0027\" ddwrt:cf_ignore=\"1\"\u0026gt;\t\t\t\t\t\u0026lt;th class=\"ms-vh\" width=\"1%\" nowrap=\"nowrap\"\u0026gt;\u0026lt;/th\u0026gt;\t\t\t\t\u0026lt;/xsl:if\u0026gt; \u0026lt;th class=\"ms-vh\" nowrap=\"nowrap\"\u0026gt;Absentee\u0026lt;/th\u0026gt;\t\t\t\t\u0026lt;th class=\"ms-vh\" nowrap=\"nowrap\"\u0026gt;Responsibilities\u0026lt;/th\u0026gt;\t\t\t\t\u0026lt;th class=\"ms-vh\" nowrap=\"nowrap\"\u0026gt;Contact\u0026lt;/th\u0026gt;\t\t\t\u0026lt;/tr\u0026gt;\t\t\t\u0026lt;xsl:call-template name=\"dvt_1.body\"\u0026gt;\t\t\t\t\u0026lt;xsl:with-param name=\"Rows\" select=\"$Rows\"/\u0026gt;\t\t\t\u0026lt;/xsl:call-template\u0026gt;\t\t\t\u0026lt;tr\u0026gt;\t\t\t\u0026lt;td colspan=\"99\" class=\"ms-vh\"\u0026gt;\t\t\t\u0026lt;a href=\"../ResponsibilityAdoption/NewForm.aspx\" onclick=\"this.href = unescapeProperly(escape(this.href)); GoToLink(this); return false;\" target=\"_self\"\u0026gt;Specify Responsibility Adoption\u0026lt;/a\u0026gt;\t\t\t\u0026lt;/td\u0026gt;\t\t\t\u0026lt;/tr\u0026gt;\t\t\u0026lt;/table\u0026gt;\t\u0026lt;/xsl:template\u0026gt;\t\u0026lt;xsl:template name=\"dvt_1.body\"\u0026gt;\t\t\u0026lt;xsl:param name=\"Rows\"/\u0026gt;\t\t\u0026lt;xsl:for-each select=\"$Rows\"\u0026gt;\t\t\t\u0026lt;xsl:call-template name=\"dvt_1.rowview\"/\u0026gt;\t\t\u0026lt;/xsl:for-each\u0026gt;\t\u0026lt;/xsl:template\u0026gt;\t\u0026lt;xsl:template name=\"dvt_1.rowview\"\u0026gt;\t\t\u0026lt;tr\u0026gt;\t\t\t\u0026lt;xsl:if test=\"position() mod 2 = 1\"\u0026gt;\t\t\t\t\u0026lt;xsl:attribute name=\"class\"\u0026gt;ms-alternating\u0026lt;/xsl:attribute\u0026gt;\t\t\t\u0026lt;/xsl:if\u0026gt;\t\t\t\u0026lt;xsl:if test=\"$dvt_1_automode = \u00271\u0027\" ddwrt:cf_ignore=\"1\"\u0026gt;\t\t\t\t\u0026lt;td class=\"ms-vb\" width=\"1%\" nowrap=\"nowrap\"\u0026gt;\t\t\t\t\t\u0026lt;span ddwrt:amkeyfield=\"\" ddwrt:amkeyvalue=\"string($XPath)\" ddwrt:ammode=\"view\"\u0026gt;\u0026lt;/span\u0026gt;\t\t\t\t\u0026lt;/td\u0026gt;\t\t\t\u0026lt;/xsl:if\u0026gt; \u0026lt;td class=\"ms-vb\"\u0026gt;\t\t\t\t\u0026lt;xsl:value-of disable-output-escaping=\"yes\" select=\"@Author\"/\u0026gt;\t\t\t\u0026lt;/td\u0026gt;\t\t\t\u0026lt;td class=\"ms-vb\"\u0026gt;\t\t\t\t\u0026lt;xsl:value-of disable-output-escaping=\"yes\" select=\"@AVMResponsibilityAdoption\"/\u0026gt;\t\t\t\u0026lt;/td\u0026gt;\t\t\t\u0026lt;td class=\"ms-vb\"\u0026gt;\t\t\t\t\u0026lt;xsl:value-of select=\"@AVMEmailto\" disable-output-escaping=\"yes\"/\u0026gt;\t\t\t\u0026lt;/td\u0026gt;\t\t\u0026lt;/tr\u0026gt;\t\u0026lt;/xsl:template\u0026gt;\u0026lt;/xsl:stylesheet\u0026gt;\t\u003c/property\u003e  \u003cproperty name=\"EnableOriginalValue\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Hidden\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ListName\" type=\"string\" /\u003e  \u003cproperty name=\"DataSourceID\" type=\"string\" /\u003e  \u003cproperty name=\"CacheXslTimeOut\" type=\"int\"\u003e86400\u003c/property\u003e  \u003cproperty name=\"ListDisplayName\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ManualRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ViewFlags\" type=\"Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003eNone\u003c/property\u003e  \u003cproperty name=\"ChromeState\" type=\"chromestate\"\u003eNormal\u003c/property\u003e  \u003cproperty name=\"AllowHide\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"PageSize\" type=\"int\"\u003e-1\u003c/property\u003e  \u003cproperty name=\"SampleData\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ShowWithSampleData\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"FireInitialRow\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"Title\" type=\"string\"\u003eResponsibility Adoption\u003c/property\u003e  \u003cproperty name=\"ListId\" type=\"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\u003e00000000-0000-0000-0000-000000000000\u003c/property\u003e  \u003cproperty name=\"AsyncRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Description\" type=\"string\" /\u003e  \u003cproperty name=\"AllowMinimize\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"TitleUrl\" type=\"string\" /\u003e  \u003cproperty name=\"DataSourcesString\" type=\"string\"\u003e\u0026lt;%@ Register TagPrefix=\"cc1\" Namespace=\"Microsoft.SharePoint.WebControls\" Assembly=\"Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" %\u0026gt;\u0026lt;%@ Register TagPrefix=\"cc2\" Namespace=\"Microsoft.SharePoint.WebPartPages\" Assembly=\"Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" %\u0026gt;\u0026lt;cc1:AggregateDataSource runat=\"server\" ID=\"New_x0020_Data_x0020_Source1\" SeparateRoot=\"true\" RootName=\"\" IsSynchronous=\"\" RowsName=\"\"\u0026gt;\u0026lt;Aggregate\u0026gt;\u0026lt;concat name=\"data source\"\u0026gt;\u0026lt;datasource name=\"Absences_Trimmed\" id=\"0\" Type=\"SPList\"/\u0026gt;\u0026lt;datasource name=\"Responsibility_Adoption\" id=\"1\" Type=\"SPList\"/\u0026gt;\u0026lt;/concat\u0026gt;\u0026lt;/Aggregate\u0026gt;\u0026lt;Sources\u0026gt;\u0026lt;cc1:SPDataSource runat=\"server\" SelectCommand=\"\u0026amp;lt;View\u0026amp;gt;\u0026amp;lt;ViewFields\u0026amp;gt;\u0026amp;lt;FieldRef Name=\u0026amp;quot;fRecurrence\u0026amp;quot;/\u0026amp;gt;\u0026amp;lt;FieldRef Name=\u0026amp;quot;ID\u0026amp;quot;/\u0026amp;gt;\u0026amp;lt;FieldRef Name=\u0026amp;quot;Author\u0026amp;quot;/\u0026amp;gt;\u0026amp;lt;FieldRef Name=\u0026amp;quot;PermMask\u0026amp;quot;/\u0026amp;gt;\u0026amp;lt;/ViewFields\u0026amp;gt;\u0026amp;lt;Query\u0026amp;gt;\u0026amp;lt;Where\u0026amp;gt;\u0026amp;lt;Eq\u0026amp;gt;\u0026amp;lt;FieldRef Name=\u0026amp;quot;ID\u0026amp;quot;/\u0026amp;gt;\u0026amp;lt;Value Type=\u0026amp;quot;Counter\u0026amp;quot;\u0026amp;gt;{Param1}\u0026amp;lt;/Value\u0026amp;gt;\u0026amp;lt;/Eq\u0026amp;gt;\u0026amp;lt;/Where\u0026amp;gt;\u0026amp;lt;/Query\u0026amp;gt;\u0026amp;lt;/View\u0026amp;gt;\" DataSourceMode=\"List\" UseInternalName=\"True\" ID=\"Absences_x0020_Trimmed1\"\u0026gt;\u0026lt;SelectParameters\u0026gt;\u0026lt;cc2:DataFormParameter PropertyName=\"ParameterValues\" ParameterKey=\"ListID\" DefaultValue=\"{{@ListId:Absences}}\" Name=\"ListID\"\u0026gt;\u0026lt;/cc2:DataFormParameter\u0026gt;\u0026lt;cc2:DataFormParameter PropertyName=\"ParameterValues\" ParameterKey=\"Param1\" DefaultValue=\"1\" Name=\"Param1\"\u0026gt;\u0026lt;/cc2:DataFormParameter\u0026gt;\u0026lt;/SelectParameters\u0026gt;\u0026lt;/cc1:SPDataSource\u0026gt;\u0026lt;cc1:SPDataSource runat=\"server\" SelectCommand=\"\u0026amp;lt;View\u0026amp;gt;\u0026amp;lt;/View\u0026amp;gt;\" DataSourceMode=\"List\" UseInternalName=\"True\"\u0026gt;\u0026lt;SelectParameters\u0026gt;\u0026lt;asp:Parameter DefaultValue=\"{{@ListId:Responsibility Adoption}}\" Name=\"ListID\"\u0026gt;\u0026lt;/asp:Parameter\u0026gt;\u0026lt;/SelectParameters\u0026gt;\u0026lt;/cc1:SPDataSource\u0026gt;\u0026lt;/Sources\u0026gt;\u0026lt;/cc1:AggregateDataSource\u0026gt;\u003c/property\u003e  \u003cproperty name=\"DisplayName\" type=\"string\" /\u003e  \u003cproperty name=\"PageType\" type=\"Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003ePAGE_NORMALVIEW\u003c/property\u003e  \u003cproperty name=\"Width\" type=\"string\" /\u003e  \u003cproperty name=\"AllowEdit\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"ExportMode\" type=\"exportmode\"\u003eAll\u003c/property\u003e  \u003cproperty name=\"Direction\" type=\"direction\"\u003eNotSet\u003c/property\u003e  \u003cproperty name=\"ViewContentTypeId\" type=\"string\" /\u003e  \u003cproperty name=\"HelpUrl\" type=\"string\" /\u003e  \u003cproperty name=\"XmlDefinition\" type=\"string\" /\u003e  \u003cproperty name=\"Default\" type=\"string\" /\u003e  \u003cproperty name=\"TitleIconImageUrl\" type=\"string\" /\u003e  \u003cproperty name=\"MissingAssembly\" type=\"string\"\u003eCannot import this Web Part.\u003c/property\u003e  \u003c/properties\u003e \u003c/data\u003e \u003c/webPart\u003e\u003c/webParts\u003e",
+        "f44b0e1f-76c9-46f6-96c8-7ca10319adcf": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle /\u003e \u003cFrameType\u003eDefault\u003c/FrameType\u003e \u003cDescription /\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003eMain\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight /\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge /\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.ListFormWebPart\u003c/TypeName\u003e \u003cListName xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListForm\"\u003e{{@ListId:Absences}}\u003c/ListName\u003e \u003cListId xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListForm\"\u003e{@ListId:Absences}\u003c/ListId\u003e \u003cPageType xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListForm\"\u003ePAGE_DISPLAYFORM\u003c/PageType\u003e \u003cFormType xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListForm\"\u003e4\u003c/FormType\u003e \u003cControlMode xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListForm\"\u003eDisplay\u003c/ControlMode\u003e \u003cViewFlag xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListForm\"\u003e1048576\u003c/ViewFlag\u003e \u003cViewFlags xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListForm\"\u003eDefault\u003c/ViewFlags\u003e \u003cListItemId xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListForm\"\u003e0\u003c/ListItemId\u003e\u003c/WebPart\u003e"
+      },
+      "WebPartPageZoneMappings": [
+        {
+          "WebPartId": "e69d1d0f-9309-430f-8651-df51d9bb14fa",
+          "ZoneId": "Main",
+          "Position": 23832
+        },
+        {
+          "WebPartId": "f44b0e1f-76c9-46f6-96c8-7ca10319adcf",
+          "ZoneId": "Main",
+          "Position": 2588
+        }
+      ],
+      "WebPartPageWebPartListViews": { },
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    },
+    "/images/homepage.gif": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "homepage.gif",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": null,
+      "IsHomePage": false,
+      "Url": "/images/homepage.gif",
+      "HostWebResourceKey": null,
+      "List": null,
+      "ContentType": null,
+      "ContentTypeId": null,
+      "IsBinary": true,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\images\\homepage.gif",
+      "WebParts": null,
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    },
+    "/Workflows/ApproveReject/ApproveReject.aspx": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "ApproveReject.aspx",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": [
+        {
+          "FieldName": "ContentTypeId",
+          "Value": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+          "FieldType": "ContentTypeId"
+        },
+        {
+          "FieldName": "FileLeafRef",
+          "Value": "ApproveReject.aspx",
+          "FieldType": "File"
+        },
+        {
+          "FieldName": "ContentType",
+          "Value": "User Workflow Document",
+          "FieldType": "ContentType"
+        }
+      ],
+      "IsHomePage": false,
+      "Url": "/Workflows/ApproveReject/ApproveReject.aspx",
+      "HostWebResourceKey": null,
+      "List": "Workflows",
+      "ContentType": "Workflow",
+      "ContentTypeId": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+      "IsBinary": false,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\Workflows\\ApproveReject\\ApproveReject.aspx",
+      "WebParts": null,
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    },
+    "/Workflows/ApproveReject/ApproveReject.xoml": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "ApproveReject.xoml",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": [
+        {
+          "FieldName": "ContentTypeId",
+          "Value": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+          "FieldType": "ContentTypeId"
+        },
+        {
+          "FieldName": "FileLeafRef",
+          "Value": "ApproveReject.xoml",
+          "FieldType": "File"
+        },
+        {
+          "FieldName": "ContentType",
+          "Value": "User Workflow Document",
+          "FieldType": "ContentType"
+        }
+      ],
+      "IsHomePage": false,
+      "Url": "/Workflows/ApproveReject/ApproveReject.xoml",
+      "HostWebResourceKey": null,
+      "List": "Workflows",
+      "ContentType": "Workflow",
+      "ContentTypeId": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+      "IsBinary": false,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\Workflows\\ApproveReject\\ApproveReject.xoml",
+      "WebParts": null,
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    },
+    "/Workflows/ApproveReject/ApproveReject.xoml.wfconfig.xml": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "ApproveReject.xoml.wfconfig.xml",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": [
+        {
+          "FieldName": "ContentTypeId",
+          "Value": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+          "FieldType": "ContentTypeId"
+        },
+        {
+          "FieldName": "FileLeafRef",
+          "Value": "ApproveReject.xoml.wfconfig.xml",
+          "FieldType": "File"
+        },
+        {
+          "FieldName": "ContentType",
+          "Value": "User Workflow Document",
+          "FieldType": "ContentType"
+        }
+      ],
+      "IsHomePage": false,
+      "Url": "/Workflows/ApproveReject/ApproveReject.xoml.wfconfig.xml",
+      "HostWebResourceKey": null,
+      "List": "Workflows",
+      "ContentType": "Workflow",
+      "ContentTypeId": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+      "IsBinary": false,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\Workflows\\ApproveReject\\ApproveReject.xoml.wfconfig.xml",
+      "WebParts": null,
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    },
+    "/Workflows/Setup/Setup.xoml": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "Setup.xoml",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": [
+        {
+          "FieldName": "ContentTypeId",
+          "Value": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+          "FieldType": "ContentTypeId"
+        },
+        {
+          "FieldName": "FileLeafRef",
+          "Value": "Setup.xoml",
+          "FieldType": "File"
+        },
+        {
+          "FieldName": "ContentType",
+          "Value": "User Workflow Document",
+          "FieldType": "ContentType"
+        }
+      ],
+      "IsHomePage": false,
+      "Url": "/Workflows/Setup/Setup.xoml",
+      "HostWebResourceKey": null,
+      "List": "Workflows",
+      "ContentType": "Workflow",
+      "ContentTypeId": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+      "IsBinary": false,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\Workflows\\Setup\\Setup.xoml",
+      "WebParts": null,
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    },
+    "/Workflows/Setup/Setup.xoml.rules": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "Setup.xoml.rules",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": [
+        {
+          "FieldName": "ContentTypeId",
+          "Value": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+          "FieldType": "ContentTypeId"
+        },
+        {
+          "FieldName": "FileLeafRef",
+          "Value": "Setup.xoml.rules",
+          "FieldType": "File"
+        },
+        {
+          "FieldName": "ContentType",
+          "Value": "User Workflow Document",
+          "FieldType": "ContentType"
+        }
+      ],
+      "IsHomePage": false,
+      "Url": "/Workflows/Setup/Setup.xoml.rules",
+      "HostWebResourceKey": null,
+      "List": "Workflows",
+      "ContentType": "Workflow",
+      "ContentTypeId": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+      "IsBinary": false,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\Workflows\\Setup\\Setup.xoml.rules",
+      "WebParts": null,
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    },
+    "/Workflows/Setup/Setup.xoml.wfconfig.xml": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "Setup.xoml.wfconfig.xml",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": [
+        {
+          "FieldName": "ContentTypeId",
+          "Value": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+          "FieldType": "ContentTypeId"
+        },
+        {
+          "FieldName": "FileLeafRef",
+          "Value": "Setup.xoml.wfconfig.xml",
+          "FieldType": "File"
+        },
+        {
+          "FieldName": "ContentType",
+          "Value": "User Workflow Document",
+          "FieldType": "ContentType"
+        }
+      ],
+      "IsHomePage": false,
+      "Url": "/Workflows/Setup/Setup.xoml.wfconfig.xml",
+      "HostWebResourceKey": null,
+      "List": "Workflows",
+      "ContentType": "Workflow",
+      "ContentTypeId": "0x01010700CCE6523F0E3905479BA49D9DAC4BF046",
+      "IsBinary": false,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\Workflows\\Setup\\Setup.xoml.wfconfig.xml",
+      "WebParts": null,
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    },
+    "/SitePages/Absences Home.aspx": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "Absences Home.aspx",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": [
+        {
+          "FieldName": "ContentTypeId",
+          "Value": "0x01010800C7FEC4FA9A5528409461618679B249B9",
+          "FieldType": "ContentTypeId"
+        },
+        {
+          "FieldName": "FileLeafRef",
+          "Value": "absences home.aspx",
+          "FieldType": "File"
+        },
+        {
+          "FieldName": "WikiField",
+          "Value": "\u003cdiv class=\"ExternalClass18E52A9747074BEB809586B078B4D1D4\"\u003e\u003ctable id=\"layoutsTable\" style=\"width\u0026#58;100%;\"\u003e\u003ctbody\u003e\u003ctr style=\"vertical-align\u0026#58;top;\"\u003e\u003ctd style=\"width\u0026#58;66.6%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\" role=\"textbox\" aria-autocomplete=\"both\" aria-haspopup=\"true\" aria-multiline=\"true\"\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 23b53eaf-0f53-4078-99c5-3296c31e6c17\" id=\"div_23b53eaf-0f53-4078-99c5-3296c31e6c17\" unselectable=\"on\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_23b53eaf-0f53-4078-99c5-3296c31e6c17\" unselectable=\"on\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 9207b70f-0274-4671-bf46-3587847fffa2\" id=\"div_9207b70f-0274-4671-bf46-3587847fffa2\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_9207b70f-0274-4671-bf46-3587847fffa2\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cp\u003e​\u003cbr\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003ctd class=\"ms-wiki-columnSpacing\" style=\"width\u0026#58;33.3%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\" role=\"textbox\" aria-autocomplete=\"both\" aria-haspopup=\"true\" aria-multiline=\"true\"\u003e\u003cdiv style=\"text-align\u0026#58;left;\"\u003e\r\n   \u003cimg class=\"ms-rtePosition-1\" src=\"{@WebServerRelativeUrl}/SiteAssets/Fab40AbsencesLogo.jpg\" alt=\"\" style=\"margin\u0026#58;5px 15px 5px 5px;\" /\u003e\r\n   \u003cstrong class=\"ms-rteFontSize-4\"\u003eLearn More About the Absence Request and Vacation Schedule Management Site​\u003c/strong\u003e\u003cbr\u003e\u003c/div\u003e\u003cdiv\u003e\u003cp\u003e​​​​​\u003cbr\u003e\u003ca href=\"https\u0026#58;//apps.instantquick.com/AppCentral/documentation/AbsenceVacationScheduleManagement\" target=\"_blank\"\u003e\u003cstrong\u003eClick Here for Resources\u003c/strong\u003e\u003c/a\u003e\u003cbr\u003e\u003c/p\u003e​​​\u003cbr\u003e\u003c/div\u003e\u003cdiv\u003e​ \r\n   \u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 8bb9bcef-eb1b-4d4e-aa6d-210b44f46b12\" id=\"div_8bb9bcef-eb1b-4d4e-aa6d-210b44f46b12\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_8bb9bcef-eb1b-4d4e-aa6d-210b44f46b12\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e​ \r\n   \u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read 6f37d3ed-c1c0-462e-954b-807cea7073bc\" id=\"div_6f37d3ed-c1c0-462e-954b-807cea7073bc\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_6f37d3ed-c1c0-462e-954b-807cea7073bc\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e​​\u003cbr\u003e\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cspan id=\"layoutsData\" style=\"display\u0026#58;none;\"\u003efalse,false,2\u003c/span\u003e\u003c/div\u003e",
+          "FieldType": "Note"
+        },
+        {
+          "FieldName": "ContentType",
+          "Value": "Wiki Page",
+          "FieldType": "ContentType"
+        }
+      ],
+      "IsHomePage": true,
+      "Url": "/SitePages/Absences Home.aspx",
+      "HostWebResourceKey": null,
+      "List": "Site Pages",
+      "ContentType": "Wiki Page",
+      "ContentTypeId": "0x01010800C7FEC4FA9A5528409461618679B249B9",
+      "IsBinary": false,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\SitePages\\Absences Home.aspx",
+      "WebParts": {
+        "9207b70f-0274-4671-bf46-3587847fffa2": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eAbsences\u003c/Title\u003e \u003cFrameType\u003eDefault\u003c/FrameType\u003e \u003cDescription\u003eUse the Absences list to enter dates that you will be out of office.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight /\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink\u003e{@ListUrl:Absences}\u003c/DetailLink\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/itevent.png?rev=39\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.ListViewWebPart\u003c/TypeName\u003e \u003cWebId xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListView\"\u003e00000000-0000-0000-0000-000000000000\u003c/WebId\u003e \u003cListViewXml xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListView\"\u003e\u0026lt;View Name=\"{9207B70F-0274-4671-BF46-3587847FFFA2}\" MobileView=\"TRUE\" Type=\"CALENDAR\" Hidden=\"TRUE\" TabularView=\"FALSE\" RecurrenceRowset=\"TRUE\" DisplayName=\"\" Url=\"{@ListUrl:Site Pages}/Absences Home.aspx\" Level=\"1\" BaseViewID=\"2\" ContentTypeID=\"0x\" MobileUrl=\"_layouts/15/mobile/viewdaily.aspx\" ImageUrl=\"/_layouts/15/images/events.png?rev=43\"\u0026gt;\u0026lt;Query\u0026gt;\u0026lt;Where\u0026gt;\u0026lt;And\u0026gt;\u0026lt;DateRangesOverlap\u0026gt;\u0026lt;FieldRef Name=\"EventDate\" /\u0026gt;\u0026lt;FieldRef Name=\"EndDate\" /\u0026gt;\u0026lt;FieldRef Name=\"RecurrenceID\" /\u0026gt;\u0026lt;Value Type=\"DateTime\"\u0026gt;\u0026lt;Month /\u0026gt;\u0026lt;/Value\u0026gt;\u0026lt;/DateRangesOverlap\u0026gt;\u0026lt;Eq\u0026gt;\u0026lt;FieldRef Name=\"AVMStatus\" /\u0026gt;\u0026lt;Value Type=\"Text\"\u0026gt;Approved\u0026lt;/Value\u0026gt;\u0026lt;/Eq\u0026gt;\u0026lt;/And\u0026gt;\u0026lt;/Where\u0026gt;\u0026lt;/Query\u0026gt;\u0026lt;ViewFields\u0026gt;\u0026lt;FieldRef Name=\"EventDate\" /\u0026gt;\u0026lt;FieldRef Name=\"EndDate\" /\u0026gt;\u0026lt;FieldRef Name=\"Title\" /\u0026gt;\u0026lt;FieldRef Name=\"fRecurrence\" Explicit=\"TRUE\" /\u0026gt;\u0026lt;/ViewFields\u0026gt;\u0026lt;RowLimit\u0026gt;0\u0026lt;/RowLimit\u0026gt;\u0026lt;Aggregations Value=\"Off\" /\u0026gt;\u0026lt;Toolbar Type=\"Standard\" /\u0026gt;\u0026lt;ViewHeader /\u0026gt;\u0026lt;ViewBody /\u0026gt;\u0026lt;ViewFooter /\u0026gt;\u0026lt;ViewEmpty /\u0026gt;\u0026lt;ParameterBindings\u0026gt;\u0026lt;ParameterBinding Name=\"NoAnnouncements\" Location=\"Resource(wss,noXinviewofY_LIST)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"NoAnnouncementsHowTo\" Location=\"Resource(wss,noXinviewofY_DEFAULT)\" /\u0026gt;\u0026lt;/ParameterBindings\u0026gt;\u0026lt;ViewData\u0026gt;\u0026lt;FieldRef Name=\"Title\" Type=\"CalendarMonthTitle\" /\u0026gt;\u0026lt;FieldRef Name=\"Title\" Type=\"CalendarWeekTitle\" /\u0026gt;\u0026lt;FieldRef Name=\"Location\" Type=\"CalendarWeekLocation\" /\u0026gt;\u0026lt;FieldRef Name=\"Title\" Type=\"CalendarDayTitle\" /\u0026gt;\u0026lt;FieldRef Name=\"Location\" Type=\"CalendarDayLocation\" /\u0026gt;\u0026lt;/ViewData\u0026gt;\u0026lt;/View\u0026gt;\u003c/ListViewXml\u003e \u003cListName xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListView\"\u003e{{@ListId:Absences}}\u003c/ListName\u003e \u003cListId xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListView\"\u003e{@ListId:Absences}\u003c/ListId\u003e \u003cViewFlag xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListView\"\u003e8921097\u003c/ViewFlag\u003e \u003cViewFlags xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListView\"\u003eHtml Hidden RecurrenceRowset Calendar Mobile\u003c/ViewFlags\u003e \u003cViewContentTypeId xmlns=\"http://schemas.microsoft.com/WebPart/v2/ListView\"\u003e0x\u003c/ViewContentTypeId\u003e\u003c/WebPart\u003e",
+        "8bb9bcef-eb1b-4d4e-aa6d-210b44f46b12": "\u003cwebParts\u003e \u003cwebPart xmlns=\"http://schemas.microsoft.com/WebPart/v3\"\u003e \u003cmetaData\u003e  \u003ctype name=\"Microsoft.SharePoint.WebPartPages.XsltListViewWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" /\u003e  \u003cimportErrorMessage\u003eCannot import this Web Part.\u003c/importErrorMessage\u003e \u003c/metaData\u003e \u003cdata\u003e  \u003cproperties\u003e  \u003cproperty name=\"ShowWithSampleData\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Default\" type=\"string\" /\u003e  \u003cproperty name=\"JSLink\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"CacheXslStorage\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"ViewContentTypeId\" type=\"string\" /\u003e  \u003cproperty name=\"XmlDefinitionLink\" type=\"string\" /\u003e  \u003cproperty name=\"ManualRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ListUrl\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ListId\" type=\"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\u003e{@ListId:Vacation Policies}\u003c/property\u003e  \u003cproperty name=\"TitleUrl\" type=\"string\"\u003e{@ListUrl:Vacation Policies}\u003c/property\u003e  \u003cproperty name=\"EnableOriginalValue\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Direction\" type=\"direction\"\u003eNotSet\u003c/property\u003e  \u003cproperty name=\"ServerRender\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ViewFlags\" type=\"Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003eHtml, Hidden, FreeForm, Mobile\u003c/property\u003e  \u003cproperty name=\"AllowConnect\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"ListName\" type=\"string\"\u003e{{@ListId:Vacation Policies}}\u003c/property\u003e  \u003cproperty name=\"ListDisplayName\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"AllowZoneChange\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"DisableSaveAsNewViewButton\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ViewFlag\" type=\"string\" /\u003e  \u003cproperty name=\"DataSourceID\" type=\"string\" /\u003e  \u003cproperty name=\"ExportMode\" type=\"exportmode\"\u003eAll\u003c/property\u003e  \u003cproperty name=\"AutoRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"FireInitialRow\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"AllowEdit\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"Description\" type=\"string\" /\u003e  \u003cproperty name=\"HelpMode\" type=\"helpmode\"\u003eModeless\u003c/property\u003e  \u003cproperty name=\"BaseXsltHashKey\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"AllowMinimize\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"CacheXslTimeOut\" type=\"int\"\u003e86400\u003c/property\u003e  \u003cproperty name=\"ChromeType\" type=\"chrometype\"\u003eDefault\u003c/property\u003e  \u003cproperty name=\"Xsl\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ChromeState\" type=\"chromestate\"\u003eNormal\u003c/property\u003e  \u003cproperty name=\"CatalogIconImageUrl\" type=\"string\" /\u003e  \u003cproperty name=\"SampleData\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"UseSQLDataSourcePaging\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"TitleIconImageUrl\" type=\"string\" /\u003e  \u003cproperty name=\"PageSize\" type=\"int\"\u003e-1\u003c/property\u003e  \u003cproperty name=\"ShowTimelineIfAvailable\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"Width\" type=\"string\" /\u003e  \u003cproperty name=\"DataFields\" type=\"string\" /\u003e  \u003cproperty name=\"Hidden\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Title\" type=\"string\" /\u003e  \u003cproperty name=\"PageType\" type=\"Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003ePAGE_NORMALVIEW\u003c/property\u003e  \u003cproperty name=\"DataSourcesString\" type=\"string\" /\u003e  \u003cproperty name=\"AllowClose\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"InplaceSearchEnabled\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"WebId\" type=\"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\u003e00000000-0000-0000-0000-000000000000\u003c/property\u003e  \u003cproperty name=\"Height\" type=\"string\" /\u003e  \u003cproperty name=\"GhostedXslLink\" type=\"string\"\u003emain.xsl\u003c/property\u003e  \u003cproperty name=\"DisableViewSelectorMenu\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"DisplayName\" type=\"string\" /\u003e  \u003cproperty name=\"IsClientRender\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"XmlDefinition\" type=\"string\"\u003e\u0026lt;View Name=\"{8BB9BCEF-EB1B-4D4E-AA6D-210B44F46B12}\" MobileView=\"TRUE\" Type=\"HTML\" Hidden=\"TRUE\" TabularView=\"FALSE\" FreeForm=\"TRUE\" DisplayName=\"\" Url=\"{@ListUrl:Site Pages}/Absences Home.aspx\" Level=\"1\" BaseViewID=\"0\" ContentTypeID=\"0x\" \u0026gt;\u0026lt;Query\u0026gt;\u0026lt;OrderBy\u0026gt;\u0026lt;FieldRef Name=\"Modified\" Ascending=\"FALSE\"/\u0026gt;\u0026lt;/OrderBy\u0026gt;\u0026lt;/Query\u0026gt;\u0026lt;ViewFields\u0026gt;\u0026lt;FieldRef Name=\"DocIcon\"/\u0026gt;\u0026lt;FieldRef Name=\"LinkFilenameNoMenu\"/\u0026gt;\u0026lt;FieldRef Name=\"Editor\"/\u0026gt;\u0026lt;/ViewFields\u0026gt;\u0026lt;RowLimit Paged=\"TRUE\"\u0026gt;30\u0026lt;/RowLimit\u0026gt;\u0026lt;XslLink Default=\"TRUE\"\u0026gt;main.xsl\u0026lt;/XslLink\u0026gt;\u0026lt;Toolbar Type=\"Freeform\"/\u0026gt;\u0026lt;/View\u0026gt;\u003c/property\u003e  \u003cproperty name=\"InitialAsyncDataFetch\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"NoDefaultStyle\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"AllowHide\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"ParameterBindings\" type=\"string\"\u003e \u0026lt;ParameterBinding Name=\"dvt_sortdir\" Location=\"Postback;Connection\"/\u0026gt; \u0026lt;ParameterBinding Name=\"dvt_sortfield\" Location=\"Postback;Connection\"/\u0026gt; \u0026lt;ParameterBinding Name=\"dvt_startposition\" Location=\"Postback\" DefaultValue=\"\"/\u0026gt; \u0026lt;ParameterBinding Name=\"dvt_firstrow\" Location=\"Postback;Connection\"/\u0026gt; \u0026lt;ParameterBinding Name=\"OpenMenuKeyAccessible\" Location=\"Resource(wss,OpenMenuKeyAccessible)\" /\u0026gt; \u0026lt;ParameterBinding Name=\"open_menu\" Location=\"Resource(wss,open_menu)\" /\u0026gt; \u0026lt;ParameterBinding Name=\"select_deselect_all\" Location=\"Resource(wss,select_deselect_all)\" /\u0026gt; \u0026lt;ParameterBinding Name=\"idPresEnabled\" Location=\"Resource(wss,idPresEnabled)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"NoAnnouncements\" Location=\"Resource(wss,noitemsinview_doclibrary)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"NoAnnouncementsHowTo\" Location=\"Resource(wss,noitemsinview_doclibrary_howto)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"AddNewAnnouncement\" Location=\"Resource(wss,Add_New_Document)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"MoreAnnouncements\" Location=\"Resource(wss,MoreDocuments)\" /\u0026gt;\u003c/property\u003e  \u003cproperty name=\"DataSourceMode\" type=\"Microsoft.SharePoint.WebControls.SPDataSourceMode, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003eList\u003c/property\u003e  \u003cproperty name=\"AutoRefreshInterval\" type=\"int\"\u003e60\u003c/property\u003e  \u003cproperty name=\"AsyncRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"HelpUrl\" type=\"string\" /\u003e  \u003cproperty name=\"MissingAssembly\" type=\"string\"\u003eCannot import this Web Part.\u003c/property\u003e  \u003cproperty name=\"XslLink\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"SelectParameters\" type=\"string\" /\u003e  \u003cproperty name=\"HasClientDataSource\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003c/properties\u003e \u003c/data\u003e \u003c/webPart\u003e\u003c/webParts\u003e",
+        "6f37d3ed-c1c0-462e-954b-807cea7073bc": "\u003cwebParts\u003e \u003cwebPart xmlns=\"http://schemas.microsoft.com/WebPart/v3\"\u003e \u003cmetaData\u003e  \u003ctype name=\"Microsoft.SharePoint.WebPartPages.DataFormWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" /\u003e  \u003cimportErrorMessage\u003eCannot import this Web Part.\u003c/importErrorMessage\u003e \u003c/metaData\u003e \u003cdata\u003e  \u003cproperties\u003e  \u003cproperty name=\"InitialAsyncDataFetch\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ChromeType\" type=\"chrometype\"\u003eDefault\u003c/property\u003e  \u003cproperty name=\"UseSQLDataSourcePaging\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"Height\" type=\"string\" /\u003e  \u003cproperty name=\"CacheXslStorage\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"XslLink\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ParameterBindings\" type=\"string\"\u003e\t\u0026lt;ParameterBinding Name=\"ListID\" Location=\"None\" DefaultValue=\"{{@ListId:Absences}}\"/\u0026gt;\t\u0026lt;ParameterBinding Name=\"dvt_apos\" Location=\"Postback;Connection\"/\u0026gt;\t\u0026lt;ParameterBinding Name=\"UserID\" Location=\"CAMLVariable\" DefaultValue=\"CurrentUserName\"/\u0026gt;\t\u0026lt;ParameterBinding Name=\"Today\" Location=\"CAMLVariable\" DefaultValue=\"CurrentDate\"/\u0026gt;\u003c/property\u003e  \u003cproperty name=\"AllowZoneChange\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"AutoRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"XmlDefinitionLink\" type=\"string\" /\u003e  \u003cproperty name=\"DataFields\" type=\"string\"\u003e@Title,Title;@AVMAbsenceType,Absence Type;@EventDate,Start Time;@EndDate,End Time;@Description,Description;@fAllDayEvent,All Day Event;@fRecurrence,Recurrence;@AVMStatus,Status;@AVMComments,Comments;@ApproveR,Approve-Reject;@Setup,Setup;@ID,ID;@ContentType,Content Type;@Modified,Modified;@Created,Created;@Author,Created By;@Editor,Modified By;@_UIVersionString,Version;@Attachments,Attachments;@File_x0020_Type,File Type;@FileLeafRef,Name (for use in forms);@FileDirRef,Path;@FSObjType,Item Type;@_HasCopyDestinations,Has Copy Destinations;@_CopySource,Copy Source;@ContentTypeId,Content Type ID;@_ModerationStatus,Approval Status;@_UIVersion,UI Version;@Created_x0020_Date,Created;@FileRef,URL Path;\u003c/property\u003e  \u003cproperty name=\"NoDefaultStyle\" type=\"string\"\u003eTRUE\u003c/property\u003e  \u003cproperty name=\"ViewFlag\" type=\"string\"\u003e0\u003c/property\u003e  \u003cproperty name=\"CatalogIconImageUrl\" type=\"string\" /\u003e  \u003cproperty name=\"ListUrl\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"AutoRefreshInterval\" type=\"int\"\u003e60\u003c/property\u003e  \u003cproperty name=\"AllowConnect\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"AllowClose\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"HelpMode\" type=\"helpmode\"\u003eModeless\u003c/property\u003e  \u003cproperty name=\"Xsl\" type=\"string\"\u003e\u0026lt;xsl:stylesheet xmlns:x=\"http://www.w3.org/2001/XMLSchema\" xmlns:d=\"http://schemas.microsoft.com/sharepoint/dsp\" version=\"1.0\" exclude-result-prefixes=\"xsl msxsl ddwrt\" xmlns:ddwrt=\"http://schemas.microsoft.com/WebParts/v2/DataView/runtime\" xmlns:asp=\"http://schemas.microsoft.com/ASPNET/20\" xmlns:__designer=\"http://schemas.microsoft.com/WebParts/v2/DataView/designer\" xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:msxsl=\"urn:schemas-microsoft-com:xslt\" xmlns:SharePoint=\"Microsoft.SharePoint.WebControls\" xmlns:ddwrt2=\"urn:frontpage:internal\"\u0026gt;\t\u0026lt;xsl:output method=\"html\" indent=\"no\"/\u0026gt;\t\u0026lt;xsl:decimal-format NaN=\"\"/\u0026gt;\t\u0026lt;xsl:param name=\"dvt_apos\"\u0026gt;\u0027\u0026lt;/xsl:param\u0026gt;\t\u0026lt;xsl:param name=\"ListID\"\u0026gt;\u0026lt;/xsl:param\u0026gt;\t\u0026lt;xsl:variable name=\"dvt_1_automode\"\u0026gt;0\u0026lt;/xsl:variable\u0026gt;\t\u0026lt;xsl:template match=\"/\" xmlns:x=\"http://www.w3.org/2001/XMLSchema\" xmlns:d=\"http://schemas.microsoft.com/sharepoint/dsp\" xmlns:asp=\"http://schemas.microsoft.com/ASPNET/20\" xmlns:__designer=\"http://schemas.microsoft.com/WebParts/v2/DataView/designer\" xmlns:SharePoint=\"Microsoft.SharePoint.WebControls\"\u0026gt;\t\t\u0026lt;xsl:call-template name=\"dvt_1\"/\u0026gt;\t\u0026lt;/xsl:template\u0026gt;\t\u0026lt;xsl:template name=\"dvt_1\"\u0026gt;\t\t\u0026lt;xsl:variable name=\"dvt_StyleName\"\u0026gt;Table\u0026lt;/xsl:variable\u0026gt;\t\t\u0026lt;xsl:variable name=\"Rows\" select=\"/dsQueryResponse/Rows/Row\"/\u0026gt; \u0026lt;SCRIPT type=\"text/javascript\"\u0026gt; function GetSource(defaultSource) { return escapeProperly(STSPageUrlValidation(window.location.href)); } \u0026lt;/SCRIPT\u0026gt;\t\t\u0026lt;table border=\"0\" width=\"100%\" cellpadding=\"2\" cellspacing=\"0\"\u0026gt;\t\t\t\u0026lt;tr valign=\"top\"\u0026gt;\t\t\t\t\u0026lt;xsl:if test=\"$dvt_1_automode = \u00271\u0027\" ddwrt:cf_ignore=\"1\"\u0026gt;\t\t\t\t\t\u0026lt;th class=\"ms-vh\" width=\"1%\" nowrap=\"nowrap\"\u0026gt;\u0026lt;/th\u0026gt;\t\t\t\t\u0026lt;/xsl:if\u0026gt;\t\t\t\t\u0026lt;th class=\"ms-vh\" nowrap=\"\"\u0026gt;Title\u0026lt;/th\u0026gt;\t\t\t\t\u0026lt;th class=\"ms-vh\" nowrap=\"\"\u0026gt;Absentee\u0026lt;/th\u0026gt;\t\t\t\t\u0026lt;th class=\"ms-vh\" nowrap=\"\"\u0026gt;\u0026lt;/th\u0026gt;\u0026lt;/tr\u0026gt;\t\t\t\u0026lt;xsl:call-template name=\"dvt_1.body\"\u0026gt;\t\t\t\t\u0026lt;xsl:with-param name=\"Rows\" select=\"$Rows\"/\u0026gt;\t\t\t\u0026lt;/xsl:call-template\u0026gt;\t\t\u0026lt;/table\u0026gt;\t\u0026lt;/xsl:template\u0026gt;\t\u0026lt;xsl:template name=\"dvt_1.body\"\u0026gt;\t\t\u0026lt;xsl:param name=\"Rows\"/\u0026gt;\t\t\u0026lt;xsl:for-each select=\"$Rows\"\u0026gt;\t\t\t\u0026lt;xsl:call-template name=\"dvt_1.rowview\"/\u0026gt;\t\t\u0026lt;/xsl:for-each\u0026gt;\t\u0026lt;/xsl:template\u0026gt;\t\u0026lt;xsl:template name=\"dvt_1.rowview\"\u0026gt;\t\t\u0026lt;tr\u0026gt;\t\t\t\u0026lt;xsl:if test=\"position() mod 2 = 1\"\u0026gt;\t\t\t\t\u0026lt;xsl:attribute name=\"class\"\u0026gt;ms-alternating\u0026lt;/xsl:attribute\u0026gt;\t\t\t\u0026lt;/xsl:if\u0026gt;\t\t\t\u0026lt;xsl:if test=\"$dvt_1_automode = \u00271\u0027\" ddwrt:cf_ignore=\"1\"\u0026gt;\t\t\t\t\u0026lt;td class=\"ms-vb\" width=\"1%\" nowrap=\"nowrap\"\u0026gt;\t\t\t\t\t\u0026lt;span ddwrt:amkeyfield=\"ID\" ddwrt:amkeyvalue=\"ddwrt:EscapeDelims(string(@ID))\" ddwrt:ammode=\"view\"\u0026gt;\u0026lt;/span\u0026gt;\t\t\t\t\u0026lt;/td\u0026gt;\t\t\t\u0026lt;/xsl:if\u0026gt;\t\t\t\u0026lt;td class=\"ms-vb\"\u0026gt;\t\t\t\t\u0026lt;a href=\"../Lists/absences/dispform.aspx?ID={@ID}\" onclick=\"javascript:this.href = unescapeProperly(escape(this.href)); GoToLink(this); return false;\" target=\"_self\"\u0026gt;\t\t\t\t\u0026lt;xsl:value-of select=\"@Title\"/\u0026gt;\t\t\t\t\u0026lt;/a\u0026gt;\t\t\t\u0026lt;/td\u0026gt;\t\t\t\u0026lt;td class=\"ms-vb\"\u0026gt;\t\t\t\t\u0026lt;xsl:value-of select=\"@Author\" disable-output-escaping=\"yes\" /\u0026gt;\t\t\t\u0026lt;/td\u0026gt;\t\t\t\u0026lt;td class=\"ms-vb\" align=\"center\"\u0026gt;\t\t\t\t\u0026lt;a href=\"../Workflows/ApproveReject/ApproveReject.aspx?ID={@ID}\u0026amp;amp;List={$ListID}\" onclick=\"javascript:this.href = unescapeProperly(escape(this.href)); GoToLink(this); return false;\" target=\"_self\"\u0026gt;Approve/Reject\u0026lt;/a\u0026gt;\t\t\t\u0026lt;/td\u0026gt;\u0026lt;/tr\u0026gt;\t\u0026lt;/xsl:template\u0026gt;\u0026lt;/xsl:stylesheet\u0026gt;\t\u003c/property\u003e  \u003cproperty name=\"EnableOriginalValue\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Hidden\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ListName\" type=\"string\"\u003e{{@ListId:Absences}}\u003c/property\u003e  \u003cproperty name=\"DataSourceID\" type=\"string\" /\u003e  \u003cproperty name=\"CacheXslTimeOut\" type=\"int\"\u003e86400\u003c/property\u003e  \u003cproperty name=\"ListDisplayName\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ManualRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ViewFlags\" type=\"Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003eNone\u003c/property\u003e  \u003cproperty name=\"ChromeState\" type=\"chromestate\"\u003eNormal\u003c/property\u003e  \u003cproperty name=\"AllowHide\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"PageSize\" type=\"int\"\u003e-1\u003c/property\u003e  \u003cproperty name=\"SampleData\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ShowWithSampleData\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"FireInitialRow\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"Title\" type=\"string\"\u003ePending Approval\u003c/property\u003e  \u003cproperty name=\"ListId\" type=\"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\u003e{@ListId:Absences}\u003c/property\u003e  \u003cproperty name=\"AsyncRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Description\" type=\"string\" /\u003e  \u003cproperty name=\"AllowMinimize\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"TitleUrl\" type=\"string\" /\u003e  \u003cproperty name=\"DataSourcesString\" type=\"string\"\u003e\u0026lt;%@ Register TagPrefix=\"cc1\" Namespace=\"Microsoft.SharePoint.WebControls\" Assembly=\"Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" %\u0026gt;\u0026lt;%@ Register TagPrefix=\"cc2\" Namespace=\"Microsoft.SharePoint.WebPartPages\" Assembly=\"Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" %\u0026gt;\u0026lt;cc1:SPDataSource runat=\"server\" SelectCommand=\"\u0026amp;lt;View\u0026amp;gt;\u0026amp;lt;Query\u0026amp;gt;\u0026amp;lt;Where\u0026amp;gt;\u0026amp;lt;Eq\u0026amp;gt;\u0026amp;lt;FieldRef Name=\u0026amp;quot;AVMStatus\u0026amp;quot;/\u0026amp;gt;\u0026amp;lt;Value Type=\u0026amp;quot;Text\u0026amp;quot;\u0026amp;gt;Pending Approval\u0026amp;lt;/Value\u0026amp;gt;\u0026amp;lt;/Eq\u0026amp;gt;\u0026amp;lt;/Where\u0026amp;gt;\u0026amp;lt;/Query\u0026amp;gt;\u0026amp;lt;/View\u0026amp;gt;\" UseInternalName=\"True\" DataSourceMode=\"List\" ID=\"Absences1\"\u0026gt;\u0026lt;SelectParameters\u0026gt;\u0026lt;cc2:DataFormParameter PropertyName=\"ParameterValues\" ParameterKey=\"ListID\" DefaultValue=\"{{@ListId:Absences}}\" Name=\"ListID\"\u0026gt;\u0026lt;/cc2:DataFormParameter\u0026gt;\u0026lt;/SelectParameters\u0026gt;\u0026lt;/cc1:SPDataSource\u0026gt;\u003c/property\u003e  \u003cproperty name=\"DisplayName\" type=\"string\"\u003eAbsences\u003c/property\u003e  \u003cproperty name=\"PageType\" type=\"Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003ePAGE_NORMALVIEW\u003c/property\u003e  \u003cproperty name=\"Width\" type=\"string\" /\u003e  \u003cproperty name=\"AllowEdit\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"ExportMode\" type=\"exportmode\"\u003eAll\u003c/property\u003e  \u003cproperty name=\"Direction\" type=\"direction\"\u003eNotSet\u003c/property\u003e  \u003cproperty name=\"ViewContentTypeId\" type=\"string\" /\u003e  \u003cproperty name=\"HelpUrl\" type=\"string\" /\u003e  \u003cproperty name=\"XmlDefinition\" type=\"string\" /\u003e  \u003cproperty name=\"Default\" type=\"string\"\u003eFALSE\u003c/property\u003e  \u003cproperty name=\"TitleIconImageUrl\" type=\"string\" /\u003e  \u003cproperty name=\"MissingAssembly\" type=\"string\"\u003eCannot import this Web Part.\u003c/property\u003e  \u003c/properties\u003e \u003c/data\u003e \u003c/webPart\u003e\u003c/webParts\u003e",
+        "23b53eaf-0f53-4078-99c5-3296c31e6c17": "\u003cwebParts\u003e \u003cwebPart xmlns=\"http://schemas.microsoft.com/WebPart/v3\"\u003e \u003cmetaData\u003e  \u003ctype name=\"Microsoft.SharePoint.WebPartPages.XsltListViewWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\" /\u003e  \u003cimportErrorMessage\u003eCannot import this Web Part.\u003c/importErrorMessage\u003e \u003c/metaData\u003e \u003cdata\u003e  \u003cproperties\u003e  \u003cproperty name=\"ShowWithSampleData\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Default\" type=\"string\" /\u003e  \u003cproperty name=\"JSLink\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"CacheXslStorage\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"ViewContentTypeId\" type=\"string\" /\u003e  \u003cproperty name=\"XmlDefinitionLink\" type=\"string\" /\u003e  \u003cproperty name=\"ManualRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ListUrl\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ListId\" type=\"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\u003e{@ListId:Announcements}\u003c/property\u003e  \u003cproperty name=\"TitleUrl\" type=\"string\"\u003e{@ListUrl:Announcements}\u003c/property\u003e  \u003cproperty name=\"EnableOriginalValue\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Direction\" type=\"direction\"\u003eNotSet\u003c/property\u003e  \u003cproperty name=\"ServerRender\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ViewFlags\" type=\"Microsoft.SharePoint.SPViewFlags, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003eHtml, Hidden, FreeForm, Mobile\u003c/property\u003e  \u003cproperty name=\"AllowConnect\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"ListName\" type=\"string\"\u003e{{@ListId:Announcements}}\u003c/property\u003e  \u003cproperty name=\"ListDisplayName\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"AllowZoneChange\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"DisableSaveAsNewViewButton\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"ViewFlag\" type=\"string\" /\u003e  \u003cproperty name=\"DataSourceID\" type=\"string\" /\u003e  \u003cproperty name=\"ExportMode\" type=\"exportmode\"\u003eAll\u003c/property\u003e  \u003cproperty name=\"AutoRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"FireInitialRow\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"AllowEdit\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"Description\" type=\"string\" /\u003e  \u003cproperty name=\"HelpMode\" type=\"helpmode\"\u003eModeless\u003c/property\u003e  \u003cproperty name=\"BaseXsltHashKey\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"AllowMinimize\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"CacheXslTimeOut\" type=\"int\"\u003e86400\u003c/property\u003e  \u003cproperty name=\"ChromeType\" type=\"chrometype\"\u003eDefault\u003c/property\u003e  \u003cproperty name=\"Xsl\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"ChromeState\" type=\"chromestate\"\u003eNormal\u003c/property\u003e  \u003cproperty name=\"CatalogIconImageUrl\" type=\"string\"\u003e/_layouts/15/images/itann.png?rev=40\u003c/property\u003e  \u003cproperty name=\"SampleData\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"UseSQLDataSourcePaging\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"TitleIconImageUrl\" type=\"string\" /\u003e  \u003cproperty name=\"PageSize\" type=\"int\"\u003e-1\u003c/property\u003e  \u003cproperty name=\"ShowTimelineIfAvailable\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"Width\" type=\"string\" /\u003e  \u003cproperty name=\"DataFields\" type=\"string\" /\u003e  \u003cproperty name=\"Hidden\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"Title\" type=\"string\" /\u003e  \u003cproperty name=\"PageType\" type=\"Microsoft.SharePoint.PAGETYPE, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003ePAGE_NORMALVIEW\u003c/property\u003e  \u003cproperty name=\"DataSourcesString\" type=\"string\" /\u003e  \u003cproperty name=\"AllowClose\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"InplaceSearchEnabled\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"WebId\" type=\"System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\"\u003e00000000-0000-0000-0000-000000000000\u003c/property\u003e  \u003cproperty name=\"Height\" type=\"string\" /\u003e  \u003cproperty name=\"GhostedXslLink\" type=\"string\"\u003emain.xsl\u003c/property\u003e  \u003cproperty name=\"DisableViewSelectorMenu\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"DisplayName\" type=\"string\" /\u003e  \u003cproperty name=\"IsClientRender\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"XmlDefinition\" type=\"string\"\u003e\u0026lt;View Name=\"{23B53EAF-0F53-4078-99C5-3296C31E6C17}\" MobileView=\"TRUE\" Type=\"HTML\" Hidden=\"TRUE\" TabularView=\"FALSE\" FreeForm=\"TRUE\" DisplayName=\"\" Url=\"{@ListUrl:Site Pages}/Absences Home.aspx\" Level=\"1\" BaseViewID=\"0\" ContentTypeID=\"0x\" \u0026gt;\u0026lt;Query\u0026gt;\u0026lt;Where\u0026gt;\u0026lt;Or\u0026gt;\u0026lt;IsNull\u0026gt;\u0026lt;FieldRef Name=\"Expires\"/\u0026gt;\u0026lt;/IsNull\u0026gt;\u0026lt;Geq\u0026gt;\u0026lt;FieldRef Name=\"Expires\"/\u0026gt;\u0026lt;Value Type=\"DateTime\"\u0026gt;\u0026lt;Today/\u0026gt;\u0026lt;/Value\u0026gt;\u0026lt;/Geq\u0026gt;\u0026lt;/Or\u0026gt;\u0026lt;/Where\u0026gt;\u0026lt;OrderBy\u0026gt;\u0026lt;FieldRef Name=\"Modified\" Ascending=\"FALSE\"/\u0026gt;\u0026lt;/OrderBy\u0026gt;\u0026lt;/Query\u0026gt;\u0026lt;ViewFields\u0026gt;\u0026lt;FieldRef Name=\"LinkTitleNoMenu\" Explicit=\"TRUE\"/\u0026gt;\u0026lt;FieldRef Name=\"Body\" Explicit=\"TRUE\"/\u0026gt;\u0026lt;FieldRef Name=\"Author\" Explicit=\"TRUE\"/\u0026gt;\u0026lt;FieldRef Name=\"Modified\" Explicit=\"TRUE\"/\u0026gt;\u0026lt;FieldRef Name=\"Attachments\" Explicit=\"TRUE\"/\u0026gt;\u0026lt;/ViewFields\u0026gt;\u0026lt;RowLimit\u0026gt;5\u0026lt;/RowLimit\u0026gt;\u0026lt;XslLink\u0026gt;main.xsl\u0026lt;/XslLink\u0026gt;\u0026lt;Toolbar Type=\"Standard\"/\u0026gt;\u0026lt;/View\u0026gt;\u003c/property\u003e  \u003cproperty name=\"InitialAsyncDataFetch\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"NoDefaultStyle\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"AllowHide\" type=\"bool\"\u003eTrue\u003c/property\u003e  \u003cproperty name=\"ParameterBindings\" type=\"string\"\u003e\u0026lt;ParameterBinding Name=\"dvt_sortdir\" Location=\"Postback;Connection\" /\u0026gt;\u0026lt;ParameterBinding Name=\"dvt_sortfield\" Location=\"Postback;Connection\" /\u0026gt;\u0026lt;ParameterBinding Name=\"dvt_startposition\" Location=\"Postback\" DefaultValue=\"\" /\u0026gt;\u0026lt;ParameterBinding Name=\"dvt_firstrow\" Location=\"Postback;Connection\" /\u0026gt;\u0026lt;ParameterBinding Name=\"OpenMenuKeyAccessible\" Location=\"Resource(wss,OpenMenuKeyAccessible)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"open_menu\" Location=\"Resource(wss,open_menu)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"select_deselect_all\" Location=\"Resource(wss,select_deselect_all)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"idPresEnabled\" Location=\"Resource(wss,idPresEnabled)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"NoAnnouncements\" Location=\"Resource(wss,NoAnnouncements)\" /\u0026gt;\u0026lt;ParameterBinding Name=\"NoAnnouncementsHowTo\" Location=\"Resource(wss,NoAnnouncementsHowTo)\" /\u0026gt;\u0026lt;ParameterBinding Location=\"Resource(wss,idHomePageNewAnnounce)\" Name=\"AddNewAnnouncement\" /\u0026gt;\u0026lt;ParameterBinding Location=\"Resource(wss,MoreAnnouncements)\" Name=\"MoreAnnouncements\" /\u0026gt;\u0026lt;ParameterBinding Location=\"Resource(wss,2000)\" Name=\"ByText\" /\u0026gt;\u003c/property\u003e  \u003cproperty name=\"DataSourceMode\" type=\"Microsoft.SharePoint.WebControls.SPDataSourceMode, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\"\u003eList\u003c/property\u003e  \u003cproperty name=\"AutoRefreshInterval\" type=\"int\"\u003e60\u003c/property\u003e  \u003cproperty name=\"AsyncRefresh\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003cproperty name=\"HelpUrl\" type=\"string\" /\u003e  \u003cproperty name=\"MissingAssembly\" type=\"string\"\u003eCannot import this Web Part.\u003c/property\u003e  \u003cproperty name=\"XslLink\" type=\"string\" null=\"true\" /\u003e  \u003cproperty name=\"SelectParameters\" type=\"string\" /\u003e  \u003cproperty name=\"HasClientDataSource\" type=\"bool\"\u003eFalse\u003c/property\u003e  \u003c/properties\u003e \u003c/data\u003e \u003c/webPart\u003e\u003c/webParts\u003e"
+      },
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": {
+        "23b53eaf-0f53-4078-99c5-3296c31e6c17": "23b53eaf-0f53-4078-99c5-3296c31e6c17",
+        "9207b70f-0274-4671-bf46-3587847fffa2": "9207b70f-0274-4671-bf46-3587847fffa2",
+        "8bb9bcef-eb1b-4d4e-aa6d-210b44f46b12": "8bb9bcef-eb1b-4d4e-aa6d-210b44f46b12",
+        "6f37d3ed-c1c0-462e-954b-807cea7073bc": "6f37d3ed-c1c0-462e-954b-807cea7073bc"
+      },
+      "WikiPageWebPartListViews": {
+        "9207b70f-0274-4671-bf46-3587847fffa2": "\u003cQuery\u003e\u003cWhere\u003e\u003cAnd\u003e\u003cDateRangesOverlap\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"RecurrenceID\" /\u003e\u003cValue Type=\"DateTime\"\u003e\u003cMonth /\u003e\u003c/Value\u003e\u003c/DateRangesOverlap\u003e\u003cEq\u003e\u003cFieldRef Name=\"AVMStatus\" /\u003e\u003cValue Type=\"Text\"\u003eApproved\u003c/Value\u003e\u003c/Eq\u003e\u003c/And\u003e\u003c/Where\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"EventDate\" /\u003e\u003cFieldRef Name=\"EndDate\" /\u003e\u003cFieldRef Name=\"Title\" /\u003e\u003cFieldRef Name=\"fRecurrence\" Explicit=\"TRUE\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit\u003e0\u003c/RowLimit\u003e\u003cAggregations Value=\"Off\" /\u003e\u003cToolbar Type=\"Standard\" /\u003e",
+        "8bb9bcef-eb1b-4d4e-aa6d-210b44f46b12": "\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Modified\" Ascending=\"FALSE\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"DocIcon\" /\u003e\u003cFieldRef Name=\"LinkFilenameNoMenu\" /\u003e\u003cFieldRef Name=\"Editor\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e30\u003c/RowLimit\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Freeform\" /\u003e",
+        "23b53eaf-0f53-4078-99c5-3296c31e6c17": "\u003cQuery\u003e\u003cWhere\u003e\u003cOr\u003e\u003cIsNull\u003e\u003cFieldRef Name=\"Expires\" /\u003e\u003c/IsNull\u003e\u003cGeq\u003e\u003cFieldRef Name=\"Expires\" /\u003e\u003cValue Type=\"DateTime\"\u003e\u003cToday /\u003e\u003c/Value\u003e\u003c/Geq\u003e\u003c/Or\u003e\u003c/Where\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"Modified\" Ascending=\"FALSE\" /\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"LinkTitleNoMenu\" Explicit=\"TRUE\" /\u003e\u003cFieldRef Name=\"Body\" Explicit=\"TRUE\" /\u003e\u003cFieldRef Name=\"Author\" Explicit=\"TRUE\" /\u003e\u003cFieldRef Name=\"Modified\" Explicit=\"TRUE\" /\u003e\u003cFieldRef Name=\"Attachments\" Explicit=\"TRUE\" /\u003e\u003c/ViewFields\u003e\u003cRowLimit\u003e5\u003c/RowLimit\u003e\u003cXslLink\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"Standard\" /\u003e"
+      }
+    },
+    "/SiteAssets/Fab40Absenceslogo.jpg": {
+      "SecurityConfiguration": null,
+      "AppPageIdentifier": null,
+      "Name": "Fab40Absenceslogo.jpg",
+      "ViewSchemas": null,
+      "ListViewWebParts": null,
+      "ListItemFieldValues": [
+        {
+          "FieldName": "ContentTypeId",
+          "Value": "0x01010024CECA6F02BA884090A541EC121F8D7D",
+          "FieldType": "ContentTypeId"
+        },
+        {
+          "FieldName": "FileLeafRef",
+          "Value": "fab40absenceslogo.jpg",
+          "FieldType": "File"
+        },
+        {
+          "FieldName": "ContentType",
+          "Value": "Document",
+          "FieldType": "ContentType"
+        }
+      ],
+      "IsHomePage": false,
+      "Url": "/SiteAssets/Fab40Absenceslogo.jpg",
+      "HostWebResourceKey": null,
+      "List": "Site Assets",
+      "ContentType": "Document",
+      "ContentTypeId": "0x01010024CECA6F02BA884090A541EC121F8D7D",
+      "IsBinary": true,
+      "DeleteOnCleanup": false,
+      "ForceOverwrite": true,
+      "Created": false,
+      "File": null,
+      "RelativeFilePath": "\\SiteAssets\\Fab40Absenceslogo.jpg",
+      "WebParts": null,
+      "WebPartPageZoneMappings": null,
+      "WebPartPageWebPartListViews": null,
+      "WikiPageWebPartStorageKeyMappings": null,
+      "WikiPageWebPartListViews": null
+    }
+  },
+  "ClassicWorkflowCreators": {
+    "Workflows/ApproveReject/ApproveReject.xoml.wfconfig.xml": {
+      "AssociateWorkflowMarkupConfigUrl": "Workflows/ApproveReject/ApproveReject.xoml.wfconfig.xml",
+      "ConfigVersion": "V1.0"
+    },
+    "Workflows/Setup/Setup.xoml.wfconfig.xml": {
+      "AssociateWorkflowMarkupConfigUrl": "Workflows/Setup/Setup.xoml.wfconfig.xml",
+      "ConfigVersion": "V1.0"
+    }
+  },
+  "CustomActionCreators": {
+  },
+  "AddFeatures": {
+  },
+  "RemoveFeatures": {
+    "MDSFeature": {
+      "FeatureId": "87294c72-f260-42f3-a41b-981a2ffce37a",
+      "DisplayName": "MDSFeature",
+      "FeatureDefinitionScope": 3,
+      "Force": true
+    }
+  },
+  "Navigation": {
+    "UseShared": false,
+    "ClearTopMenu": true,
+    "ClearLeftMenu": true,
+    "TopNavigationNodes": {
+      "Absence Request and Vacation Schedule Management Source": {
+        "AsLastNode": true,
+        "IsExternal": false,
+        "Title": "Absence Request and Vacation Schedule Management",
+        "Url": "{@WebServerRelativeUrl}",
+        "Children": null
+      }
+    },
+    "LeftNavigationNodes": {
+      "Common Actions": {
+        "AsLastNode": true,
+        "IsExternal": false,
+        "Title": "Common Actions",
+        "Url": "{@WebServerRelativeUrl}",
+        "Children": [
+          {
+            "AsLastNode": true,
+            "IsExternal": false,
+            "Title": "Submit New Absence",
+            "Url": "{@WebServerRelativeUrl}/Lists/Absences/NewForm.aspx",
+            "Children": null
+          },
+          {
+            "AsLastNode": true,
+            "IsExternal": false,
+            "Title": "Specify Responsibility Adoption",
+            "Url": "{@WebServerRelativeUrl}/Lists/ResponsibilityAdoption/NewForm.aspx",
+            "Children": null
+          }
+        ]
+      },
+      "Lists": {
+        "AsLastNode": true,
+        "IsExternal": true,
+        "Title": "Lists",
+        "Url": "{@WebServerRelativeUrl}/_layouts/viewlsts.aspx?BaseType=0",
+        "Children": [
+          {
+            "AsLastNode": true,
+            "IsExternal": false,
+            "Title": "Absences",
+            "Url": "{@WebServerRelativeUrl}/Lists/Absences/calendar.aspx",
+            "Children": null
+          },
+          {
+            "AsLastNode": true,
+            "IsExternal": false,
+            "Title": "Responsibility Adoption",
+            "Url": "{@WebServerRelativeUrl}/Lists/ResponsibilityAdoption/AllItems.aspx",
+            "Children": null
+          },
+          {
+            "AsLastNode": true,
+            "IsExternal": false,
+            "Title": "\nAbsence Type\n\t\t\t\t\t\t\t",
+            "Url": "{@WebServerRelativeUrl}/Lists/AbsenceType/AllItems.aspx",
+            "Children": null
+          }
+        ]
+      },
+      "Documents": {
+        "AsLastNode": true,
+        "IsExternal": true,
+        "Title": "Documents",
+        "Url": "{@WebServerRelativeUrl}/_layouts/viewlsts.aspx?BaseType=1",
+        "Children": [
+          {
+            "AsLastNode": true,
+            "IsExternal": false,
+            "Title": "Vacation Policies",
+            "Url": "{@WebServerRelativeUrl}/policies/Forms/AllItems.aspx",
+            "Children": null
+          }
+        ]
+      },
+      "\n\t\nSite Contents\n\n  ": {
+        "AsLastNode": true,
+        "IsExternal": true,
+        "Title": "\n\t\nSite Contents\n\n  ",
+        "Url": "{@WebServerRelativeUrl}/_layouts/15/viewlsts.aspx",
+        "Children": null
+      }
+    }
+  },
+  "LookAndFeel": {
+    "SiteTitle": null,
+    "SiteLogoUrl": "",
+    "DefaultMasterPageUrl": "",
+    "CustomMasterPageUrl": "",
+    "AlternateCssUrl": "",
+    "CurrentComposedLook": null
+  },
+  "RemoteEventRegistrationCreators": [ ],
+  "Description": "This is a migrated version of the Absence Request and Vacation Schedule Management application template for Microsoft Windows SharePoint Services 3.0. The Absence Request and Vacation Schedule Management application template for Windows SharePoint Services 3.0 helps employees manage requests for out of office days. Team members post days they will be unavailable and can use the template to assign their responsibilities to others during those days. The application template helps team leaders manage requests for vacation and provides dashboards showing which users are signed up for the absent team member’s responsibilities during an absence.",
+  "RuntimeResources": null,
+  "ClientPageRuntimeResources": null,
+  "ClientGlobalRuntimeResources": null
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ns0:RootWorkflowActivityWithData x:Class="Microsoft.SharePoint.Workflow.ROOT" x:Name="ROOT" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null">
+	<ns0:RootWorkflowActivityWithData.WorkflowFields>
+		<ns0:WorkflowDataField Name="__list" Type="System.String" />
+		<ns0:WorkflowDataField Name="__item" Type="System.Int32" />
+		<ns0:WorkflowDataField Name="__context" Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" />
+		<ns0:WorkflowDataField Name="__initParams" Type="Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties" />
+		<ns0:WorkflowDataField Name="__workflowId" Type="System.Guid" />
+	</ns0:RootWorkflowActivityWithData.WorkflowFields>
+	<ns0:OnWorkflowActivated WorkflowProperties="{ActivityBind ROOT,Path=__initParams}" x:Name="ID1">
+		<ns0:OnWorkflowActivated.CorrelationToken>
+			<wf0:CorrelationToken Name="refObject" OwnerActivityName="ROOT" xmlns:wf0="http://schemas.microsoft.com/winfx/2006/xaml/workflow" />
+		</ns0:OnWorkflowActivated.CorrelationToken>
+	</ns0:OnWorkflowActivated>
+	<ns0:ApplyActivation __Context="{ActivityBind ROOT,Path=__context}" x:Name="ID2" __WorkflowProperties="{ActivityBind ROOT,Path=__initParams}" />
+	<IfElseActivity x:Name="ID4" Description="Step 1">
+		<IfElseBranchActivity x:Name="ID3">
+			<IfElseBranchActivity.Condition>
+				<RuleConditionReference ConditionName="__Rule_ID3" />
+			</IfElseBranchActivity.Condition>
+			<ns0:SetFieldActivity x:Name="ID6" FieldName="AVMStatus" __Context="{ActivityBind ROOT,Path=__context}" __ListId="{ActivityBind ROOT,Path=__list}" __ListItem="{ActivityBind ROOT,Path=__item}">
+				<ns0:SetFieldActivity.Value>
+					<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Pending Approval</ns1:String>
+				</ns0:SetFieldActivity.Value>
+			</ns0:SetFieldActivity>
+		</IfElseBranchActivity>
+		<IfElseBranchActivity x:Name="ID7">
+			<ns0:SetFieldActivity x:Name="ID8" FieldName="AVMStatus" __Context="{ActivityBind ROOT,Path=__context}" __ListId="{ActivityBind ROOT,Path=__list}" __ListItem="{ActivityBind ROOT,Path=__item}">
+				<ns0:SetFieldActivity.Value>
+					<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Approved</ns1:String>
+				</ns0:SetFieldActivity.Value>
+			</ns0:SetFieldActivity>
+		</IfElseBranchActivity>
+	</IfElseActivity>
+</ns0:RootWorkflowActivityWithData>

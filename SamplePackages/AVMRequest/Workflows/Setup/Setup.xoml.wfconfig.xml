@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorkflowConfig>
+    <Template
+        BaseID="{22CE8EB9-75F5-41C8-8C3E-7B64FA57F9C7}"
+        DocLibID="{{@ListId:Workflows}}"
+        XomlHref="Workflows/Setup/Setup.xoml"
+        XomlVersion="V1.0"
+        RulesHref="Workflows/Setup/Setup.xoml.rules"
+        RulesVersion="V1.0"
+    >
+    </Template>
+    <Association
+        ListID="{{@ListId:Absences}}"
+        TaskListID="{{@ListId:Tasks}}"
+        StartOnCreate="true"
+    >
+    </Association>
+    <ContentTypes>
+    </ContentTypes>
+    <Initiation URL="Workflows/Setup/Setup.aspx">
+        <Fields />
+        <Parameters></Parameters>
+    </Initiation>
+</WorkflowConfig>
