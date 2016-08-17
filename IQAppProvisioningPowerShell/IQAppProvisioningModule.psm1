@@ -33,6 +33,9 @@ function New-IQAppManifest
 		[string]$JSONFilePath,
 				
 		[Parameter()]
+	    [bool]$PreserveBaseFilePath,
+
+		[Parameter()]
 	    [string]$StorageAccount,
 
 		[Parameter()]
@@ -57,7 +60,12 @@ function New-IQAppManifest
 	{	
 		Write-Host $JSONFilePath
 		$j = Get-Content -Path "$JSONFilePath" -Encoding UTF8
-		return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::GetManifestFromJSON($j)
+		$manifest = [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::GetManifestFromJSON($j)
+		if($PreserveBaseFilePath -ne $true)
+		{
+			$manifest.BaseFilePath = Split-Path -Path $JSONFilePath -Parent
+		}
+		return $manifest
 	}
 	elseif (($StorageAccount -ne "") -and ($AccountKey -ne "") -and ($Container -eq ""))
 	{	
@@ -479,7 +487,7 @@ function Get-FileCreatorAndFolders
 		[Parameter(Mandatory=$true, Position=3)]
 		[string]$FileWebRelativeUrl,
 
-		[Parameter(Position=4)]
+		[Parameter]
 		[string]$DownloadFolderPath,
 		
 		[Parameter()]
@@ -786,9 +794,11 @@ function Get-LookAndFeelCreator
     Populates or updates a web definition by comparing a site with customizations to a base site
 
 	.DESCRIPTION
-	Populates or updates a web definition by comparing a site with customizations to a base site.
+	Populates or updates a web creator in a site definition or an app manifest by comparing a site with customizations to a base site.
 	
-	This operation will also create or update the first app manifest and download any files for the web definition using the storage information included in the site definition. 
+	If this operation is done with a site defintion it will also create or update the first app manifest.
+	
+	Get-WebCreator will download files using the storage information included in the site definition or app manifest. 
 	
 	For more detail about the operation as it executes, include the -VerboseNotify switch.
 #>
@@ -803,11 +813,14 @@ function Get-WebCreator
 		[Parameter(Mandatory=$true, Position=2)]
 	    [Microsoft.SharePoint.Client.ClientContext]$BaseClientContext,
 
-		[Parameter(Mandatory=$true, Position=3)]
+		[Parameter()]
 		[IQAppProvisioningBaseClasses.Provisioning.SiteDefinition]$SiteDefinition,
 
-	    [Parameter(Mandatory=$true, Position=4)]
+	    [Parameter()]
 	    [IQAppProvisioningBaseClasses.Provisioning.WebCreator]$WebDefinition,
+
+		[Parameter()]
+	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
 	    [IQAppManifestBuilders.WebCreatorBuilderOptions]$Options,
@@ -816,13 +829,27 @@ function Get-WebCreator
 		[switch]$VerboseNotify
 	)
 	$Error.Clear()
-    $builder = New-Object IQAppManifestBuilders.WebCreatorBuilder
-	
-    if($VerboseNotify)
+	if($SiteDefinition -eq $null -and $AppManifest -eq $null)
 	{
-		$builder.WriteNotificationsToStdOut = $true
+		Write-Error "Please include either a site definition or app manifest."
 	}
-	$builder.GetWebCreatorBuilder($SiteDefinition, $WebDefinition, $Options, $SourceClientContext, $BaseClientContext)
+	else
+	{
+		$builder = New-Object IQAppManifestBuilders.WebCreatorBuilder
+	
+		if($VerboseNotify)
+		{
+			$builder.WriteNotificationsToStdOut = $true
+		}
+		if($SiteDefinition -ne $null)
+		{
+			$builder.GetWebCreatorBuilder($SiteDefinition, $WebDefinition, $Options, $SourceClientContext, $BaseClientContext)
+		}
+		else 
+		{
+			$builder.GetWebCreatorBuilder($AppManifest, $Options, $SourceClientContext, $BaseClientContext)
+		}
+	}
 }
 
 <#
@@ -882,6 +909,9 @@ function New-IQSiteDefinition
 		
 		[Parameter()]
 		[string]$JSONFilePath,
+
+		[Parameter()]
+	    [bool]$PreserveBaseFilePath,
 				
 		[Parameter()]
 	    [string]$StorageAccount,
@@ -908,7 +938,12 @@ function New-IQSiteDefinition
 	{	
 		Write-Host $JSONFilePath
 		$j = Get-Content -Path "$JSONFilePath" -Encoding UTF8
-		return [IQAppProvisioningBaseClasses.Provisioning.SiteDefinition]::GetSiteDefinitionFromJSON($j)
+		$siteDefinition = [IQAppProvisioningBaseClasses.Provisioning.SiteDefinition]::GetSiteDefinitionFromJSON($j)
+		if($PreserveBaseFilePath -ne $true)
+		{
+			$siteDefinition.BaseFilePath = Split-Path -Path $JSONFilePath -Parent
+		}
+		return $siteDefinition
 	}
 	elseif (($StorageAccount -ne "") -and ($AccountKey -ne "") -and ($Container -eq ""))
 	{	

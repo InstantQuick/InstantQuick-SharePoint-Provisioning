@@ -3259,12 +3259,6 @@
       "ClassicWorkflowCreators": null,
       "CustomActionCreators": null,
       "AddFeatures": {
-        "MaintenanceLogs": {
-          "FeatureId": "8c6f9096-388d-4eed-96ff-698b3ec46fc4",
-          "DisplayName": "MaintenanceLogs",
-          "Force": true,
-          "FeatureDefinitionScope": 3
-        }
       },
       "RemoveFeatures": {
         "MDSFeature": {

@@ -40,6 +40,7 @@ namespace IQAppManifestBuilders
             var js = new JavaScriptSerializer();
 
             var existingManifest = js.Deserialize<AppManifestBase>(appManifestJson);
+            
             return GetFileCreator(ctx, web, fileWebRelativeUrl, downloadFolderPath, existingManifest,
                 getRelatedFileCreators);
         }
@@ -50,6 +51,11 @@ namespace IQAppManifestBuilders
             if (!fileWebRelativeUrl.StartsWith("/")) fileWebRelativeUrl = "/" + fileWebRelativeUrl;
             fileWebRelativeUrl = fileWebRelativeUrl.Replace("%20", " ");
             OnVerboseNotify("Getting file creator for " + fileWebRelativeUrl);
+
+            if (string.IsNullOrEmpty(downloadFolderPath))
+            {
+                downloadFolderPath = existingManifest.BaseFilePath;
+            }
 
             existingManifest = existingManifest ?? new AppManifestBase();
             existingManifest.FileCreators = existingManifest.FileCreators ?? new Dictionary<string, FileCreator>();

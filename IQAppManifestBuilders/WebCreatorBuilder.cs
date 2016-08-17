@@ -51,6 +51,35 @@ namespace IQAppManifestBuilders
             GetWebCreatorBuilder(siteDefinition, siteDefinition.WebDefinition, null, sourceContext, baseContext);
         }
 
+        public void GetWebCreatorBuilder(AppManifestBase appManifest, ClientContext sourceContext, ClientContext baseContext)
+        {
+            GetWebCreatorBuilder(appManifest,new WebCreatorBuilderOptions(), sourceContext, baseContext);
+        }
+
+        public void GetWebCreatorBuilder(AppManifestBase appManifest, WebCreatorBuilderOptions options, ClientContext sourceContext,
+            ClientContext baseContext)
+        {
+            if (appManifest == null)
+            {
+                throw new ArgumentException("AppManifest is required!");
+            }
+            var siteDefinition = new SiteDefinition();
+            if (appManifest.StorageType == StorageTypes.AzureStorage)
+            {
+                var storageInfo = appManifest.GetAzureStorageInfo();
+                siteDefinition.StorageType = StorageTypes.AzureStorage;
+                siteDefinition.SetAzureStorageInfo(storageInfo.Account, storageInfo.AccountKey, storageInfo.Container);
+            }
+            else
+            {
+                siteDefinition.StorageType = StorageTypes.FileSystem;
+                siteDefinition.BaseFilePath = appManifest.BaseFilePath;
+            }
+            siteDefinition.WebDefinition = new WebCreator();
+            siteDefinition.WebDefinition.AppManifest = appManifest;
+            GetWebCreatorBuilder(siteDefinition, siteDefinition.WebDefinition, options, sourceContext, baseContext);
+        }
+
         public void GetWebCreatorBuilder(SiteDefinition siteDefinition, WebCreator webDefinition,
             WebCreatorBuilderOptions options, ClientContext sourceContext, ClientContext baseContext)
         {
