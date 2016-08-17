@@ -92,7 +92,7 @@ namespace IQAppManifestBuilders
 
                 ctx.Load(list.Fields, f => f.Where(field => field.Hidden == false));
                 ctx.Load(list.ContentTypes,
-                    ctypes => ctypes.Include(ct => ct.Id, ct => ct.Name, ct => ct.Parent, ct => ct.Fields));
+                    ctypes => ctypes.Include(ct => ct.Id, ct => ct.Name, ct => ct.Parent, ct => ct.Fields, ct => ct.DocumentTemplateUrl));
                 ctx.Load(list.Views,
                     v => v.Where(view => view.Hidden == false).Include(view => view.ListViewXml, view => view.Title));
                 ctx.Load(list.WorkflowAssociations, wfa => wfa.Include(
@@ -145,6 +145,12 @@ namespace IQAppManifestBuilders
                     ctx.Web.ServerRelativeUrl != "/")
                 {
                     listCreator.DocumentTemplateUrl = TokenizeUrls(web, list.DocumentTemplateUrl);
+                }
+                else if(list.ContentTypes[0].DocumentTemplateUrl != null &&
+                    !list.ContentTypes[0].DocumentTemplateUrl.ToLowerInvariant().Contains("/template.") &&
+                    ctx.Web.ServerRelativeUrl != "/")
+                {
+                    listCreator.DocumentTemplateUrl = TokenizeUrls(web, list.ContentTypes[0].DocumentTemplateUrl);
                 }
 
                 //Some odd lists such as "Workflows" have no views

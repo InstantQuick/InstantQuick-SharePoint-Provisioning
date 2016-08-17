@@ -1,0 +1,16 @@
+<WorkflowConfig>
+  <Template BaseID="{8C45392F-0C63-4A33-8335-73B8378B6E59}" 
+            DocLibID="{{@ListId:Workflows}}"
+            XomlHref="Workflows/Create Meeting Minutes/Create Meeting Minutes.xoml" 
+            XomlVersion="V1.0"/>
+  <Association ListID="{{@ListId:Board Events}}" TaskListID="{{@ListId:Tasks}}" StartOnCreate="true"/>
+  <ContentTypes/>
+  <Initiation URL="Workflows/Create Meeting Minutes/Create Meeting Minutes.aspx">
+    <Fields/>
+    <Parameters/>
+    <DefaultData/>
+  </Initiation>
+  <Extended>
+    <Fields/>
+  </Extended>
+</WorkflowConfig>

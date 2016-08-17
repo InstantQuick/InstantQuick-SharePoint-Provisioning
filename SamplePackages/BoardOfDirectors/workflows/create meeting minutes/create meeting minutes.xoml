@@ -1,0 +1,50 @@
+<ns0:RootWorkflowActivityWithData x:Class="Microsoft.SharePoint.Workflow.ROOT" x:Name="ROOT" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Microsoft.SharePoint.WorkflowActions.WithKey;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Microsoft.SharePoint.WorkflowActions;Assembly=Microsoft.SharePoint.WorkflowActions, Version=15.0.0.0, Culture=neutral, PublicKeyToken=null">
+	<ns0:RootWorkflowActivityWithData.WorkflowFields>
+		<ns0:WorkflowDataField Type="System.String" Name="__list" />
+		<ns0:WorkflowDataField Type="Microsoft.SharePoint.Workflow.SPItemKey, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Name="__item" />
+		<ns0:WorkflowDataField Type="Microsoft.SharePoint.WorkflowActions.WorkflowContext" Name="__context" />
+		<ns0:WorkflowDataField Type="Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties" Name="__initParams" />
+		<ns0:WorkflowDataField Type="System.Guid" Name="__workflowId" />
+		<ns0:WorkflowDataField Type="Microsoft.SharePoint.Workflow.SPItemKey, Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Name="create" />
+		<ns0:WorkflowDataField Type="System.String" Name="__historylist" />
+		<ns0:WorkflowDataField Type="System.String" Name="__tasklist" />
+		<ns0:WorkflowDataField Type="System.Int32" Name="__itemId" />
+	</ns0:RootWorkflowActivityWithData.WorkflowFields>
+	<ns0:OnWorkflowActivated WorkflowProperties="{ActivityBind ROOT,Path=__initParams}" x:Name="ID1">
+		<ns0:OnWorkflowActivated.CorrelationToken>
+			<wf0:CorrelationToken OwnerActivityName="ROOT" Name="refObject" xmlns:wf0="http://schemas.microsoft.com/winfx/2006/xaml/workflow" />
+		</ns0:OnWorkflowActivated.CorrelationToken>
+	</ns0:OnWorkflowActivated>
+	<ns0:ApplyActivation x:Name="ID2" __WorkflowProperties="{ActivityBind ROOT,Path=__initParams}" __Context="{ActivityBind ROOT,Path=__context}" />
+	<SequenceActivity Description="Step 1" x:Name="ID3">
+		<ns0:ClearHashtableActivity Collection="{x:Null}" x:Name="ID23" />
+		<ns1:LookupActivity ListId="{ActivityBind ROOT,Path=__list}" LookupFunction="LookupFriendlyString" __Context="{ActivityBind ROOT,Path=__context}" FieldName="Title" ListItem="{ActivityBind ROOT,Path=__item}" x:Name="ID26" />
+		<ns0:CoerceStringActivity CoercionFunction="AsDNString" __Context="{ActivityBind ROOT,Path=__context}" x:Name="ID25">
+			<ns0:CoerceStringActivity.Value>
+				<ActivityBind Path="ReturnValue" Name="ID26" />
+			</ns0:CoerceStringActivity.Value>
+		</ns0:CoerceStringActivity>
+		<ns0:AddToHashtableActivity ValueType="System.String" Collection="{ActivityBind ID23,Path=Collection}" Key="FileLeafRef" x:Name="ID24">
+			<ns0:AddToHashtableActivity.Value>
+				<ActivityBind Path="ReturnValue" Name="ID25" />
+			</ns0:AddToHashtableActivity.Value>
+		</ns0:AddToHashtableActivity>
+		<ns1:LookupActivity ListId="{ActivityBind ROOT,Path=__list}" LookupFunction="LookupInt" __Context="{ActivityBind ROOT,Path=__context}" FieldName="ID" ListItem="{ActivityBind ROOT,Path=__item}" x:Name="ID29" />
+		<ns0:CoerceIntActivity CoercionFunction="AsDNInt32" __Context="{ActivityBind ROOT,Path=__context}" x:Name="ID28">
+			<ns0:CoerceIntActivity.Value>
+				<ActivityBind Path="ReturnValue" Name="ID29" />
+			</ns0:CoerceIntActivity.Value>
+		</ns0:CoerceIntActivity>
+		<ns0:AddToHashtableActivity ValueType="System.Int32" Collection="{ActivityBind ID23,Path=Collection}" Key="Meeting" x:Name="ID27">
+			<ns0:AddToHashtableActivity.Value>
+				<ActivityBind Path="ReturnValue" Name="ID28" />
+			</ns0:AddToHashtableActivity.Value>
+		</ns0:AddToHashtableActivity>
+		<ns0:AddToHashtableActivity ValueType="System.String" Collection="{ActivityBind ID23,Path=Collection}" Key="ContentTypeId" x:Name="ID30">
+			<ns0:AddToHashtableActivity.Value>
+				<ns2:String xmlns:ns2="clr-namespace:System;Assembly=mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">{@ListContentType: Meeting Minutes|Document}</ns2:String>
+			</ns0:AddToHashtableActivity.Value>
+		</ns0:AddToHashtableActivity>
+		<ns1:CreateItemActivity ListId="{}{{@ListId:Meeting Minutes}}" __Context="{ActivityBind ROOT,Path=__context}" ItemProperties="{ActivityBind ID23,Path=Collection}" x:Name="ID14" NewItemId="{ActivityBind ROOT,Path=create}" Overwrite="False" />
+	</SequenceActivity>
+</ns0:RootWorkflowActivityWithData>

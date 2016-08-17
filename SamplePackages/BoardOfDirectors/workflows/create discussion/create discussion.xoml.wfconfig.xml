@@ -1,0 +1,21 @@
+<WorkflowConfig>
+    <Template
+        BaseID="{39D64111-51CF-4F0B-8B31-88A56C4508B2}"
+        DocLibID="{{@ListId:Workflows}}"
+        XomlHref="Workflows/Create Discussion/Create Discussion.xoml"
+        XomlVersion="V1.0"
+    >
+    </Template>
+    <Association
+        ListID="{{@ListId:Board Events}}"
+        TaskListID="{{@ListId:Tasks}}"
+        StartOnCreate="true"
+    >
+    </Association>
+    <ContentTypes>
+    </ContentTypes>
+    <Initiation URL="Workflows/Create Discussion/Create Discussion.aspx">
+        <Fields />
+        <Parameters></Parameters>
+    </Initiation>
+</WorkflowConfig>
