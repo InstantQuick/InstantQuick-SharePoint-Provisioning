@@ -464,7 +464,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                     catch (Exception ex)
                     {
                         //There is a bug in 2013 that will result in a COM exception when creating certain hidden lists
-                        //The list gets created when this happens, so this loop just retries ten times if the create gives a server exception.
+                        //The list gets created when this happens, so this loop just retries to load the list if the create gives a server exception.
                         //Note the retry counter value of 20 is completely arbitrary!
                         if (ex is ServerException)
                         {
