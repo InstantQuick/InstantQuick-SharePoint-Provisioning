@@ -419,52 +419,6 @@
       "WikiPageWebPartStorageKeyMappings": { "509814bf-b130-4b07-b581-e77f600e807b": "5d51d768-a391-485f-8cd6-91248a0e8781" },
       "WikiPageWebPartListViews": { }
     },
-    "/AngularJS and Bootstrap Web Parts Documentation/Foo.aspx": {
-      "SecurityConfiguration": null,
-      "AppPageIdentifier": null,
-      "Name": "Foo.aspx",
-      "ViewSchemas": null,
-      "ListViewWebParts": null,
-      "ListItemFieldValues": [
-        {
-          "FieldName": "ContentTypeId",
-          "Value": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
-          "FieldType": "ContentTypeId"
-        },
-        {
-          "FieldName": "FileLeafRef",
-          "Value": "Foo.aspx",
-          "FieldType": "File"
-        },
-        {
-          "FieldName": "WikiField",
-          "Value": "\u003cdiv class=\"ExternalClassA87E78793D4343DF9F3B5BB094FFF688\"\u003e\u003ctable id=\"layoutsTable\" style=\"width\u0026#58;100%;\"\u003e\u003ctbody\u003e\u003ctr style=\"vertical-align\u0026#58;top;\"\u003e\u003ctd style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-outer\" style=\"width\u0026#58;100%;\"\u003e\u003cdiv class=\"ms-rte-layoutszone-inner\"\u003e\u003cp\u003e​​\u003cbr\u003e\u003c/p\u003e\u003cdiv class=\"ms-rtestate-read ms-rte-wpbox\"\u003e\u003cdiv class=\"ms-rtestate-notify  ms-rtestate-read e5f85c32-ca71-4fdf-bd70-d41a6adff3e5\" id=\"div_e5f85c32-ca71-4fdf-bd70-d41a6adff3e5\"\u003e\u003c/div\u003e\u003cdiv id=\"vid_e5f85c32-ca71-4fdf-bd70-d41a6adff3e5\" style=\"display\u0026#58;none;\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cp\u003e​\u003cbr\u003e\u003c/p\u003e\u003c/div\u003e\u003c/div\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\u003cspan id=\"layoutsData\" style=\"display\u0026#58;none;\"\u003efalse,false,1\u003c/span\u003e\u003c/div\u003e",
-          "FieldType": "Note"
-        },
-        {
-          "FieldName": "ContentType",
-          "Value": "Wiki Page",
-          "FieldType": "ContentType"
-        }
-      ],
-      "IsHomePage": false,
-      "Url": "/AngularJS and Bootstrap Web Parts Documentation/Foo.aspx",
-      "HostWebResourceKey": null,
-      "List": "AngularJS and Bootstrap Web Parts Documentation",
-      "ContentType": "Wiki Page",
-      "ContentTypeId": "0x0101080034C40E7DA79CCC4092331FF4834E8084",
-      "IsBinary": false,
-      "DeleteOnCleanup": false,
-      "ForceOverwrite": true,
-      "Created": false,
-      "File": null,
-      "RelativeFilePath": "\\AngularJS and Bootstrap Web Parts Documentation\\Foo.aspx",
-      "WebParts": { "2da24c9e-ef9d-45b4-8936-ff6216dc0c31": "\u003c?xml version=\"1.0\" encoding=\"utf-16\"?\u003e\u003cWebPart xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.microsoft.com/WebPart/v2\"\u003e \u003cTitle\u003eAngularJS IQApp Container (Page Viewer)\u003c/Title\u003e \u003cFrameType\u003eNone\u003c/FrameType\u003e \u003cDescription\u003eA container for an AngularJS/Bootstrap add-in based on the Page Viewer Web Part.\u003c/Description\u003e \u003cIsIncluded\u003etrue\u003c/IsIncluded\u003e \u003cZoneID\u003ewpz\u003c/ZoneID\u003e \u003cPartOrder\u003e0\u003c/PartOrder\u003e \u003cFrameState\u003eNormal\u003c/FrameState\u003e \u003cHeight\u003e400px\u003c/Height\u003e \u003cWidth /\u003e \u003cAllowRemove\u003etrue\u003c/AllowRemove\u003e \u003cAllowZoneChange\u003etrue\u003c/AllowZoneChange\u003e \u003cAllowMinimize\u003etrue\u003c/AllowMinimize\u003e \u003cAllowConnect\u003etrue\u003c/AllowConnect\u003e \u003cAllowEdit\u003etrue\u003c/AllowEdit\u003e \u003cAllowHide\u003etrue\u003c/AllowHide\u003e \u003cIsVisible\u003etrue\u003c/IsVisible\u003e \u003cDetailLink /\u003e \u003cHelpLink /\u003e \u003cHelpMode\u003eModeless\u003c/HelpMode\u003e \u003cDir\u003eDefault\u003c/Dir\u003e \u003cPartImageSmall /\u003e \u003cMissingAssembly\u003eCannot import this Web Part.\u003c/MissingAssembly\u003e \u003cPartImageLarge\u003e/_layouts/15/images/mscntvwl.gif\u003c/PartImageLarge\u003e \u003cIsIncludedFilter /\u003e \u003cAssembly\u003eMicrosoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c\u003c/Assembly\u003e \u003cTypeName\u003eMicrosoft.SharePoint.WebPartPages.PageViewerWebPart\u003c/TypeName\u003e \u003cContentLink xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003e{@ListUrl:IQAppCore}/SPAContainer/SPABody.aspx\u003c/ContentLink\u003e \u003cSourceType xmlns=\"http://schemas.microsoft.com/WebPart/v2/PageViewer\"\u003eURL\u003c/SourceType\u003e\u003c/WebPart\u003e" },
-      "WebPartPageZoneMappings": null,
-      "WebPartPageWebPartListViews": null,
-      "WikiPageWebPartStorageKeyMappings": { "2da24c9e-ef9d-45b4-8936-ff6216dc0c31": "e5f85c32-ca71-4fdf-bd70-d41a6adff3e5" },
-      "WikiPageWebPartListViews": { }
-    },
     "/IQAppCore/bootstrap/css/bootstrap.css": {
       "SecurityConfiguration": null,
       "AppPageIdentifier": null,

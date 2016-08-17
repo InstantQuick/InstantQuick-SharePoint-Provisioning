@@ -43,7 +43,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                 else
                 {
                     //Assumes the site is local intranet and that saved credentials exist in the credential manager 
-                    webPartPageService.Credentials = CredentialCache.DefaultNetworkCredentials;
+                    webPartPageService.Credentials = ctx.Credentials;
                 }
                 try
                 {

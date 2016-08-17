@@ -76,6 +76,14 @@ namespace IQAppProvisioningBaseClasses.Provisioning
             var hasWebUrl = fileText.Contains("{@WebServerRelativeUrl}") || fileText.Contains("{@WebUrl}");
             var hasListContentType = fileText.Contains("{@ListContentType:");
 
+            //This is a crude way to go about cooercing the version numbers
+            //for files created on SPO/SP2016 for SP2013 on prem
+            //probably valid 99.999% of the time, but if it isn't for you, sorry!
+            if(ctx.ServerLibraryVersion.Major == 15)
+            {
+                fileText = fileText.Replace("16.0.0.0", "15.0.0.0");
+            }
+
             if (hasAppPageIdentifierToken)
             {
                 fileText = fileText.Replace("{@appPageIdentifier}", AppPageIdentifier);
@@ -520,6 +528,15 @@ namespace IQAppProvisioningBaseClasses.Provisioning
             {
                 var wpXml = WebParts[zoneMapping.WebPartId].Replace("{@WebUrl}", web.Url).Replace("{@WebServerRelativeUrl}",
                     web.ServerRelativeUrl != "/" ? web.ServerRelativeUrl : "");
+
+                //This is a crude way to go about cooercing the version numbers
+                //for files created on SPO/SP2016 for SP2013 on prem
+                //probably valid 99.999% of the time, but if it isn't for you, sorry!
+                if (ctx.ServerLibraryVersion.Major == 15)
+                {
+                    wpXml = wpXml.Replace("16.0.0.0", "15.0.0.0");
+                }
+
                 var hasListIdToken = wpXml.Contains(@"{@ListId:");
                 var hasListUrlToken = wpXml.Contains(@"{@ListUrl:");
                 var listTitle = string.Empty;
@@ -643,7 +660,17 @@ namespace IQAppProvisioningBaseClasses.Provisioning
         {
             foreach (var key in WebParts.Keys)
             {
-                var wpXml = WebParts[key];
+                var wpXml = WebParts[key].Replace("{@WebUrl}", web.Url).Replace("{@WebServerRelativeUrl}",
+                    web.ServerRelativeUrl != "/" ? web.ServerRelativeUrl : "");
+
+                //This is a crude way to go about cooercing the version numbers
+                //for files created on SPO/SP2016 for SP2013 on prem
+                //probably valid 99.999% of the time, but if it isn't for you, sorry!
+                if (ctx.ServerLibraryVersion.Major == 15)
+                {
+                    wpXml = wpXml.Replace("16.0.0.0", "15.0.0.0");
+                }
+
                 var hasListIdToken = wpXml.Contains(@"{@ListId:");
                 var hasListUrlToken = wpXml.Contains(@"{@ListUrl:");
 
@@ -651,7 +678,6 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                 {
                     wpXml = ReplaceListTokens(wpXml, ctx, web, false);
                 }
-
 
                 var def = limitedWebPartManager.ImportWebPart(wpXml);
                 def = limitedWebPartManager.AddWebPart(def.WebPart, "Bottom", 0);

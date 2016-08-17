@@ -153,7 +153,12 @@ function New-SPClientContext
 		$context.AuthenticationMode = [Microsoft.SharePoint.Client.ClientAuthenticationMode]::Default
 		$securePassword = ConvertTo-SecureString $password -AsPlainText -Force
 
-		$credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($username, $securePassword)
+		$credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($UserName, $securePassword)
+		$context.Credentials = $credentials
+	}
+	else
+	{
+		$credentials = New-Object System.Net.NetworkCredential($UserName, $Password)
 		$context.Credentials = $credentials
 	}
 	$web = $context.Web

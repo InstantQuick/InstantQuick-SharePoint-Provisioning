@@ -457,7 +457,30 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                     CreateList(creator);
                     creator.ProvisionListItems = true;
                     _existingLists[key] = Creators[key].List;
-                    _ctx.ExecuteQueryRetry();
+                    try
+                    {
+                        _ctx.ExecuteQueryRetry();
+                    }
+                    catch (Exception ex)
+                    {
+                        //There is a bug in 2013 that will result in a COM exception when creating certain hidden lists
+                        //The list gets created when this happens, so this loop just retries ten times if the create gives a server exception.
+                        //Note the retry counter value of 20 is completely arbitrary!
+                        if (ex is ServerException)
+                        {
+                            var retryCounter = 0;
+                            bool success = false;
+                            do
+                            {
+                                success = retryLoadList(creator);
+                                retryCounter++;
+                            } while (!success && retryCounter < 20);
+                        }
+                        else
+                        {
+                            throw;
+                        }
+                    }
                 }
                 else
                 {
@@ -471,6 +494,25 @@ namespace IQAppProvisioningBaseClasses.Provisioning
             if (_ctx.HasPendingRequest)
             {
                 _ctx.ExecuteQueryRetry();
+            }
+        }
+        private bool retryLoadList(ListCreator creator)
+        {
+            try
+            {
+                creator.List = _web.Lists.GetByTitle(creator.Title);
+                //Get the list's current content types
+                _ctx.Load(creator.List.ContentTypes,
+                    c => c.Include
+                        (contentType => contentType.Name));
+
+                _ctx.Load(creator.List, l => l.Id, l => l.Title);
+                _ctx.ExecuteQueryRetry();
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
 
