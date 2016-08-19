@@ -713,7 +713,9 @@ function Get-RemoteEventReceiverCreators
     Reads the top or left navigation nodes from a SharePoint site or web and optionally adds them to a manifest.
 
 	.DESCRIPTION
-	Reads the top or left navigation nodes from a SharePoint site or web and optionally adds them to a manifest.
+	Reads the top or left navigation nodes from a SharePoint site or web and optionally adds them to a manifest. 
+	
+	Valid values for NavigationCollection are 'Top' and 'Left'.
 	
 	For more detail about the operation as it executes, include the -VerboseNotify switch.
 #>
@@ -971,8 +973,6 @@ function New-IQSiteDefinition
 
 	.DESCRIPTION
 	New-WebCreator returns an object of type IQAppProvisioningBaseClasses.Provisioning.WebCreator as a new object.
-	
-	If the file is located in Azure storage, it must be named sitedefinition.json. 
 #>
 function New-WebCreator 
 {
