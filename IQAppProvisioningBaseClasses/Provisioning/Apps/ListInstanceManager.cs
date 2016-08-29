@@ -145,7 +145,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
             TermStore termStore = null;
 
             ClientContext tempCtx = _ctx.Clone(_web.Url);
-            if (sortedCreators.FirstOrDefault(c => c.ListItems.FirstOrDefault(li => li.FieldValues.FirstOrDefault(fv => fv.FieldType.StartsWith("TaxonomyField")) != null) != null) != null)
+            if (sortedCreators.FirstOrDefault(c => c.ListItems.FirstOrDefault(li => li.FieldValues.FirstOrDefault(fv => fv.FieldType != null && fv.FieldType.StartsWith("TaxonomyField")) != null) != null) != null)
             {
                 taxonomySession = TaxonomySession.GetTaxonomySession(tempCtx);
                 termStore = taxonomySession.GetDefaultSiteCollectionTermStore();
@@ -242,7 +242,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                                 }
 
                             }
-                            else if (fieldInfo.FieldType.StartsWith("TaxonomyField"))
+                            else if (fieldInfo.FieldType != null && fieldInfo.FieldType.StartsWith("TaxonomyField"))
                             {
 
                                 var termSetName = fieldInfo.Value.GetInnerText("{@TermSet:", "}");
