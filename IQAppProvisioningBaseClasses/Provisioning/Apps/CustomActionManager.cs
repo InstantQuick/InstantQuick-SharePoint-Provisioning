@@ -57,7 +57,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                     var webUserCustomActionReplacementTokens = new Dictionary<string, string>
                     {
                         {"Title", web.Title},
-                        {"ServerRelativeUrl", web.ServerRelativeUrl},
+                        {"WebServerRelativeUrl", web.ServerRelativeUrl != "/" ? web.ServerRelativeUrl : ""},
                         {"Ticks", DateTime.Now.Ticks.ToString()}
                     };
 
@@ -180,25 +180,34 @@ namespace IQAppProvisioningBaseClasses.Provisioning
 
         public void CreateAll(string clientId, string version)
         {
+            var webUserCustomActionReplacementTokens = new Dictionary<string, string>
+                    {
+                        {"Title", _web.Title},
+                        {"WebServerRelativeUrl", _web.ServerRelativeUrl  != "/" ? _web.ServerRelativeUrl : ""},
+                        {"Ticks", DateTime.Now.Ticks.ToString()},
+                        {"clientId", clientId },
+                        {"version", version },
+                    };
+
             if (CustomActions != null && CustomActions.Count > 0)
             {
                 try
                 {
                     DeleteAll();
-                    foreach (var customActionDefinition in CustomActions.Values)
+                    foreach (var customActionCreator in CustomActions.Values)
                     {
-                        if (customActionDefinition.Location == "ScriptLink" &&
-                            string.IsNullOrEmpty(customActionDefinition.ScriptBlock) &&
-                            string.IsNullOrEmpty(customActionDefinition.ScriptSrc)) continue;
+                        if (customActionCreator.Location == "ScriptLink" &&
+                            string.IsNullOrEmpty(customActionCreator.ScriptBlock) &&
+                            string.IsNullOrEmpty(customActionCreator.ScriptSrc)) continue;
 
-                        customActionDefinition.ClientId = clientId;
-                        customActionDefinition.Version = version;
+                        customActionCreator.ClientId = clientId;
+                        customActionCreator.Version = version;
 
                         UserCustomAction newUserCustomAction;
 
                         //Can't set site collection custom actions in an app web 
                         //which is fine because app webs don't have subsites anyway!
-                        if (customActionDefinition.SiteScope && _web.AppInstanceId == default(Guid))
+                        if (customActionCreator.SiteScope && _web.AppInstanceId == default(Guid))
                         {
                             newUserCustomAction = _ctx.Site.UserCustomActions.Add();
                         }
@@ -207,15 +216,25 @@ namespace IQAppProvisioningBaseClasses.Provisioning
                             newUserCustomAction = _web.UserCustomActions.Add();
                         }
 
-                        newUserCustomAction.Location = customActionDefinition.Location;
-                        newUserCustomAction.ScriptBlock =
-                            customActionDefinition.ScriptBlock.Replace("{@clientId}", clientId)
-                                .Replace("{@version}", version);
-                        newUserCustomAction.Sequence = customActionDefinition.Sequence;
-                        newUserCustomAction.Title = customActionDefinition.Title;
+                        newUserCustomAction.Title = DoTokenReplacement(customActionCreator.Title,
+                            webUserCustomActionReplacementTokens);
+                        newUserCustomAction.Description = customActionCreator.Description;
+                        newUserCustomAction.Group = customActionCreator.Group;
+                        newUserCustomAction.ImageUrl = DoTokenReplacement(customActionCreator.ImageUrl,
+                            webUserCustomActionReplacementTokens);
+                        newUserCustomAction.Location = customActionCreator.Location;
+                        newUserCustomAction.RegistrationId = customActionCreator.RegistrationId;
+                        newUserCustomAction.RegistrationType = customActionCreator.RegistrationType;
+                        newUserCustomAction.ScriptBlock = DoTokenReplacement(customActionCreator.ScriptBlock,
+                            webUserCustomActionReplacementTokens);
+                        newUserCustomAction.ScriptSrc = DoTokenReplacement(customActionCreator.ScriptSrc,
+                            webUserCustomActionReplacementTokens);
+                        newUserCustomAction.Sequence = customActionCreator.Sequence;
+                        newUserCustomAction.Url = DoTokenReplacement(customActionCreator.Url,
+                            webUserCustomActionReplacementTokens);
                         newUserCustomAction.Update();
                         OnNotify(ProvisioningNotificationLevels.Verbose,
-                            "Adding custom action " + customActionDefinition.Title);
+                            "Adding custom action " + customActionCreator.Title);
                     }
 
                     _ctx.ExecuteQueryRetry();
