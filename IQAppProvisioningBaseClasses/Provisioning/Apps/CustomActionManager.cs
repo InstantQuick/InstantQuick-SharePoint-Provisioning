@@ -23,6 +23,7 @@ namespace IQAppProvisioningBaseClasses.Provisioning
         {
             _ctx = ctx;
             _web = web;
+            _web.EnsureProperties(w => w.Title, w => w.ServerRelativeUrl, w => w.AppInstanceId, w => w.Url);
         }
 
         public virtual Dictionary<string, CustomActionCreator> CustomActions { get; set; }
