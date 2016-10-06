@@ -617,54 +617,61 @@ namespace IQAppManifestBuilders
         {
             OnVerboseNotify("This is a root web.");
 
-            //On prem SP still doesn't have the display name at this point
-            if (canGetSourceFeatureNames)
+            try
             {
-                _sourceContext.Site.EnsureProperties(p => p.Audit, p => p.AuditLogTrimmingRetention,
-                    p => p.TrimAuditLog, p => p.Features.Include(f => f.DefinitionId, f => f.DisplayName));
-            }
-            else
-            {
-                _sourceContext.Site.EnsureProperties(p => p.Audit, p => p.AuditLogTrimmingRetention,
-                    p => p.TrimAuditLog, p => p.Features);
-            }
-            if (canGetBaseFeatureNames)
-            {
-                _baseContext.Site.EnsureProperties(p => p.Audit, p => p.AuditLogTrimmingRetention,
-                    p => p.TrimAuditLog, p => p.Features.Include(f => f.DefinitionId, f => f.DisplayName));
-            }
-            else
-            {
-                _baseContext.Site.EnsureProperties(p => p.Audit, p => p.AuditLogTrimmingRetention,
-                    p => p.TrimAuditLog, p => p.Features);
-            }
-
-            if (_sourceContext.Site.Audit.AuditFlags != _baseContext.Site.Audit.AuditFlags ||
-                _sourceContext.Site.AuditLogTrimmingRetention != _baseContext.Site.AuditLogTrimmingRetention ||
-                _sourceContext.Site.TrimAuditLog != _baseContext.Site.TrimAuditLog)
-            {
-                OnVerboseNotify("Found differences in audit settings.");
-                webDefinition.SiteAuditSettings = new SiteAuditSettings
+                //On prem SP still doesn't have the display name at this point
+                if (canGetSourceFeatureNames)
                 {
-                    AuditMaskType = _sourceContext.Site.Audit.AuditFlags,
-                    AuditLogTrimmingRetention = _sourceContext.Site.AuditLogTrimmingRetention,
-                    TrimAuditLog = _sourceContext.Site.TrimAuditLog
-                };
-            }
-            else
-            {
-                OnVerboseNotify("Did not find differences in audit settings.");
-            }
+                    _sourceContext.Site.EnsureProperties(p => p.Audit, p => p.AuditLogTrimmingRetention,
+                        p => p.TrimAuditLog, p => p.Features.Include(f => f.DefinitionId, f => f.DisplayName));
+                }
+                else
+                {
+                    _sourceContext.Site.EnsureProperties(p => p.Audit, p => p.AuditLogTrimmingRetention,
+                        p => p.TrimAuditLog, p => p.Features);
+                }
+                if (canGetBaseFeatureNames)
+                {
+                    _baseContext.Site.EnsureProperties(p => p.Audit, p => p.AuditLogTrimmingRetention,
+                        p => p.TrimAuditLog, p => p.Features.Include(f => f.DefinitionId, f => f.DisplayName));
+                }
+                else
+                {
+                    _baseContext.Site.EnsureProperties(p => p.Audit, p => p.AuditLogTrimmingRetention,
+                        p => p.TrimAuditLog, p => p.Features);
+                }
 
-            if (!canGetSourceFeatureNames)
-            {
-                OnVerboseNotify(
-                    "Unable to get feature display names from the source context's CSOM implementation. Using the id instead, Sorry...");
+                if (_sourceContext.Site.Audit.AuditFlags != _baseContext.Site.Audit.AuditFlags ||
+                    _sourceContext.Site.AuditLogTrimmingRetention != _baseContext.Site.AuditLogTrimmingRetention ||
+                    _sourceContext.Site.TrimAuditLog != _baseContext.Site.TrimAuditLog)
+                {
+                    OnVerboseNotify("Found differences in audit settings.");
+                    webDefinition.SiteAuditSettings = new SiteAuditSettings
+                    {
+                        AuditMaskType = _sourceContext.Site.Audit.AuditFlags,
+                        AuditLogTrimmingRetention = _sourceContext.Site.AuditLogTrimmingRetention,
+                        TrimAuditLog = _sourceContext.Site.TrimAuditLog
+                    };
+                }
+                else
+                {
+                    OnVerboseNotify("Did not find differences in audit settings.");
+                }
+
+                if (!canGetSourceFeatureNames)
+                {
+                    OnVerboseNotify(
+                        "Unable to get feature display names from the source context's CSOM implementation. Using the id instead, Sorry...");
+                }
+                if (!canGetBaseFeatureNames)
+                {
+                    OnVerboseNotify(
+                        "Unable to get feature display names from the base context's CSOM implementation. Using the id instead, Sorry...");
+                }
             }
-            if (!canGetBaseFeatureNames)
+            catch(ServerException e)
             {
-                OnVerboseNotify(
-                    "Unable to get feature display names from the base context's CSOM implementation. Using the id instead, Sorry...");
+                OnVerboseNotify("Unable to read audit settings with CSOM against current server version.");
             }
         }
 
