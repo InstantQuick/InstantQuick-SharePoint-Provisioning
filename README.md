@@ -4,7 +4,7 @@ The InstantQuick SharePoint Provisioning stack is the easiest to use and most co
 This repository includes the .NET class libraries we use at InstantQuick and a companion PowerShell module.
 
 ## Minimal Path to Awesome
-1. Download and Install the PowerShell Module - **[Setup](https://github.com/InstantQuick/InstantQuick-SharePoint-Provisioning/raw/master/Installer/1.0.0.0/IQPowerShellProvisioning.msi)** 
+1. Download and Install the PowerShell Module - **[Setup](https://github.com/InstantQuick/InstantQuick-SharePoint-Provisioning/raw/master/Installer/1.0.0.1/IQPowerShellProvisioning.msi)** 
 2. Visit the **[wiki](https://github.com/InstantQuick/InstantQuick-SharePoint-Provisioning/wiki)**
 3. Pick one of the three samples and follow the instructions
  
