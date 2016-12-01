@@ -3,7 +3,7 @@
 	<Product Id="3ED3FFE0-B233-41C4-8AFC-DCD66C8B32C6" 
            Name="InstantQuick SharePoint Provisioning PowerShell" 
            Language="1033" 
-           Version="1.0.0.0" 
+           Version="1.0.0.1" 
            Manufacturer="InstantQuick" 
            UpgradeCode="61DE39D7-C47D-4FC4-B78C-5F5E84B8850A">
 		<Package Id="1CC12A6F-E750-4FDA-847A-F3C4CB8A3AC5" 
