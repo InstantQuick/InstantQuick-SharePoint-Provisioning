@@ -19,7 +19,7 @@ Add-Type -AssemblyName System.Xml.Linq
 
 	The JSON can be in the form of a string or a file located in a file system volume or Azure Storage.
 	
-	If the file is located in Azure storage, it must be named manifest.json. 
+	If the file is located in Azure storage, it must be named manifest.json or you must include the FileName parameter. 
 #>
 function New-IQAppManifest
 {
@@ -42,7 +42,10 @@ function New-IQAppManifest
 	    [string]$AccountKey,
 
 		[Parameter()]
-	    [string]$Container
+	    [string]$Container,
+
+		[Parameter()]
+	    [string]$FileName
 	)
 	$Error.Clear()
 
@@ -78,7 +81,14 @@ function New-IQAppManifest
 	}
 	else
 	{
-		return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::GetManifestFromAzureStorage($StorageAccount, $AccountKey, $Container)
+		if($FileName -eq "")
+		{
+			return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::GetManifestFromAzureStorage($StorageAccount, $AccountKey, $Container)
+		}
+		else
+		{
+			return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::GetManifestFromAzureStorage($StorageAccount, $AccountKey, $Container, $FileName)
+		}
 	}
 }
 
@@ -95,7 +105,7 @@ function New-IQAppManifest
 
 	If the value is AzureStorage (2) you must call the AppManifestBase.SetAzureStorageInfo method prior to using this command. 
 	
-	The generated file will be named manifest.json. If a manifest.json already exists at the specified location it will be overwritten.
+	The generated file will be named manifest.json unless overridden by providing a value for the FileName parameter. If a manifest.json already exists at the specified location it will be overwritten.
 #>
 function Save-IQAppManifest
 {
@@ -103,17 +113,19 @@ function Save-IQAppManifest
 	param
 	(
 	    [Parameter()]
-	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest
+	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
+
+		[Parameter()]
+	    [string]$FileName
 	)
 
 	$Error.Clear()
 	if($AppManifest.GetAzureStorageInfo() -ne $null){
-		return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::SaveManifestToAzureStorage($AppManifest)
+		return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::SaveManifestToAzureStorage($AppManifest, $FileName)
 	}
 	else {
-		return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::SaveManifestToFileSystem($AppManifest)
+		return [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]::SaveManifestToFileSystem($AppManifest, $FileName)
 	}
-
 }
 
 <#
