@@ -72,6 +72,9 @@ namespace IQAppManifestProvisioner
                 FieldDefinitions = manifest.Fields
             };
             fieldManager.DeleteAll(ctx);
+
+            var remoteEventRegistrationManager = new RemoteEventRegistrationManager();
+            remoteEventRegistrationManager.DeleteAll(ctx, web, manifest.RemoteEventRegistrationCreators);
         }
 
         public void Provision(ClientContext ctx, Web web, string manifestJsonFileAbsolutePath)
