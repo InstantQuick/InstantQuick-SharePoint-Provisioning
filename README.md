@@ -1,7 +1,7 @@
 # InstantQuick SharePoint Provisioning
 The InstantQuick SharePoint Provisioning stack is the easiest to use and most complete SharePoint provisioning library currently available. It is the core engine used in the InstantQuick line of products and can read from and provision to SharePoint 2013, SharePoint 2016, and SharePoint Online.
 
-This repository includes the .NET class libraries we use at InstantQuick and a companion PowerShell module.
+This repository includes the .NET class libraries maintained in a separate repo, [IQAppProvisioningBaseClasses](https://github.com/InstantQuick/IQAppProvisioningBaseClasses), we use at InstantQuick and a companion PowerShell module.
 
 ## Minimal Path to Awesome
 0. Uninstall the previous version if necessary
