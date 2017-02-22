@@ -257,8 +257,8 @@ namespace IQAppManifestBuilders
             };
 
             var propertyBagItems = new Dictionary<string, string>();
-            list.EnsureProperties(p => p.ParentWeb);
-            list.RootFolder.EnsureProperties(p => p.Properties);
+            var parentWeb = list.ParentWeb;
+            ctx.Load(parentWeb, w => w.Url, w => w.ServerRelativeUrl);
             var rootFolderProps = list.RootFolder.Properties;
             ctx.Load(rootFolderProps);
             ctx.ExecuteQueryRetry();
