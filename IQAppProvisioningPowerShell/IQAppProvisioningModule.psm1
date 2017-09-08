@@ -211,16 +211,15 @@ function Install-IQAppManifest
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
     
 	$provisioner = New-Object IQAppManifestProvisioner.Provisioner
-    
-	if($VerboseNotify)
-	{
-		$provisioner.WriteNotificationsToStdOut = $true
-	}
+    $job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $provisioner
 
 	if($AppManifest -eq $null)
 	{
@@ -230,6 +229,8 @@ function Install-IQAppManifest
 	{
 		Write-Host $provisioner.Provision($ClientContext, $Web, $AppManifest)
 	}
+
+	Clear-Notifications $job
 }
 
 <#
@@ -266,7 +267,10 @@ function Uninstall-IQAppManifest
 		[switch]$VerboseNotify,
 
 		[Parameter()]
-	    [switch]$Force
+	    [switch]$Force,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
     
@@ -283,10 +287,8 @@ function Uninstall-IQAppManifest
 	}
 	if ($Force -eq $true -or $decision -eq 0) {
 		$provisioner = New-Object IQAppManifestProvisioner.Provisioner
-		if($VerboseNotify)
-		{
-			$provisioner.WriteNotificationsToStdOut = $true
-		}
+		$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $provisioner
+		
 		if($AppManifest -eq $null)
 		{
 			Write-Host $provisioner.Deprovision($ClientContext, $Web, $AbsoluteJSONPath)
@@ -295,6 +297,7 @@ function Uninstall-IQAppManifest
 		{
 			Write-Host $provisioner.Deprovision($ClientContext, $web, $AppManifest)
 		}
+		Clear-Notifications $job
 	}
 }
 
@@ -320,16 +323,18 @@ function Get-FieldCreator
 		[IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
+
     $builder = New-Object IQAppManifestBuilders.CreatorBuilder
-	
-    if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+    $job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
 	$builder.GetCreator($ClientContext, $null, $FieldName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::Field)
+	Clear-Notifications $job
 }
 
 <#
@@ -385,16 +390,19 @@ function Get-ContentTypeCreator
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
-    $builder = New-Object IQAppManifestBuilders.CreatorBuilder
-	
-    if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+
+	$builder = New-Object IQAppManifestBuilders.CreatorBuilder
+    $job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
 	$builder.GetCreator($ClientContext, $null, $ContentTypeName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::ContentType)
+
+	Clear-Notifications $job
 }
 
 <#
@@ -422,16 +430,19 @@ function Get-ListCreator
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
+
     $builder = New-Object IQAppManifestBuilders.CreatorBuilder
-	
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
     $builder.GetCreator($ClientContext, $web, $ListName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::List)
+
+	Clear-Notifications $job
 }
 
 <#
@@ -459,16 +470,19 @@ function Get-ListCreatorListItems
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
-	$builder = New-Object IQAppManifestBuilders.ListCreatorBuilder
 
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+	$builder = New-Object IQAppManifestBuilders.ListCreatorBuilder
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
 	$builder.GetListCreatorListItems($ClientContext, $web, $ListName, $AppManifest)
+
+	Clear-Notifications $job
 }
 
 <#
@@ -517,15 +531,15 @@ function Get-FileCreatorAndFolders
 		[bool]$GetRelatedFileCreators,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
-    $builder = New-Object IQAppManifestBuilders.FileCreatorBuilder
 
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+    $builder = New-Object IQAppManifestBuilders.FileCreatorBuilder
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
     
 	if(($AppManifestJSON -ne $null) -or ($AppManifest -ne $null)){
 		if($AppManifest -ne $null)
@@ -541,6 +555,7 @@ function Get-FileCreatorAndFolders
 	{
 		$manifest = $builder.GetFileCreator($ClientContext, $web, $FileWebRelativeUrl, $DownloadFolderPath)
 	}
+	Clear-Notifications $job
 }
 
 <#
@@ -568,16 +583,18 @@ function Get-RoleDefinitionCreator
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
+
     $builder = New-Object IQAppManifestBuilders.CreatorBuilder
-	$e = Register-ObjectEvent $builder VerboseNotify -Action {}
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
     $builder.GetCreator($ClientContext, $web, $RoleDefinitionName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::RoleDefinition)
+	Clear-Notifications $job
 }
 
 <#
@@ -605,16 +622,18 @@ function Get-GroupCreator
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
+
     $builder = New-Object IQAppManifestBuilders.CreatorBuilder
-	
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
     $builder.GetCreator($ClientContext, $web, $GroupName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::Group)
+	Clear-Notifications $job
 }
 
 <#
@@ -649,15 +668,16 @@ function Get-UserCustomActionCreators
 		[bool]$SiteScope,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
-    $builder = New-Object IQAppManifestBuilders.CustomActionCreatorBuilder
-	
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+
+    $builder = New-Object IQAppManifestBuilders.CustomActionCreatorBuilder	
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
 	if($AppManifest -eq $null)
     {
         if($CustomActionTitle -eq "")
@@ -680,6 +700,7 @@ function Get-UserCustomActionCreators
             $builder.GetCustomActionCreator($ClientContext, $Web, $CustomActionTitle, $AppManifest, $SiteScope)
         }
     }
+	Clear-Notifications $job
 }
 
 <#
@@ -708,16 +729,18 @@ function Get-RemoteEventReceiverCreators
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
-    $builder = New-Object IQAppManifestBuilders.CreatorBuilder
-	
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+
+    $builder = New-Object IQAppManifestBuilders.CreatorBuilder	
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
     $builder.GetCreator($ClientContext, $web, "", $AppManifest, [IQAppManifestBuilders.CreatorTypes]::RemoteEvents)
+	Clear-Notifications $job
 }
 
 <#
@@ -750,16 +773,18 @@ function Get-NavigationCreator
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
-    $builder = New-Object IQAppManifestBuilders.CreatorBuilder
-	
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+
+    $builder = New-Object IQAppManifestBuilders.CreatorBuilder	
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
     $builder.GetCreator($ClientContext, $web, $NavigationCollection, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::Navigation)
+	Clear-Notifications $job
 }
 
 <#
@@ -796,16 +821,18 @@ function Get-LookAndFeelCreator
 		[IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
-    $builder = New-Object IQAppManifestBuilders.CreatorBuilder
-	
-    if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+
+    $builder = New-Object IQAppManifestBuilders.CreatorBuilder	
+    $job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
 	$builder.GetCreator($ClientContext, $Web, $null, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::LookAndFeel)
+	Clear-Notifications $job
 }
 
 <#
@@ -845,7 +872,10 @@ function Get-WebCreator
 	    [IQAppManifestBuilders.WebCreatorBuilderOptions]$Options,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
 	if($SiteDefinition -eq $null -and $AppManifest -eq $null)
@@ -854,12 +884,9 @@ function Get-WebCreator
 	}
 	else
 	{
-		$builder = New-Object IQAppManifestBuilders.WebCreatorBuilder
-	
-		if($VerboseNotify)
-		{
-			$builder.WriteNotificationsToStdOut = $true
-		}
+		$builder = New-Object IQAppManifestBuilders.WebCreatorBuilder	
+		$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
+
 		if($SiteDefinition -ne $null)
 		{
 			$builder.GetWebCreatorBuilder($SiteDefinition, $WebDefinition, $Options, $SourceClientContext, $BaseClientContext)
@@ -868,6 +895,7 @@ function Get-WebCreator
 		{
 			$builder.GetWebCreatorBuilder($AppManifest, $Options, $SourceClientContext, $BaseClientContext)
 		}
+		Clear-Notifications $job
 	}
 }
 
@@ -895,16 +923,18 @@ function ConvertTo-BlobStorageIQApp
 	    [string]$AccountKey,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
-    $migrator = New-Object IQAppStorageMigrator.Migrator
-	
-	if($VerboseNotify)
-	{
-		$builder.WriteNotificationsToStdOut = $true
-	}
+
+    $migrator = New-Object IQAppStorageMigrator.Migrator	
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath  $migrator
+
     $migrator.MigrateFromFileSystemToAzure($AppManifest, $StorageAccount, $AccountKey)
+	Clear-Notifications $job
 }
 
 <#
@@ -1054,16 +1084,16 @@ function Install-IQSiteDefinition
 	    [IQAppProvisioningBaseClasses.Provisioning.SiteDefinition]$SiteDefinition,
 
 		[Parameter()]
-		[switch]$VerboseNotify
+		[switch]$VerboseNotify,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
     
 	$provisioner = New-Object IQAppSiteProvisioner.Provisioner
-    
-	if($VerboseNotify)
-	{
-		$provisioner.WriteNotificationsToStdOut = $true
-	}
+	$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $provisioner
+
 	if($SiteDefinition -eq $null)
 	{
 		Write-Host $provisioner.Provision($ClientContext, $Web, $AbsoluteJSONPath)
@@ -1072,6 +1102,7 @@ function Install-IQSiteDefinition
 	{
 		Write-Host $provisioner.Provision($ClientContext, $Web, $SiteDefinition)
 	}
+	Clear-Notifications $job
 }
 
 <#
@@ -1108,7 +1139,10 @@ function Uninstall-IQSiteDefinition
 		[switch]$VerboseNotify,
 
 		[Parameter()]
-	    [switch]$Force
+	    [switch]$Force,
+
+		[Parameter()]
+		[string]$LogFilePath
 	)
 	$Error.Clear()
 
@@ -1126,10 +1160,8 @@ function Uninstall-IQSiteDefinition
 
 	if ($Force -eq $true -or $decision -eq 0) {
 		$provisioner = New-Object IQAppSiteProvisioner.Provisioner
-		if($VerboseNotify)
-		{
-			$provisioner.WriteNotificationsToStdOut = $true
-		}
+		$job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $provisioner
+
 		if($SiteDefinition -eq $null)
 		{
 			Write-Host $provisioner.Deprovision($ClientContext, $Web, $AbsoluteJSONPath)
@@ -1138,5 +1170,30 @@ function Uninstall-IQSiteDefinition
 		{
 			Write-Host $provisioner.Deprovision($ClientContext, $Web, $SiteDefinition)
 		}
+		Clear-Notifications $job
 	} 
+}
+
+function Set-Notifications($VerboseNotify, $LogFilePath, $provisioner)
+{
+	if($VerboseNotify)
+	{
+		$provisioner.WriteNotificationsToStdOut = $true
+		if($LogFilePath -ne $null -and $LogFilePath -ne "")
+		{
+			return Register-ObjectEvent $provisioner VerboseNotify -MessageData $LogFilePath -Action { 
+				$Event.SourceEventArgs.Message | Out-File -FilePath $Event.MessageData -Append
+			}
+		}
+	}
+}
+
+function Clear-Notifications($job)
+{
+	if($job -ne $null)
+	{
+		$ErrorActionPreference = "SilentlyContinue"
+		Unregister-Event $job.Id
+		$ErrorActionPreference = "Continue"
+	}
 }

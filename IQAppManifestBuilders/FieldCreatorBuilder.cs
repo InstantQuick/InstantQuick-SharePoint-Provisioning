@@ -10,39 +10,54 @@ namespace IQAppManifestBuilders
     {
         public string GetFieldCreator(ClientContext ctx, string fieldName)
         {
-            var retVal = new Dictionary<string, string>();
-            var js = new JavaScriptSerializer();
-            var field = GetField(ctx, fieldName);
-            if (field == null)
+            try
             {
-                OnVerboseNotify($"No information found for {fieldName}");
+                var retVal = new Dictionary<string, string>();
+                var js = new JavaScriptSerializer();
+                var field = GetField(ctx, fieldName);
+                if (field == null)
+                {
+                    OnVerboseNotify($"No information found for {fieldName}");
+                    return string.Empty;
+                }
+                var schemaXml = FieldTokenizer.DoTokenSubstitutions(ctx, field);
+                retVal.Add(field.InternalName, schemaXml);
+
+                return js.Serialize(retVal);
+            }
+            catch (Exception ex)
+            {
+                OnVerboseNotify($"Error getting schema for {fieldName} - {ex}");
                 return string.Empty;
             }
-            var schemaXml = FieldTokenizer.DoTokenSubstitutions(ctx, field);
-            retVal.Add(field.InternalName, schemaXml);
-
-            return js.Serialize(retVal);
         }
 
         public void GetFieldCreator(ClientContext ctx, string fieldName, AppManifestBase manifest)
         {
-            var existingFieldCreators = manifest.Fields;
-
-            existingFieldCreators = existingFieldCreators ?? new Dictionary<string, string>();
-
-            var field = GetField(ctx, fieldName);
-            if (field != null)
+            try
             {
-                OnVerboseNotify($"Got field creation information for {fieldName}");
-                var schemaXml = FieldTokenizer.DoTokenSubstitutions(ctx, field);
-                existingFieldCreators[field.InternalName] = schemaXml;
-            }
-            else
-            {
-                OnVerboseNotify($"No information found for {fieldName}");
-            }
+                var existingFieldCreators = manifest.Fields;
 
-            manifest.Fields = existingFieldCreators;
+                existingFieldCreators = existingFieldCreators ?? new Dictionary<string, string>();
+
+                var field = GetField(ctx, fieldName);
+                if (field != null)
+                {
+                    OnVerboseNotify($"Got field creation information for {fieldName}");
+                    var schemaXml = FieldTokenizer.DoTokenSubstitutions(ctx, field);
+                    existingFieldCreators[field.InternalName] = schemaXml;
+                }
+                else
+                {
+                    OnVerboseNotify($"No information found for {fieldName}");
+                }
+
+                manifest.Fields = existingFieldCreators;
+            }
+            catch (Exception ex)
+            {
+                OnVerboseNotify($"Error getting schema for {fieldName} - {ex}");
+            }
         }
 
         private Field GetField(ClientContext ctx, string fieldName)

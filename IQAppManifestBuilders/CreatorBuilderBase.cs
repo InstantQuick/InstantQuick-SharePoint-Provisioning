@@ -25,17 +25,14 @@ namespace IQAppManifestBuilders
         /// <param name="message">The message</param>
         protected void OnVerboseNotify(string message)
         {
-            if (VerboseNotify != null)
-            {
-                VerboseNotify(null, new CreatorBuilderProgressNotificationEvent
-                {
-                    Message = message
-                });
-            }
-            else if (WriteNotificationsToStdOut)
+            if (WriteNotificationsToStdOut)
             {
                 Console.Out.WriteLine(message);
             }
+            VerboseNotify?.Invoke(null, new CreatorBuilderProgressNotificationEvent
+            {
+                Message = message
+            });
         }
 
         /// <summary>
