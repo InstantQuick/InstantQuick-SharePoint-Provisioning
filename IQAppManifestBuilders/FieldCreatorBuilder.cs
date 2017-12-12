@@ -20,7 +20,7 @@ namespace IQAppManifestBuilders
                     OnVerboseNotify($"No information found for {fieldName}");
                     return string.Empty;
                 }
-                var schemaXml = FieldTokenizer.DoTokenSubstitutions(ctx, field);
+                var schemaXml = FieldTokenizer.DoTokenSubstitutionsAndCleanSchema(ctx, field);
                 retVal.Add(field.InternalName, schemaXml);
 
                 return js.Serialize(retVal);
@@ -44,7 +44,7 @@ namespace IQAppManifestBuilders
                 if (field != null)
                 {
                     OnVerboseNotify($"Got field creation information for {fieldName}");
-                    var schemaXml = FieldTokenizer.DoTokenSubstitutions(ctx, field);
+                    var schemaXml = FieldTokenizer.DoTokenSubstitutionsAndCleanSchema(ctx, field);
                     existingFieldCreators[field.InternalName] = schemaXml;
                 }
                 else

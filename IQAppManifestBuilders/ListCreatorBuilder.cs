@@ -543,7 +543,7 @@ namespace IQAppManifestBuilders
             //The field is not in any of the list content types
             try
             {
-                var schemaXml = FieldTokenizer.DoTokenSubstitutions(ctx, field);
+                var schemaXml = FieldTokenizer.DoTokenSubstitutionsAndCleanSchema(ctx, field);
                 var displayName = schemaXml.GetXmlAttribute("DisplayName");
                 schemaXml = schemaXml.SetXmlAttribute("Name", displayName.Replace(" ", "_x0020_"));
                 listCreator.AdditionalFields.Add(field.InternalName, schemaXml);
