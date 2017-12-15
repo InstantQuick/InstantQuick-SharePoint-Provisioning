@@ -87,8 +87,26 @@ namespace IQAppManifestBuilders
             {
                 lookAndFeel.CurrentComposedLook =
                     new ListItemCreatorBuilder(ctx, web, composedLooks).GetListItemCreator(item);
+
+                foreach (var fieldValue in lookAndFeel.CurrentComposedLook.FieldValues)
+                {
+                    fieldValue.Value = FixSiteUrlUrlTokens(fieldValue.Value);
+                }
             }
             return lookAndFeel;
+        }
+
+        private string FixSiteUrlUrlTokens(string text)
+        {
+            if (text.Contains("{@SiteUrl}"))
+            {
+                OnVerboseNotify("Theme Url has SiteUrl token. SharePoint Online now requires theme files to be in the target web when calling ApplyTheme. Changing token to {@WebServerRelativeUrl}. Ensure the required theme files exist always or are included in the manifest.");
+                text = text.Replace("{@SiteUrl}", "{@WebServerRelativeUrl}");
+                OnVerboseNotify($"File is {text}");
+                OnVerboseNotify("If you add this file using this library, make sure to set the List and ListItemFieldValues of the resulting creator to NULL. The Theme catalog doesn't exist in subsites.");
+                OnVerboseNotify("Also, consider going to UserVoice and complaining about this bug they introduced sometime in late 2015 which causes ApplyTheme to break if the files are in the root where they belong instead of requiring a copy to the subsite.");
+            }
+            return text;
         }
     }
 }

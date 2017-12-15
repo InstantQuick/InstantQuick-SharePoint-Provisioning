@@ -729,15 +729,17 @@ namespace IQAppManifestBuilders
                 }
 
                 Debug.WriteLine(principalName);
-                if (principal.PrincipalType == PrincipalType.SharePointGroup ||
-                    principal.PrincipalType == PrincipalType.SecurityGroup)
+                if ((principal.PrincipalType == PrincipalType.SharePointGroup ||
+                    principal.PrincipalType == PrincipalType.SecurityGroup) && 
+                    !principalName.StartsWith("SharingLinks.")
+                    )
                 {
                     foreach (var roleDefinition in roleAssignment.RoleDefinitionBindings)
                     {
                         //This part of the object model is quirky
                         //There should be at most two for a given principal
                         //butif there are more the first one that isn't Limited Access wins
-                        if (roleDefinition.Name != "Limited Access")
+                        if (roleDefinition.Name != "Limited Access" && roleDefinition.Name != "System.LimitedEdit")
                         {
                             if (!creator.SecurityConfiguration.CopyExisting)
                             {
