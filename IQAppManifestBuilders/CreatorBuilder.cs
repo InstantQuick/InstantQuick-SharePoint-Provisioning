@@ -28,9 +28,9 @@ namespace IQAppManifestBuilders
             switch (creatorType)
             {
                 case CreatorTypes.Field:
-                    return GetFieldCreator(ctx, title, manifest);
+                    return GetFieldCreator(ctx, web, title, manifest);
                 case CreatorTypes.ContentType:
-                    return GetContentTypeCreator(ctx, title, manifest);
+                    return GetContentTypeCreator(ctx, web, title, manifest);
                 case CreatorTypes.List:
                     return GetListCreator(ctx, web, title, manifest);
                 case CreatorTypes.RoleDefinition:
@@ -133,7 +133,7 @@ namespace IQAppManifestBuilders
             return string.Empty;
         }
 
-        private string GetContentTypeCreator(ClientContext ctx, string title, AppManifestBase manifest)
+        private string GetContentTypeCreator(ClientContext ctx, Web web, string title, AppManifestBase manifest)
         {
             OnVerboseNotify("Getting content type creator for " + title);
 
@@ -141,9 +141,9 @@ namespace IQAppManifestBuilders
             builder.VerboseNotify += builder_Notify;
             if (manifest == null)
             {
-                return builder.GetContentTypeCreator(ctx, title);
+                return builder.GetContentTypeCreator(ctx, web, title);
             }
-            builder.GetContentTypeCreator(ctx, title, manifest);
+            builder.GetContentTypeCreator(ctx, web, title, manifest);
             return string.Empty;
         }
 
@@ -152,17 +152,21 @@ namespace IQAppManifestBuilders
             OnVerboseNotify(eventArgs.Message);
         }
 
-        private string GetFieldCreator(ClientContext ctx, string title, AppManifestBase manifest)
+        private string GetFieldCreator(ClientContext ctx, Web web, string title, AppManifestBase manifest)
         {
             OnVerboseNotify("Getting field creator for " + title);
 
+            if (web == null)
+            {
+                web = ctx.Site.RootWeb;
+            }
             var builder = new FieldCreatorBuilder();
             builder.VerboseNotify += builder_Notify;
             if (manifest == null)
             {
-                return builder.GetFieldCreator(ctx, title);
+                return builder.GetFieldCreator(ctx, web, title);
             }
-            builder.GetFieldCreator(ctx, title, manifest);
+            builder.GetFieldCreator(ctx, web, title, manifest);
             return string.Empty;
         }
     }

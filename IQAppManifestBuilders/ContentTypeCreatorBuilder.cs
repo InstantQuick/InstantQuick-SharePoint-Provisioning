@@ -18,12 +18,13 @@ namespace IQAppManifestBuilders
         /// Emits a content type creator as a json string
         /// </summary>
         /// <param name="ctx">The client context</param>
+        /// <param name="contentTypeName">The web. If null uses RootWeb</param>
         /// <param name="contentTypeName">The content type to read</param>
         /// <returns></returns>
-        public string GetContentTypeCreator(ClientContext ctx, string contentTypeName)
+        public string GetContentTypeCreator(ClientContext ctx, Web web, string contentTypeName)
         {
             var manifest = new AppManifestBase();
-            GetContentTypeCreator(ctx, contentTypeName, manifest);
+            GetContentTypeCreator(ctx, web, contentTypeName, manifest);
             if (manifest.ContentTypeCreators != null && manifest.ContentTypeCreators.ContainsKey(contentTypeName))
             {
                 var js = new JavaScriptSerializer();
@@ -37,15 +38,18 @@ namespace IQAppManifestBuilders
         /// Adds a content type creator to a given manifest
         /// </summary>
         /// <param name="ctx">The client context</param>
-        /// <param name="contentTypeName">The content type to read</param>
+        /// <param name="web">The web. RootWeb if null</param>
+        /// <param name="contentTypeName">The web. If null uses RootWeb</param>
         /// <param name="manifest">The manifest to which the creator is to be added</param>
-        public void GetContentTypeCreator(ClientContext ctx, string contentTypeName, AppManifestBase manifest)
+        public void GetContentTypeCreator(ClientContext ctx, Web web, string contentTypeName, AppManifestBase manifest)
         {
             if (manifest == null) return;
 
+            web = web ?? ctx.Site.RootWeb;
+
             var existingContentTypeCreators = manifest.ContentTypeCreators;
             existingContentTypeCreators = existingContentTypeCreators ?? new Dictionary<string, ContentTypeCreator>();
-            var contentTypeCreators = GetContentTypeCreatorFromSite(ctx, contentTypeName);
+            var contentTypeCreators = GetContentTypeCreatorFromSite(ctx, web, contentTypeName);
             if (contentTypeCreators == null)
             {
                 OnVerboseNotify($"No information found for content type {contentTypeName}");
@@ -56,17 +60,10 @@ namespace IQAppManifestBuilders
             OnVerboseNotify($"Got content type creation information for {contentTypeName}");
         }
 
-        /// <summary>
-        /// Reads a content type from a site's root web and returns a dictionary with a single entry
-        /// for merging into an existing manifest
-        /// </summary>
-        /// <param name="ctx">The client context</param>
-        /// <param name="contentTypeName">The content type to read</param>
-        /// <returns></returns>
-        private Dictionary<string, ContentTypeCreator> GetContentTypeCreatorFromSite(ClientContext ctx,
+        private Dictionary<string, ContentTypeCreator> GetContentTypeCreatorFromSite(ClientContext ctx, Web web,
             string contentTypeName)
         {
-            var contentTypes = ctx.Site.RootWeb.ContentTypes;
+            var contentTypes = web.ContentTypes;
 
             ctx.Load(contentTypes,
                 c => c.Include

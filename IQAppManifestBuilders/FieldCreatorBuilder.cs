@@ -8,19 +8,23 @@ namespace IQAppManifestBuilders
 {
     public class FieldCreatorBuilder : CreatorBuilderBase
     {
-        public string GetFieldCreator(ClientContext ctx, string fieldName)
+        public string GetFieldCreator(ClientContext ctx, Web web, string fieldName)
         {
             try
             {
                 var retVal = new Dictionary<string, string>();
                 var js = new JavaScriptSerializer();
-                var field = GetField(ctx, fieldName);
+                var field = GetField(ctx, web, fieldName);
+                if (web == null)
+                {
+                    web = ctx.Site.RootWeb;
+                }
                 if (field == null)
                 {
                     OnVerboseNotify($"No information found for {fieldName}");
                     return string.Empty;
                 }
-                var schemaXml = FieldTokenizer.DoTokenSubstitutionsAndCleanSchema(ctx, field);
+                var schemaXml = FieldTokenizer.DoTokenSubstitutionsAndCleanSchema(ctx, web, field);
                 retVal.Add(field.InternalName, schemaXml);
 
                 return js.Serialize(retVal);
@@ -32,7 +36,7 @@ namespace IQAppManifestBuilders
             }
         }
 
-        public void GetFieldCreator(ClientContext ctx, string fieldName, AppManifestBase manifest)
+        public void GetFieldCreator(ClientContext ctx, Web web, string fieldName, AppManifestBase manifest)
         {
             try
             {
@@ -40,7 +44,7 @@ namespace IQAppManifestBuilders
 
                 existingFieldCreators = existingFieldCreators ?? new Dictionary<string, string>();
 
-                var field = GetField(ctx, fieldName);
+                var field = GetField(ctx, web, fieldName);
                 if (field != null)
                 {
                     OnVerboseNotify($"Got field creation information for {fieldName}");
@@ -60,9 +64,9 @@ namespace IQAppManifestBuilders
             }
         }
 
-        private Field GetField(ClientContext ctx, string fieldName)
+        private Field GetField(ClientContext ctx, Web web, string fieldName)
         {
-            var field = ctx.Site.RootWeb.Fields.GetByInternalNameOrTitle(fieldName);
+            var field = web.Fields.GetByInternalNameOrTitle(fieldName);
             try
             {
                 ctx.Load(field, f => f.InternalName, f => f.SchemaXml, f => f.TypeAsString);

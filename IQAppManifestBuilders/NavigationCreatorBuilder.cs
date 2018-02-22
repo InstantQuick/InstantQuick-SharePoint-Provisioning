@@ -5,6 +5,7 @@ using Microsoft.SharePoint.Client;
 
 namespace IQAppManifestBuilders
 {
+    //TODO: Clean up and consolidate redundant token substitution code
     public class NavigationCreatorBuilder : CreatorBuilderBase
     {
         public string GetNavigationCreator(ClientContext ctx, Web web, string navigationCollection)
@@ -43,6 +44,9 @@ namespace IQAppManifestBuilders
 
             var retVal = new Dictionary<string, NavigationNodeCreator>();
 
+            var rootWeb = ctx.Site.RootWeb;
+            ctx.Load(rootWeb, w => w.ServerRelativeUrl, w => w.Url);
+
             var navigationNodeCollection = navigationCollection == "Left"
                 ? web.Navigation.QuickLaunch
                 : web.Navigation.TopNavigationBar;
@@ -61,8 +65,15 @@ namespace IQAppManifestBuilders
                     Title = node.Title
                 };
 
+                newCreatorNode.Url = node.Url.Replace(web.Url, "{@WebUrl}");
                 if (ctx.Web.ServerRelativeUrl != "/")
                     newCreatorNode.Url = node.Url.Replace(web.ServerRelativeUrl, "{@WebServerRelativeUrl}");
+
+                if (web.Url != rootWeb.Url)
+                {
+                    newCreatorNode.Url = node.Url.Replace(rootWeb.Url, "{@SiteUrl}");
+                    newCreatorNode.Url = node.Url.Replace(rootWeb.ServerRelativeUrl, "{@SiteServerRelativeUrl}");
+                }
 
                 if (node.Children != null && node.Children.Count > 0)
                 {
@@ -76,8 +87,16 @@ namespace IQAppManifestBuilders
                             IsExternal = child.IsExternal,
                             Title = child.Title
                         };
+                        newChildNode.Url = child.Url.Replace(web.Url, "{@WebUrl}");
                         if (ctx.Web.ServerRelativeUrl != "/")
                             newChildNode.Url = child.Url.Replace(web.ServerRelativeUrl, "{@WebServerRelativeUrl}");
+
+                        if (web.Url != rootWeb.Url)
+                        {
+                            newChildNode.Url = child.Url.Replace(rootWeb.Url, "{@SiteUrl}");
+                            newChildNode.Url = child.Url.Replace(rootWeb.ServerRelativeUrl, "{@SiteServerRelativeUrl}");
+                        }
+
                         newCreatorNode.Children.Add(newChildNode);
                     }
                 }

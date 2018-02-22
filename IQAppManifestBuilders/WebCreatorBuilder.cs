@@ -565,7 +565,7 @@ namespace IQAppManifestBuilders
                     ct => _baseContext.Web.ContentTypes.FirstOrDefault(bct => bct.Name == ct.Name) == null);
             foreach (var contentType in contentTypesToAdd)
             {
-                contentTypeCreatorBuilder.GetContentTypeCreator(_sourceContext, contentType.Name,
+                contentTypeCreatorBuilder.GetContentTypeCreator(_sourceContext, _sourceContext.Web, contentType.Name,
                     webDefinition.AppManifest);
             }
         }
@@ -605,7 +605,7 @@ namespace IQAppManifestBuilders
                     }
                     else
                     {
-                        fieldCreatorBuilder.GetFieldCreator(_sourceContext, field.InternalName,
+                        fieldCreatorBuilder.GetFieldCreator(_sourceContext, _sourceContext.Web, field.InternalName,
                             webDefinition.AppManifest);
                     }
                 }

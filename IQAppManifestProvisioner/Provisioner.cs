@@ -299,6 +299,7 @@ namespace IQAppManifestProvisioner
                 {
                     navigationManager.Provision();
                 }
+                else
                 //but create a custom action to inject the nav via JavaScript for app webs
                 {
                     manifest.CustomActionCreators["IQAppWebNavigation"] =
