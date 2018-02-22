@@ -85,6 +85,13 @@ namespace IQAppManifestBuilders
                     l => l.DefaultView,
                     l => l.NoCrawl,
                     l => l.Hidden,
+                    l => l.EnableFolderCreation,
+                    l => l.EnableMinorVersions,
+                    l => l.EnableModeration,
+                    l => l.EnableVersioning,
+                    l => l.EnableAttachments,
+                    l => l.ValidationFormula,
+                    l => l.ValidationMessage,
                     l => l.HasUniqueRoleAssignments,
                     l => l.RoleAssignments,
                     l => l.DefaultView,
@@ -129,6 +136,13 @@ namespace IQAppManifestBuilders
                     TemplateType = list.BaseTemplate,
                     NoCrawl = list.NoCrawl,
                     Hidden = list.Hidden,
+                    EnableAttachments = list.EnableAttachments,
+                    EnableFolderCreation = list.EnableFolderCreation,
+                    EnableMinorVersions = list.EnableMinorVersions,
+                    EnableModeration = list.EnableModeration,
+                    EnableVersioning = list.EnableVersioning,
+                    ValidationFormula = list.ValidationFormula,
+                    ValidationMessage = list.ValidationMessage,
                     ContentType = list.ContentTypes[0].Name,
                     AdditionalFields = new Dictionary<string, string>(),
                     IndexFields = new List<string>(),
@@ -146,7 +160,7 @@ namespace IQAppManifestBuilders
                 {
                     listCreator.DocumentTemplateUrl = TokenizeUrls(web, list.DocumentTemplateUrl);
                 }
-                else if(list.ContentTypes[0].DocumentTemplateUrl != null &&
+                else if (list.ContentTypes[0].DocumentTemplateUrl != null &&
                     !list.ContentTypes[0].DocumentTemplateUrl.ToLowerInvariant().Contains("/template.") &&
                     ctx.Web.ServerRelativeUrl != "/")
                 {
@@ -210,6 +224,17 @@ namespace IQAppManifestBuilders
                 OnVerboseNotify("Checking for workflow associations for " + listName);
                 //TODO: For 2013 style workflows
                 //CheckForWorkflowAssociations(listCreator, list, ctx, appManifest);
+
+                try
+                {
+                    OnVerboseNotify("Checking list experience for " + listName);
+                    list.EnsureProperty(l => l.ListExperienceOptions);
+                    listCreator.ListExperienceOptions = list.ListExperienceOptions;
+                }
+                catch
+                {
+                    //ignored
+                }
 
                 return listCreator;
             }

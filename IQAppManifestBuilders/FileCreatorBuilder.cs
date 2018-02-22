@@ -572,8 +572,17 @@ namespace IQAppManifestBuilders
 
         private string TokenizeText(Web web, string text)
         {
+            var ctx = web.Context.GetSiteCollectionContext();
+            var rootWeb = ctx.Site.RootWeb;
+            rootWeb.EnsureProperties(w => w.Url, w => w.ServerRelativeUrl);
+
             text = text.Replace(web.Url, "{@WebUrl}");
             if (web.ServerRelativeUrl != "/") text = text.Replace(web.ServerRelativeUrl, "{@WebServerRelativeUrl}");
+            if (web.Url != rootWeb.Url)
+            {
+                text = text.Replace(rootWeb.Url, "{@SiteUrl}");
+                text = text.Replace(rootWeb.ServerRelativeUrl, "{@SiteServerRelativeUrl}");
+            }
             return text;
         }
 

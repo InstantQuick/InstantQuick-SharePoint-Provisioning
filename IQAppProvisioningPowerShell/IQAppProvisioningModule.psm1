@@ -315,9 +315,12 @@ function Get-FieldCreator
 	(
 	    [Parameter(Mandatory=$true, Position=1)]
 	    [Microsoft.SharePoint.Client.ClientContext]$ClientContext,
-		
+
 		[Parameter(Mandatory=$true, Position=2)]
 		[string]$FieldName,
+
+		[Parameter()]
+	    [Microsoft.SharePoint.Client.Web]$Web,
 
 	    [Parameter()]
 		[IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
@@ -333,7 +336,7 @@ function Get-FieldCreator
     $builder = New-Object IQAppManifestBuilders.CreatorBuilder
     $job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
 
-	$builder.GetCreator($ClientContext, $null, $FieldName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::Field)
+	$builder.GetCreator($ClientContext, $Web, $FieldName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::Field)
 	Clear-Notifications $job
 }
 
@@ -386,6 +389,9 @@ function Get-ContentTypeCreator
 		[Parameter(Mandatory=$true, Position=2)]
 		[string]$ContentTypeName,
 
+		[Parameter()]
+	    [Microsoft.SharePoint.Client.Web]$Web,
+
 	    [Parameter()]
 	    [IQAppProvisioningBaseClasses.Provisioning.AppManifestBase]$AppManifest,
 
@@ -400,7 +406,7 @@ function Get-ContentTypeCreator
 	$builder = New-Object IQAppManifestBuilders.CreatorBuilder
     $job = Set-Notifications $VerboseNotify.IsPresent $LogFilePath $builder
 
-	$builder.GetCreator($ClientContext, $null, $ContentTypeName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::ContentType)
+	$builder.GetCreator($ClientContext, $web, $ContentTypeName, $AppManifest, [IQAppManifestBuilders.CreatorTypes]::ContentType)
 
 	Clear-Notifications $job
 }
