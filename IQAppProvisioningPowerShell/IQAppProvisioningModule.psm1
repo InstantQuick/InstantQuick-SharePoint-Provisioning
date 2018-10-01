@@ -136,6 +136,8 @@ function Save-IQAppManifest
 	Connects to SharePoint 2013, SharePoint 2016, or SharePoint Online and returns a new Microsoft.SharePoint.Client.ClientContext instance. The new ClientContext will contain fully loaded Site and Web properties.
 	
 	Most operations in this provisioning module require an Microsoft.SharePoint.Client.ClientContext instance and those that do assume the Site and Web properties are loaded and available. 
+
+	When using the ACS switch the userName is the Client Id and the Password is the ClientSecret
 #>
 function New-SPClientContext
 {
@@ -152,7 +154,10 @@ function New-SPClientContext
 	    [string]$UserName,
 
 	    [Parameter(Mandatory=$true, Position=4)]
-	    [string]$Password
+	    [string]$Password,
+
+		[Parameter(Mandatory=$false)]
+		[switch]$ACS
 	)
 
     $Error.Clear()
@@ -167,6 +172,14 @@ function New-SPClientContext
 
 		$credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($UserName, $securePassword)
 		$context.Credentials = $credentials
+	}
+	elseif($ACS)
+	{
+		$targetPrincipal = "00000003-0000-0ff1-ce00-000000000000"
+		$hostUri = New-Object System.Uri($SiteURL)
+		$realm = [IQAppManifestBuilders.TokenHelper]::GetRealmFromTargetUrl($hostUri)
+		$accessToken = [IQAppManifestBuilders.TokenHelper]::GetAppOnlyAccessToken($targetPrincipal, $hostUri.Authority, $realm, $UserName, $Password).AccessToken
+		$context = [IQAppManifestBuilders.TokenHelper]::GetClientContext($SiteURL, $accessToken)
 	}
 	else
 	{
