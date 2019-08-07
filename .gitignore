@@ -84,3 +84,6 @@ _ReSharper*/
 /IQAppProvisioningPowerShell/assemblies/zh-Hant/Microsoft.Data.OData.resources.dll
 /IQAppProvisioningPowerShell/assemblies/zh-Hant/Microsoft.Data.Edm.resources.dll
 /.vs/config/applicationhost.config
+/.vs/IQSharePointProvisioning/v15/Server/sqlite3
+/IQAppProvisioningBaseClasses/.vs/IQAppProvisioningBaseClasses/v15/Server/sqlite3
+/IQAppProvisioningBaseClasses
